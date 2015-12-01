@@ -28,15 +28,15 @@ header {
 }
 
 .nav__item {
-	@include font-size(1.6);
+	@include font-size(1.4);
 	display: inline-block;
 
 	&:not(:last-child) {
-		margin-right: line-height(5);
+		margin-right: em(30);
 	}
 }
 
 .nav__link {
 	color: brand-colour(colour-six);
-	line-height: 60px;
+	line-height: 70px;
 }

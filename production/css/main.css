@@ -58,7 +58,9 @@ html {
 
 body {
   position: relative;
-  background-color: #ffffff;
+  background-color: #e6e6e6;
+  background: url("../assets/fearon-bros-background.jpg") no-repeat center center fixed;
+  background-size: cover;
 }
 
 .fearon-half {
@@ -152,28 +154,25 @@ header {
 }
 
 .nav__item {
-  font-size: 16px;
-  font-size: 1.6rem;
-  line-height: 24px;
-  line-height: 2.4rem;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 21px;
+  line-height: 2.1rem;
   display: inline-block;
 }
 .nav__item:not(:last-child) {
-  margin-right: 2rem;
+  margin-right: 1.875em;
 }
 
 .nav__link {
   color: #ffffff;
-  line-height: 60px;
+  line-height: 70px;
 }
 
 .featured {
   margin-top: 50px;
-  padding: 6.25em 0;
+  padding: 7.5em 0;
   position: relative;
-  background-color: #e6e6e6;
-  background: url("../assets/fearon-bros-background.jpg") no-repeat center center fixed;
-  background-size: cover;
 }
 
 .featured .fb--copy {
@@ -188,7 +187,7 @@ header {
   width: 100px;
   height: 5px;
   margin: 2.125em auto 3.125em auto;
-  background-color: #002C2B;
+  background-color: #004E4E;
 }
 
 .featured__ribbon {
@@ -198,10 +197,28 @@ header {
   line-height: 2.4rem;
   background-color: #004E4E;
   color: #ffffff;
-  padding: 15px 0;
-  border-top: 2px solid #002C2B;
-  border-bottom: 2px solid #002C2B;
-  margin-bottom: 15px;
+  padding: 0.9375em 0;
+  border: 2px solid #002C2B;
+  margin: -1px -15px 0.9375em -15px;
+  position: relative;
+}
+.featured__ribbon:before, .featured__ribbon:after {
+  content: " ";
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  border-top: 13px solid #002C2B;
+  background: transparent;
+  bottom: -15px;
+}
+.featured__ribbon:before {
+  left: -2px;
+  border-left: 13px solid transparent;
+}
+.featured__ribbon:after {
+  right: -2px;
+  border-right: 13px solid transparent;
 }
 
 .featured__intro {
@@ -211,6 +228,24 @@ header {
   line-height: 2.1rem;
   color: #546A7B;
   margin-bottom: 15px;
+  padding: 0.9375em;
+}
+
+.featured__button {
+  color: #004E4E;
+  border-top: 1px solid #e6e6e6;
+  display: block;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 21px;
+  line-height: 2.1rem;
+  padding: 0.9375em;
+}
+.featured__button:hover {
+  background-color: #e6e6e6;
+  border-color: #cdcdcd;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
 }
 
 .featured__designs {
@@ -218,14 +253,18 @@ header {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  padding: 0 15px;
+  padding: 0 0.9375em;
+}
+@media only screen and (min-width: 768px) {
+  .featured__designs {
+    padding: 0;
+  }
 }
 
 .featured__design {
   -webkit-flex: 1 1 0px;
       -ms-flex: 1 1 0px;
           flex: 1 1 0px;
-  text-align: center;
   background-color: #ffffff;
 }
 
@@ -235,7 +274,7 @@ header {
 @media only screen and (min-width: 992px) {
   .featured--small {
     display: block;
-    margin: 120px 0;
+    margin: 140px 0;
     background-size: cover;
   }
 }
@@ -246,7 +285,7 @@ header {
 @media only screen and (min-width: 768px) {
   .featured--medium {
     display: block;
-    margin: 80px 0;
+    margin: 100px 0;
     background-size: cover;
   }
 }
@@ -254,10 +293,11 @@ header {
 .featured--large {
   border: 2px solid #002C2B;
   border-radius: 7px;
-  max-width: 400px;
-  -webkit-flex: 1 1 200px;
-      -ms-flex: 1 1 200px;
-          flex: 1 1 200px;
+  max-width: 375px;
+  -webkit-flex: 1 1 375px;
+      -ms-flex: 1 1 375px;
+          flex: 1 1 375px;
+  text-align: center;
 }
 .featured--large img {
   max-width: 100%;

@@ -6,7 +6,9 @@ html {
 
 body {
 	position: relative;
-	background-color: brand-colour(colour-six);
+	background-color: brand-colour(colour-five);
+	background: url('../assets/fearon-bros-background.jpg') no-repeat center center fixed;
+	background-size: cover;
 }
 
 // Grid

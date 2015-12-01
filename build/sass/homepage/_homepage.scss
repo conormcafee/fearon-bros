@@ -1,10 +1,7 @@
 .featured {
 	margin-top: 50px;
-	padding: 6.25em 0;
+	padding: em(120) 0;
 	position: relative;
-	background-color: brand-colour(colour-five);
-	background: url('../assets/fearon-bros-background.jpg') no-repeat center center fixed;
-	background-size: cover;
 }
 
 .featured .fb--copy {
@@ -19,7 +16,7 @@
 		width: 100px;
 		height: 5px;
 		margin: 2.125em auto 3.125em auto;
-		background-color: brand-colour(colour-two);
+		background-color: brand-colour(colour-one);
 	}
 }
 
@@ -27,27 +24,67 @@
 	@include font-size(1.6);
 	background-color: brand-colour(colour-one);
 	color: brand-colour(colour-six);
-	padding: 15px 0;
-	border-top: 2px solid brand-colour(colour-two);
-	border-bottom: 2px solid brand-colour(colour-two);
-	margin-bottom: 15px;
+	padding: em(15) 0;
+	border: 2px solid brand-colour(colour-two);
+	margin: -1px -15px em(15) -15px;
+	position: relative;
+
+	&:before,
+	&:after {
+		content: " ";
+  		display: block;
+  		width: 0;
+  		height: 0;
+  		position: absolute;
+		border-top: 13px solid brand-colour(colour-two);
+  		background: transparent;
+  		bottom: -15px;
+	}
+
+	&:before {
+  		left: -2px;
+  		border-left: 13px solid transparent;
+	}
+	&:after {
+		right: -2px;
+  		border-right: 13px solid transparent;
+	}
 }
 
 .featured__intro {
 	@include font-size(1.4);
 	color: brand-colour(colour-three);
 	margin-bottom: 15px;
+	padding: em(15);
+}
+
+.featured__button {
+	color: brand-colour(colour-one);
+	border-top: 1px solid brand-colour(colour-five);
+	display: block;
+	@include font-size(1.4);
+	padding: em(15);
+
+	&:hover {
+		background-color: brand-colour(colour-five);
+		border-color: darken(brand-colour(colour-five), 10%);
+		border-bottom-left-radius: 7px;
+		border-bottom-right-radius: 7px;
+	}
 }
 
 .featured__designs {
     display: flex;
     width: 100%;
-    padding: 0 15px;
+    padding: 0 em(15);
+
+    @media only screen and (min-width: 768px) {
+    	padding: 0;
+    }
 }
 
 .featured__design {
 	flex: 1 1 0px;
-    text-align: center;
     background-color: brand-colour(colour-six);
 }
 
@@ -56,7 +93,7 @@
 
 	@media only screen and (min-width: 992px) {
 		display: block;
-		margin: 120px 0;
+		margin: 140px 0;
 		background-size: cover;
 	}
 }
@@ -66,7 +103,7 @@
 
 	@media only screen and (min-width: 768px) {
 		display: block;
-		margin: 80px 0;
+		margin: 100px 0;
 		background-size: cover;
 	}
 }
@@ -74,8 +111,9 @@
 .featured--large {
 	border: 2px solid brand-colour(colour-two);
 	border-radius: 7px;
-	max-width: 400px;
-    flex: 1 1 200px;
+	max-width: 375px;
+    flex: 1 1 375px;
+    text-align: center;
 
     img {
     	max-width: 100%;
