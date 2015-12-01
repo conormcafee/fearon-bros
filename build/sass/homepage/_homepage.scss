@@ -1,7 +1,10 @@
 .featured {
-	margin-top: 50px;
 	padding: em(120) 0;
 	position: relative;
+
+	@media only screen and (min-width: 768px) {
+		margin-top: 50px;
+	}
 }
 
 .featured .fb--copy {
@@ -186,6 +189,7 @@
 .logo--folio {
 	display: block;
 	margin: 0 auto;
+	max-width: 250px;
 }
 
 .btn--folio {

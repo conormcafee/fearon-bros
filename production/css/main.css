@@ -66,7 +66,11 @@ body {
 .fearon-half {
   display: block;
   float: left;
-  width: 50%;
+}
+@media only screen and (min-width: 768px) {
+  .fearon-half {
+    width: 50%;
+  }
 }
 
 .fb--copy {
@@ -121,24 +125,96 @@ a:focus {
   padding: 10px 15px;
 }
 
+@media only screen and (max-width: 767px) {
+  .nav__mob {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1979;
+  }
+
+  .nav__mob-list {
+    text-align: center;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+  }
+
+  .nav__mob-item {
+    background: #004E4E;
+    background: linear-gradient(180deg, #004E4E, #002C2B);
+    -webkit-flex: 1 1 0px;
+        -ms-flex: 1 1 0px;
+            flex: 1 1 0px;
+    height: 44px;
+    line-height: 20px;
+    color: #ffffff;
+    -webkit-align-self: flex-end;
+        -ms-flex-item-align: end;
+            align-self: flex-end;
+    margin-top: 16px;
+    border-top: 1px solid #002C2B;
+  }
+  .nav__mob-item:not(:last-child) {
+    border-right: 1px solid #002C2B;
+  }
+  .nav__mob-item.nav__mob--logo {
+    background: #002C2B;
+    color: #ffffff;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    border: 3px solid #002C2B;
+    border-bottom: none;
+  }
+
+  .nav__mob--logo {
+    height: 60px;
+    line-height: 60px;
+    margin-top: 0;
+    max-width: 25%;
+    -webkit-flex: 1 1 25%;
+        -ms-flex: 1 1 25%;
+            flex: 1 1 25%;
+  }
+
+  .nav__mob-svg {
+    display: block;
+    margin: 0.3125em auto;
+    fill: #ffffff;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .nav__mob {
+    display: none;
+  }
+}
 header {
   background: #004E4E;
   background: linear-gradient(180deg, #004E4E, #002C2B);
   border-bottom: 5px solid #ffffff;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1979;
+}
+@media only screen and (min-width: 768px) {
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1979;
+  }
 }
 
 .logo--header {
   display: block;
-  float: left;
+  margin-left: auto;
+  margin-right: auto;
   height: 60px;
 }
 @media only screen and (min-width: 768px) {
   .logo--header {
+    float: left;
+    margin-left: 0;
     height: 70px;
   }
 }
@@ -154,10 +230,10 @@ header {
 }
 
 .nav__item {
-  font-size: 14px;
-  font-size: 1.4rem;
-  line-height: 21px;
-  line-height: 2.1rem;
+  font-size: 13px;
+  font-size: 1.3rem;
+  line-height: 19.5px;
+  line-height: 1.95rem;
   display: inline-block;
 }
 .nav__item:not(:last-child) {
@@ -170,9 +246,13 @@ header {
 }
 
 .featured {
-  margin-top: 50px;
   padding: 7.5em 0;
   position: relative;
+}
+@media only screen and (min-width: 768px) {
+  .featured {
+    margin-top: 50px;
+  }
 }
 
 .featured .fb--copy {
@@ -363,6 +443,7 @@ header {
 .logo--folio {
   display: block;
   margin: 0 auto;
+  max-width: 250px;
 }
 
 .btn--folio {
