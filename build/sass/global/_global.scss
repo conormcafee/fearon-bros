@@ -1,0 +1,69 @@
+html {
+	-webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+	font-size: 62.5%;
+}
+
+body {
+	position: relative;
+	background-color: brand-colour(colour-six);
+}
+
+// Grid
+
+.fearon-half {
+	display: block;
+	float: left;
+	width: 50%;
+}
+
+.fb--copy {
+	@include font-size(2.0);
+}
+
+.fb--heading {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+}
+
+.fb--base {
+	font-family: 'Droid Serif', serif;
+	font-weight: 400;
+}
+
+.wrapper {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	position: relative;
+	padding: 0 1.125em;
+
+	&:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+}
+
+.logo {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+
+	&:focus {
+		outline: none;
+	}
+}
+
+.btn {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	display: inline-block;
+	border-radius: 20px;
+	padding: 10px 15px;   
+}

@@ -1,0 +1,418 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.clearfix {
+  clear: both;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  font-size: 62.5%;
+}
+
+body {
+  position: relative;
+  background-color: #ffffff;
+}
+
+.fearon-half {
+  display: block;
+  float: left;
+  width: 50%;
+}
+
+.fb--copy {
+  font-size: 20px;
+  font-size: 2rem;
+  line-height: 30px;
+  line-height: 3rem;
+}
+
+.fb--heading {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+.fb--base {
+  font-family: 'Droid Serif', serif;
+  font-weight: 400;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 1.125em;
+}
+.wrapper:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.logo {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:focus {
+  outline: none;
+}
+
+.btn {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  display: inline-block;
+  border-radius: 20px;
+  padding: 10px 15px;
+}
+
+header {
+  background: #004E4E;
+  background: linear-gradient(180deg, #004E4E, #002C2B);
+  border-bottom: 5px solid #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1979;
+}
+
+.logo--header {
+  display: block;
+  float: left;
+  height: 60px;
+}
+@media only screen and (min-width: 768px) {
+  .logo--header {
+    height: 70px;
+  }
+}
+
+.nav__list {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  .nav__list {
+    display: block;
+    text-align: right;
+  }
+}
+
+.nav__item {
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 24px;
+  line-height: 2.4rem;
+  display: inline-block;
+}
+.nav__item:not(:last-child) {
+  margin-right: 2rem;
+}
+
+.nav__link {
+  color: #ffffff;
+  line-height: 60px;
+}
+
+.featured {
+  margin-top: 50px;
+  padding: 6.25em 0;
+  position: relative;
+  background-color: #e6e6e6;
+  background: url("../assets/fearon-bros-background.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.featured .fb--copy {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  color: #546A7B;
+}
+.featured .fb--copy:after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 5px;
+  margin: 2.125em auto 3.125em auto;
+  background-color: #002C2B;
+}
+
+.featured__ribbon {
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 24px;
+  line-height: 2.4rem;
+  background-color: #004E4E;
+  color: #ffffff;
+  padding: 15px 0;
+  border-top: 2px solid #002C2B;
+  border-bottom: 2px solid #002C2B;
+  margin-bottom: 15px;
+}
+
+.featured__intro {
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 21px;
+  line-height: 2.1rem;
+  color: #546A7B;
+  margin-bottom: 15px;
+}
+
+.featured__designs {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 0 15px;
+}
+
+.featured__design {
+  -webkit-flex: 1 1 0px;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0px;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.featured--small {
+  display: none;
+}
+@media only screen and (min-width: 992px) {
+  .featured--small {
+    display: block;
+    margin: 120px 0;
+    background-size: cover;
+  }
+}
+
+.featured--medium {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  .featured--medium {
+    display: block;
+    margin: 80px 0;
+    background-size: cover;
+  }
+}
+
+.featured--large {
+  border: 2px solid #002C2B;
+  border-radius: 7px;
+  max-width: 400px;
+  -webkit-flex: 1 1 200px;
+      -ms-flex: 1 1 200px;
+          flex: 1 1 200px;
+}
+.featured--large img {
+  max-width: 100%;
+  height: auto;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.featured--small[data-feature="first"] {
+  border: 2px solid #ffffff;
+  border-right: none;
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+}
+
+.featured--small[data-feature="fifth"] {
+  border: 2px solid #ffffff;
+  border-left: none;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+
+.featured--medium[data-feature="second"] {
+  border: 2px solid #ffffff;
+  border-right: none;
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+}
+
+.featured--medium[data-feature="fourth"] {
+  border: 2px solid #ffffff;
+  border-left: none;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+
+.folio {
+  background-color: #004E4E;
+  background-image: url(http://www.transparenttextures.com/patterns/cartographer.png);
+  border-top: 3px solid #002C2B;
+  border-bottom: 3px solid #002C2B;
+  padding-top: 6.25em;
+  clear: both;
+}
+
+.folio .fb--copy {
+  color: #ffffff;
+  max-width: 500px;
+}
+.folio .fb--copy:first-child:after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 5px;
+  margin: 2.125em 0 2.125em 0;
+  background-color: #002C2B;
+}
+
+.folio__link {
+  text-align: center;
+}
+
+.logo--folio {
+  display: block;
+  margin: 0 auto;
+}
+
+.btn--folio {
+  background-color: #ffffff;
+  color: #004E4E;
+  margin: 2rem;
+}
+
+.folio__frames {
+  height: 150px;
+  margin-top: 6.25em;
+  background: url("../assets/portfolio-images.png");
+}
+
+.approach {
+  padding: 3.125em 0;
+}
+
+.approach__list {
+  text-align: center;
+  border: 1px solid #999;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.approach__item {
+  font-size: 20px;
+  font-size: 2rem;
+  line-height: 30px;
+  line-height: 3rem;
+  display: block;
+  float: left;
+  width: 33.333333333%;
+  color: #004E4E;
+  padding: 2.125em 0;
+  position: relative;
+}
+.approach__item span {
+  display: block;
+}
+.approach__item:nth-child(-n+3) {
+  border-bottom: 1px solid #999;
+}
+.approach__item:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.approach__item:nth-child(odd) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.approach__item:after {
+  content: attr(data-stage);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 20px;
+  font-size: 2rem;
+  line-height: 30px;
+  line-height: 3rem;
+}
+
+.approach--middle {
+  border-left: 1px solid #999;
+  border-right: 1px solid #999;
+}
+
+.approach .fb--copy.fb--heading {
+  font-size: 20px;
+  font-size: 2rem;
+  line-height: 30px;
+  line-height: 3rem;
+  margin-bottom: 0;
+}
+.approach .fb--copy.fb--heading:after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 5px;
+  margin: 1.125em 0 2.125em 0;
+  background-color: #004E4E;
+}
+
+.approach .fb--copy {
+  font-size: 20px;
+  font-size: 2rem;
+  line-height: 30px;
+  line-height: 3rem;
+  color: #546A7B;
+  margin-bottom: 2.125em;
+}
+.approach .fb--copy:first-child {
+  margin-top: 2.125em;
+}

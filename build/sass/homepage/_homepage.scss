@@ -1,0 +1,242 @@
+.featured {
+	margin-top: 50px;
+	padding: 6.25em 0;
+	position: relative;
+	background-color: brand-colour(colour-five);
+	background: url('../assets/fearon-bros-background.jpg') no-repeat center center fixed;
+	background-size: cover;
+}
+
+.featured .fb--copy {
+	max-width: 500px;
+	margin: 0 auto;
+	text-align: center;
+	color: brand-colour(colour-three);
+
+	&:after {
+		content: "";
+		display: block;
+		width: 100px;
+		height: 5px;
+		margin: 2.125em auto 3.125em auto;
+		background-color: brand-colour(colour-two);
+	}
+}
+
+.featured__ribbon {
+	@include font-size(1.6);
+	background-color: brand-colour(colour-one);
+	color: brand-colour(colour-six);
+	padding: 15px 0;
+	border-top: 2px solid brand-colour(colour-two);
+	border-bottom: 2px solid brand-colour(colour-two);
+	margin-bottom: 15px;
+}
+
+.featured__intro {
+	@include font-size(1.4);
+	color: brand-colour(colour-three);
+	margin-bottom: 15px;
+}
+
+.featured__designs {
+    display: flex;
+    width: 100%;
+    padding: 0 15px;
+}
+
+.featured__design {
+	flex: 1 1 0px;
+    text-align: center;
+    background-color: brand-colour(colour-six);
+}
+
+.featured--small {
+	display: none;
+
+	@media only screen and (min-width: 992px) {
+		display: block;
+		margin: 120px 0;
+		background-size: cover;
+	}
+}
+
+.featured--medium {
+	display: none;
+
+	@media only screen and (min-width: 768px) {
+		display: block;
+		margin: 80px 0;
+		background-size: cover;
+	}
+}
+
+.featured--large {
+	border: 2px solid brand-colour(colour-two);
+	border-radius: 7px;
+	max-width: 400px;
+    flex: 1 1 200px;
+
+    img {
+    	max-width: 100%;
+		height: auto;
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+    }
+}
+
+.featured--small[data-feature="first"] {
+	border: 2px solid brand-colour(colour-six);
+	border-right: none;
+	border-top-left-radius: 7px;
+	border-bottom-left-radius: 7px;
+}
+
+.featured--small[data-feature="fifth"] {
+	border: 2px solid brand-colour(colour-six);
+	border-left: none;
+	border-top-right-radius: 7px;
+	border-bottom-right-radius: 7px;
+}
+
+.featured--medium[data-feature="second"] {
+	border: 2px solid brand-colour(colour-six);
+	border-right: none;
+	border-top-left-radius: 7px;
+	border-bottom-left-radius: 7px;
+}
+
+.featured--medium[data-feature="fourth"] {
+	border: 2px solid brand-colour(colour-six);
+	border-left: none;
+	border-top-right-radius: 7px;
+	border-bottom-right-radius: 7px;
+} 
+
+
+
+
+// Folio
+
+.folio {
+	background-color: brand-colour(colour-one);
+	background-image: url(http://www.transparenttextures.com/patterns/cartographer.png);
+	border-top: 3px solid brand-colour(colour-two);
+	border-bottom: 3px solid brand-colour(colour-two);
+	padding-top: 6.25em;
+	clear: both;
+}
+
+.folio .fb--copy {
+	color: brand-colour(colour-six);
+	max-width: 500px;
+
+	&:first-child:after {
+		content: "";
+		display: block;
+		width: 100px;
+		height: 5px;
+		margin: 2.125em 0 2.125em 0;
+		background-color: brand-colour(colour-two);
+	}
+}
+
+.folio__link {
+	text-align: center;
+}
+
+.logo--folio {
+	display: block;
+	margin: 0 auto;
+}
+
+.btn--folio {
+	background-color: brand-colour(colour-six);
+	color: brand-colour(colour-one);
+	margin: 2rem;
+}
+
+.folio__frames {
+	height: 150px;
+	margin-top: 6.25em;
+	background: url('../assets/portfolio-images.png');
+}
+
+
+
+
+// Our Approach
+
+.approach {
+	padding: 3.125em 0;
+}
+
+.approach__list {
+	text-align: center;
+	border: 1px solid #999;
+	overflow: hidden;
+	border-radius: 10px;
+}
+
+.approach__item {
+	@include font-size(2.0);
+	display: block;
+	float: left;
+	width: 33.333333333%;
+	color: brand-colour(colour-one);
+	padding: 2.125em 0;
+	position: relative;
+
+	span {
+		display: block;
+	}
+
+	&:nth-child(-n+3) {
+		border-bottom: 1px solid #999;
+	}
+
+	&:nth-child(even) {
+		background-color: rgba(0, 0, 0, 0.1);
+	}
+
+	&:nth-child(odd) {
+		background-color: rgba(0, 0, 0, 0.05);
+	}
+}
+
+.approach__item:after {
+	content: attr(data-stage);
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	@include font-size(2.0);
+}
+
+.approach--middle {
+	border-left: 1px solid #999;
+	border-right: 1px solid #999;
+}
+
+.approach .fb--copy.fb--heading {
+	@include font-size(2.0);
+	margin-bottom: 0;
+
+	&:after {
+		content: "";
+		display: block;
+		width: 100px;
+		height: 5px;
+		margin: 1.125em 0 2.125em 0;
+		background-color: brand-colour(colour-one);
+	}
+}
+
+.approach .fb--copy {
+	@include font-size(2.0);
+	color: brand-colour(colour-three);
+	margin-bottom: 2.125em;
+
+	&:first-child {
+		margin-top: 2.125em;
+	}
+}
