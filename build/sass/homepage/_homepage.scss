@@ -10,14 +10,14 @@
 .featured .fb--copy {
 	max-width: 500px;
 	margin: 0 auto;
-	text-align: center;
 	color: brand-colour(colour-three);
+	text-align: center;
 
 	&:after {
 		content: "";
 		display: block;
 		width: 100px;
-		height: 5px;
+		height: 3px;
 		margin: 2.125em auto 3.125em auto;
 		background-color: brand-colour(colour-one);
 	}
@@ -117,6 +117,7 @@
 	max-width: 375px;
     flex: 1 1 375px;
     text-align: center;
+    margin: 0 auto;
 
     img {
     	max-width: 100%;
@@ -164,7 +165,7 @@
 	background-image: url(http://www.transparenttextures.com/patterns/cartographer.png);
 	border-top: 3px solid brand-colour(colour-two);
 	border-bottom: 3px solid brand-colour(colour-two);
-	padding-top: 6.25em;
+	padding-top: em(120);
 	clear: both;
 }
 
@@ -176,8 +177,8 @@
 		content: "";
 		display: block;
 		width: 100px;
-		height: 5px;
-		margin: 2.125em 0 2.125em 0;
+		height: 3px;
+		margin: em(20) 0 em(25) 0;
 		background-color: brand-colour(colour-two);
 	}
 }
@@ -210,53 +211,7 @@
 // Our Approach
 
 .approach {
-	padding: 3.125em 0;
-}
-
-.approach__list {
-	text-align: center;
-	border: 1px solid #999;
-	overflow: hidden;
-	border-radius: 10px;
-}
-
-.approach__item {
-	@include font-size(2.0);
-	display: block;
-	float: left;
-	width: 33.333333333%;
-	color: brand-colour(colour-one);
-	padding: 2.125em 0;
-	position: relative;
-
-	span {
-		display: block;
-	}
-
-	&:nth-child(-n+3) {
-		border-bottom: 1px solid #999;
-	}
-
-	&:nth-child(even) {
-		background-color: rgba(0, 0, 0, 0.1);
-	}
-
-	&:nth-child(odd) {
-		background-color: rgba(0, 0, 0, 0.05);
-	}
-}
-
-.approach__item:after {
-	content: attr(data-stage);
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	@include font-size(2.0);
-}
-
-.approach--middle {
-	border-left: 1px solid #999;
-	border-right: 1px solid #999;
+	padding: em(120) 0;
 }
 
 .approach .fb--copy.fb--heading {
@@ -267,18 +222,56 @@
 		content: "";
 		display: block;
 		width: 100px;
-		height: 5px;
-		margin: 1.125em 0 2.125em 0;
+		height: 3px;
+		margin: em(20) 0 em(25) 0;
 		background-color: brand-colour(colour-one);
 	}
 }
 
 .approach .fb--copy {
-	@include font-size(2.0);
+	@include font-size(1.8);
 	color: brand-colour(colour-three);
-	margin-bottom: 2.125em;
+	margin-bottom: em(15);
 
-	&:first-child {
-		margin-top: 2.125em;
+	@media only screen and (min-width: 768px) {
+		&:first-child {
+			margin-top: em(70);
+		}
 	}
+}
+
+.approach__list {
+	max-width: 500px;
+}
+
+.approach__item {
+	@include font-size(1.8);
+	color: brand-colour(colour-one);
+	padding: em(30) 0;
+	position: relative;
+
+	&:not(:last-child) {
+		border-bottom: 2px solid brand-colour(colour-three);
+	}
+
+	span {
+		@include font-size(2.4);
+		color: brand-colour(colour-one);
+		margin-right: em(15);
+	}
+}
+
+.approach__item:before {
+	content: "";
+	height: 2px;
+	width: 5000px;
+	display: inline-block;
+	background-color: brand-colour(colour-three);
+	position: absolute;
+	bottom: -2px;
+	right: 0;
+}
+
+.approach__item:last-child:before {
+	display: none;
 }

@@ -1,7 +1,11 @@
 html {
 	-webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
-	font-size: 62.5%;
+    font-size: 55%;
+	
+    @media only screen and (min-width: 768px) {
+    	font-size: 62.5%;
+    }
 }
 
 body {
@@ -19,6 +23,14 @@ body {
 
 	@media only screen and (min-width: 768px) {
 		width: 50%;
+
+		&.fb--push {
+			float: right;
+		}
+
+		&.fb--pull {
+			float: left;
+		}
 	}
 }
 
