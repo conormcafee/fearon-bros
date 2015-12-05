@@ -171,25 +171,35 @@
 
 .folio .fb--copy {
 	color: brand-colour(colour-six);
-	max-width: 500px;
+	text-align: center;
 
 	&:first-child:after {
 		content: "";
 		display: block;
 		width: 100px;
 		height: 3px;
-		margin: em(20) 0 em(25) 0;
+		margin: em(20) auto em(25) auto;
 		background-color: brand-colour(colour-two);
+	}
+
+	@media only screen and (min-width: 768px) {
+		text-align: left;
+		max-width: 500px;
+
+		&:first-child:after {
+			margin: em(20) 0 em(25) 0;
+		}
 	}
 }
 
 .folio__link {
 	text-align: center;
+	margin-top: em(100);
 }
 
 .logo--folio {
 	display: block;
-	margin: 0 auto;
+	margin: em(20) auto;
 	max-width: 250px;
 }
 
@@ -235,19 +245,21 @@
 
 	@media only screen and (min-width: 768px) {
 		&:first-child {
-			margin-top: em(70);
+			margin-top: em(130);
 		}
 	}
 }
 
-.approach__list {
-	max-width: 500px;
+@media only screen and (min-width: 768px) {
+	.approach__list {
+		padding-right: em(120);
+	}
 }
 
 .approach__item {
 	@include font-size(1.8);
 	color: brand-colour(colour-one);
-	padding: em(30) 0;
+	padding: em(40) 0 em(40) em(90);
 	position: relative;
 
 	&:not(:last-child) {
@@ -255,13 +267,22 @@
 	}
 
 	span {
-		@include font-size(2.4);
-		color: brand-colour(colour-one);
-		margin-right: em(15);
+		display: block;
 	}
 }
 
 .approach__item:before {
+	content: attr(data-approach);
+	display: inline-block;
+	@include font-size(7.0);
+	opacity: 0.2;
+	position: absolute;
+	top: 15px;
+	left: 0;
+	color: brand-colour(colour-three);
+}
+
+.approach__item:after {
 	content: "";
 	height: 2px;
 	width: 5000px;
@@ -272,6 +293,6 @@
 	right: 0;
 }
 
-.approach__item:last-child:before {
+.approach__item:last-child:after {
 	display: none;
 }

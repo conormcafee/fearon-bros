@@ -71,6 +71,7 @@ body {
 .fearon-half {
   display: block;
   float: left;
+  width: 100%;
 }
 @media only screen and (min-width: 768px) {
   .fearon-half {
@@ -249,6 +250,43 @@ header {
     display: none;
   }
 }
+footer {
+  background: #004E4E;
+  background: linear-gradient(180deg, #004E4E, #002C2B);
+  color: #ffffff;
+  border-top: 3px solid #002C2B;
+  padding: 3.75em 0;
+}
+
+.footer__list {
+  display: block;
+  float: left;
+  width: 50%;
+}
+@media only screen and (min-width: 768px) {
+  .footer__list {
+    width: 25%;
+  }
+}
+
+.footer__item {
+  margin-bottom: 0.3125em;
+}
+.footer__item.fb--heading {
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 27px;
+  line-height: 2.7rem;
+  margin-bottom: 0.9375em;
+}
+
+.footer__link {
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 21px;
+  line-height: 2.1rem;
+}
+
 .featured {
   padding: 7.5em 0;
   position: relative;
@@ -430,24 +468,34 @@ header {
 
 .folio .fb--copy {
   color: #ffffff;
-  max-width: 500px;
+  text-align: center;
 }
 .folio .fb--copy:first-child:after {
   content: "";
   display: block;
   width: 100px;
   height: 3px;
-  margin: 1.25em 0 1.5625em 0;
+  margin: 1.25em auto 1.5625em auto;
   background-color: #002C2B;
+}
+@media only screen and (min-width: 768px) {
+  .folio .fb--copy {
+    text-align: left;
+    max-width: 500px;
+  }
+  .folio .fb--copy:first-child:after {
+    margin: 1.25em 0 1.5625em 0;
+  }
 }
 
 .folio__link {
   text-align: center;
+  margin-top: 6.25em;
 }
 
 .logo--folio {
   display: block;
-  margin: 0 auto;
+  margin: 1.25em auto;
   max-width: 250px;
 }
 
@@ -493,36 +541,46 @@ header {
 }
 @media only screen and (min-width: 768px) {
   .approach .fb--copy:first-child {
-    margin-top: 4.375em;
+    margin-top: 8.125em;
   }
 }
 
-.approach__list {
-  max-width: 500px;
+@media only screen and (min-width: 768px) {
+  .approach__list {
+    padding-right: 7.5em;
+  }
 }
-
 .approach__item {
   font-size: 18px;
   font-size: 1.8rem;
   line-height: 27px;
   line-height: 2.7rem;
   color: #004E4E;
-  padding: 1.875em 0;
+  padding: 2.5em 0 2.5em 5.625em;
   position: relative;
 }
 .approach__item:not(:last-child) {
   border-bottom: 2px solid #546A7B;
 }
 .approach__item span {
-  font-size: 24px;
-  font-size: 2.4rem;
-  line-height: 36px;
-  line-height: 3.6rem;
-  color: #004E4E;
-  margin-right: 0.9375em;
+  display: block;
 }
 
 .approach__item:before {
+  content: attr(data-approach);
+  display: inline-block;
+  font-size: 70px;
+  font-size: 7rem;
+  line-height: 105px;
+  line-height: 10.5rem;
+  opacity: 0.2;
+  position: absolute;
+  top: 15px;
+  left: 0;
+  color: #546A7B;
+}
+
+.approach__item:after {
   content: "";
   height: 2px;
   width: 5000px;
@@ -533,6 +591,6 @@ header {
   right: 0;
 }
 
-.approach__item:last-child:before {
+.approach__item:last-child:after {
   display: none;
 }
