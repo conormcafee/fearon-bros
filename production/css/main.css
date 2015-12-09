@@ -85,6 +85,29 @@ body {
   }
 }
 
+.fearon-two-third {
+  display: block;
+  float: left;
+  width: 100%;
+}
+@media only screen and (min-width: 768px) {
+  .fearon-two-third {
+    width: 68.75%;
+    margin-right: 2.5%;
+  }
+}
+
+.fearon-one-third {
+  display: block;
+  float: left;
+  width: 100%;
+}
+@media only screen and (min-width: 768px) {
+  .fearon-one-third {
+    width: 28.75%;
+  }
+}
+
 .fb--copy {
   font-size: 20px;
   font-size: 2rem;
@@ -113,6 +136,11 @@ body {
   content: "";
   display: block;
   clear: both;
+}
+
+.mt {
+  padding: 7.5em 0;
+  margin-top: 50px;
 }
 
 .logo {
@@ -256,6 +284,7 @@ footer {
   color: #ffffff;
   border-top: 3px solid #002C2B;
   padding: 3.75em 0;
+  clear: both;
 }
 
 .footer__list {
@@ -573,7 +602,7 @@ footer {
   font-size: 7rem;
   line-height: 105px;
   line-height: 10.5rem;
-  opacity: 0.2;
+  opacity: 0.4;
   position: absolute;
   top: 15px;
   left: 0;
@@ -593,4 +622,66 @@ footer {
 
 .approach__item:last-child:after {
   display: none;
+}
+
+.portfolio {
+  overflow: hidden;
+  display: block;
+}
+
+.portfolio__item {
+  display: block;
+  float: left;
+  width: 48.75%;
+  border: 1px solid #cdcdcd;
+  background-color: #ffffff;
+  margin-right: 2.5%;
+  border-radius: 7px;
+}
+
+@media only screen and (max-width: 767px) {
+  .portfolio__item:nth-child(2n) {
+    margin-right: 0;
+  }
+
+  .portfolio__item::nth-child(2n+1) {
+    clear: left;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .portfolio__item {
+    width: 23.1255%;
+  }
+
+  .portfolio__item:nth-child(4n) {
+    margin-right: 0;
+  }
+
+  .portfolio__item::nth-child(4n+1) {
+    clear: left;
+  }
+}
+.portfolio__name,
+.portfolio__link {
+  display: block;
+  padding: 1.875em 1.25em;
+}
+
+.portfolio__thumb {
+  background: url("../assets/featured-02.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 200px;
+}
+@media only screen and (min-width: 768px) {
+  .portfolio__thumb {
+    height: 250px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .portfolio__thumb {
+    height: 250px;
+  }
 }

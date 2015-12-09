@@ -35,6 +35,27 @@ body {
 	}
 }
 
+.fearon-two-third {
+	display: block;
+	float: left;
+	width: 100%;
+
+	@media only screen and (min-width: 768px) {
+		width: 68.75%;
+		margin-right: 2.5%;
+	}
+}
+
+.fearon-one-third {
+	display: block;
+	float: left;
+	width: 100%;
+
+	@media only screen and (min-width: 768px) {
+		width: 28.75%;
+	}
+}
+
 .fb--copy {
 	@include font-size(2.0);
 }
@@ -61,6 +82,11 @@ body {
 		display: block;
 		clear: both;
 	}
+}
+
+.mt {
+	padding: em(120) 0;
+	margin-top: 50px;
 }
 
 .logo {
