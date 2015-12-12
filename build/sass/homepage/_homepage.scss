@@ -1,5 +1,5 @@
 .featured {
-	padding: em(120) 0;
+	padding-top: em(120);
 	position: relative;
 
 	@media only screen and (min-width: 768px) {
@@ -80,6 +80,7 @@
     display: flex;
     width: 100%;
     padding: 0 em(15);
+    margin-bottom: em(120);
 
     @media only screen and (min-width: 768px) {
     	padding: 0;
