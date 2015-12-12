@@ -1,5 +1,4 @@
 .filters {
-	//height: 100px;
 	background-color: brand-colour(colour-six);
 	border-top: 1px solid brand-colour(colour-five, dark);
 	border-bottom: 1px solid brand-colour(colour-five, dark);
@@ -25,14 +24,31 @@
 }
 
 .filter input[type="checkbox"] {
-	cursor: pointer;
+	display: none;
 }
 
-.filter label {
+.filter input[type="checkbox"] + label {
 	@include font-size(1.6);
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 400;
 	color: brand-colour(colour-five, darker);
-	display: block;
-	margin-top: em(10);
+    display: block;
+    cursor: pointer;
+}
+
+.filter input[type="checkbox"]:checked + label {
+	color: red;
+}
+
+$filters: (
+    modern: brand-colour(colour-one, light),
+    traditional: brand-colour(colour-three, light),
+    bedroom: brand-colour(colour-seven, light)
+);
+
+@each $selector, $value in $filters {
+  	.filter[data-filter="#{$selector}"] input[type="checkbox"] + label:hover,
+  	.filter[data-filter="#{$selector}"] input[type="checkbox"]:checked + label {
+  		color: $value;
+  	}
 }

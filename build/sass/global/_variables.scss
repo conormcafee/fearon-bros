@@ -6,6 +6,7 @@ $colour-three: #546A7B;
 $colour-four: #384F61;
 $colour-five: #e6e6e6;
 $colour-six: #ffffff;
+$colour-seven: #433A3F;
  
 // Brand Colour Palette
 $brand-colours: (
@@ -59,6 +60,15 @@ $brand-colours: (
         light:  lighten($colour-six, 10%),
         dark:   darken($colour-six, 10%),
         darker: darken($colour-six, 30%)
+    ),
+
+    colour-seven: (
+        base:   $colour-seven,
+        opacity: rgba($colour-seven, 0.8),
+        lighter: lighten($colour-seven, 20%),
+        light:  lighten($colour-seven, 10%),
+        dark:   darken($colour-seven, 10%),
+        darker: darken($colour-seven, 30%)
     )
 );
  

@@ -47,18 +47,18 @@
   <div class="wrapper">
     
     <div class="filter--wrapper">
-      <div class="filter">
-        <input id="check1" type="checkbox" name="check" value="modern-kitch" class="category">
+      <div class="filter" data-filter="modern">
+        <input id="check1" type="checkbox" name="check" value="modern" class="category">
         <label for="check1">Modern Kitchens</label>
       </div>
 
-      <div class="filter">
-        <input id="check2" type="checkbox" name="check" value="trad-kitch" class="category">
-        <label for="check2">Traditional Kitchen</label>
+      <div class="filter" data-filter="traditional">
+        <input id="check2" type="checkbox" name="check" value="traditional" class="category">
+        <label for="check2">Traditional Kitchens</label>
       </div>
 
-      <div class="filter">
-        <input id="check3" type="checkbox" name="check" value="bedrooms" class="category">
+      <div class="filter" data-filter="bedroom">
+        <input id="check3" type="checkbox" name="check" value="bedroom" class="category">
         <label for="check3">Bedrooms</label>
       </div>
     </div>
@@ -68,8 +68,8 @@
 
 <div class="portfolio fb--heading">
   <div class="wrapper">
-    <ul class="portfolio__list">
-      <li class="portfolio__item" data-tag="modern">
+    <ul class="portfolio__list searchresults">
+      <li class="portfolio__item resultblock" data-tag="modern">
         <div class="portfolio__content">
           <div class="portfolio__thumb" style="background-image: url('https://raw.githubusercontent.com/conormcafee/fearon-bros/master/production/assets/featured-03.jpg');">
             <div class="portfolio__thumb-content">
@@ -84,9 +84,9 @@
         </div>
       </li>
         
-      <li class="portfolio__item" data-tag="traditional">
+      <li class="portfolio__item resultblock" data-tag="traditional">
         <div class="portfolio__content">
-          <div class="portfolio__thumb" style="background-image: url('https://raw.githubusercontent.com/conormcafee/fearon-bros/master/production/assets/featured-04.jpg');">
+          <div class="portfolio__thumb" style="background-image: url('production/assets/kitchen-02/001.jpg');">
             <div class="portfolio__thumb-content">
               <a href="#" class="portfolio__link">
                 Designed &amp; Built by
@@ -94,14 +94,14 @@
               </a>
             </div>
           </div>
-          <h2 class="portfolio__title">Broadoak Painted China Blue</h2>
+          <h2 class="portfolio__title">1909 Half Pencil &amp; Scalloped</h2>
           <a href="#" class="portfolio__cta">View Photos</a>
         </div>
       </li>
 
-      <li class="portfolio__item" data-tag="bedroom">
+      <li class="portfolio__item resultblock" data-tag="modern">
         <div class="portfolio__content">
-          <div class="portfolio__thumb" style="background-image: url('https://raw.githubusercontent.com/conormcafee/fearon-bros/master/production/assets/featured-04.jpg');">
+          <div class="portfolio__thumb" style="background-image: url('production/assets/kitchen-03/001.jpg');">
             <div class="portfolio__thumb-content">
               <a href="#" class="portfolio__link">
                 Designed &amp; Built by
@@ -109,14 +109,14 @@
               </a>
             </div>
           </div>
-          <h2 class="portfolio__title">Broadoak Painted China Blue</h2>
+          <h2 class="portfolio__title">Remo White & Dove Grey</h2>
           <a href="#" class="portfolio__cta">View Photos</a>
         </div>
       </li>
 
-      <li class="portfolio__item" data-tag="modern">
+      <li class="portfolio__item resultblock" data-tag="modern">
         <div class="portfolio__content">
-          <div class="portfolio__thumb" style="background-image: url('https://raw.githubusercontent.com/conormcafee/fearon-bros/master/production/assets/featured-03.jpg');">
+          <div class="portfolio__thumb" style="background-image: url('production/assets/kitchen-04/001.jpg');">
             <div class="portfolio__thumb-content">
               <a href="#" class="portfolio__link">
                 Designed &amp; Built by
@@ -124,14 +124,14 @@
               </a>
             </div>
           </div>
-          <h2 class="portfolio__title">Ivory &amp; Blueberry Gloss</h2>
+          <h2 class="portfolio__title">Slipped Shaker Painted</h2>
           <a href="#" class="portfolio__cta">View Photos</a>
         </div>
       </li>
-        
-      <li class="portfolio__item" data-tag="traditional">
+      
+      <li class="portfolio__item resultblock" data-tag="bedroom">
         <div class="portfolio__content">
-          <div class="portfolio__thumb" style="background-image: url('https://raw.githubusercontent.com/conormcafee/fearon-bros/master/production/assets/featured-04.jpg');">
+          <div class="portfolio__thumb" style="background-image: url('production/assets/bedroom-01/001.jpg');">
             <div class="portfolio__thumb-content">
               <a href="#" class="portfolio__link">
                 Designed &amp; Built by
@@ -139,14 +139,14 @@
               </a>
             </div>
           </div>
-          <h2 class="portfolio__title">Broadoak Painted China Blue</h2>
+          <h2 class="portfolio__title">Walk-in Wardrope</h2>
           <a href="#" class="portfolio__cta">View Photos</a>
         </div>
       </li>
 
-      <li class="portfolio__item" data-tag="bedroom">
+      <li class="portfolio__item resultblock" data-tag="traditional">
         <div class="portfolio__content">
-          <div class="portfolio__thumb" style="background-image: url('https://raw.githubusercontent.com/conormcafee/fearon-bros/master/production/assets/featured-04.jpg');">
+          <div class="portfolio__thumb" style="background-image: url('production/assets/kitchen-05/001.jpg');">
             <div class="portfolio__thumb-content">
               <a href="#" class="portfolio__link">
                 Designed &amp; Built by
@@ -154,7 +154,52 @@
               </a>
             </div>
           </div>
-          <h2 class="portfolio__title">Broadoak Painted China Blue</h2>
+          <h2 class="portfolio__title">Broadoak Painted Stone</h2>
+          <a href="#" class="portfolio__cta">View Photos</a>
+        </div>
+      </li>
+
+      <li class="portfolio__item resultblock" data-tag="traditional">
+        <div class="portfolio__content">
+          <div class="portfolio__thumb" style="background-image: url('production/assets/kitchen-06/001.jpg');">
+            <div class="portfolio__thumb-content">
+              <a href="#" class="portfolio__link">
+                Designed &amp; Built by
+                <img src="production/assets/fb-logo.png" alt="Fearon Bros Logo" class="logo portfolio__logo" />
+              </a>
+            </div>
+          </div>
+          <h2 class="portfolio__title">Broadoak Painted Alabaster &amp; Linen</h2>
+          <a href="#" class="portfolio__cta">View Photos</a>
+        </div>
+      </li>
+
+      <li class="portfolio__item resultblock" data-tag="traditional">
+        <div class="portfolio__content">
+          <div class="portfolio__thumb" style="background-image: url('production/assets/kitchen-07/001.jpg');">
+            <div class="portfolio__thumb-content">
+              <a href="#" class="portfolio__link">
+                Designed &amp; Built by
+                <img src="production/assets/fb-logo.png" alt="Fearon Bros Logo" class="logo portfolio__logo" />
+              </a>
+            </div>
+          </div>
+          <h2 class="portfolio__title">Cornell Oak Kitchen</h2>
+          <a href="#" class="portfolio__cta">View Photos</a>
+        </div>
+      </li>
+
+      <li class="portfolio__item resultblock" data-tag="modern">
+        <div class="portfolio__content">
+          <div class="portfolio__thumb" style="background-image: url('production/assets/kitchen-08/001.jpg');">
+            <div class="portfolio__thumb-content">
+              <a href="#" class="portfolio__link">
+                Designed &amp; Built by
+                <img src="production/assets/fb-logo.png" alt="Fearon Bros Logo" class="logo portfolio__logo" />
+              </a>
+            </div>
+          </div>
+          <h2 class="portfolio__title">Textured Oak Handle-less</h2>
           <a href="#" class="portfolio__cta">View Photos</a>
         </div>
       </li>
@@ -206,6 +251,31 @@
   </div>
 </footer>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $('.category').on('change', function(){
+    var category_list = [];
+    $('#filters :input:checked').each(function(){
+      var category = $(this).val();
+      category_list.push(category); //Push each check item's value into an array
+    });
+
+    if(category_list.length == 0)
+        $('.resultblock').fadeIn();
+    
+    else {
+      $('.resultblock').each(function(){
+        var item = $(this).attr('data-tag');
+        if(jQuery.inArray(item,category_list) > -1) //Check if data-tag's value is in array
+          $(this).fadeIn('slow');
+        else
+          $(this).hide();
+      });
+    }
+  });
+});
+</script>
 </body>
 
 </html>
