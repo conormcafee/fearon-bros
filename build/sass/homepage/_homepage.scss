@@ -260,7 +260,7 @@
 .approach__item {
 	@include font-size(1.8);
 	color: brand-colour(colour-one);
-	padding: em(40) 0 em(40) em(90);
+	padding: em(60) 0;
 	position: relative;
 
 	&:not(:last-child) {
@@ -278,8 +278,8 @@
 	@include font-size(7.0);
 	opacity: 0.4;
 	position: absolute;
-	top: 15px;
-	left: 0;
+	top: 30px;
+	right: 0;
 	color: brand-colour(colour-three);
 }
 

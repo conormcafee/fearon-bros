@@ -586,7 +586,7 @@ footer {
   line-height: 27px;
   line-height: 2.7rem;
   color: #004E4E;
-  padding: 2.5em 0 2.5em 5.625em;
+  padding: 3.75em 0;
   position: relative;
 }
 .approach__item:not(:last-child) {
@@ -605,8 +605,8 @@ footer {
   line-height: 10.5rem;
   opacity: 0.4;
   position: absolute;
-  top: 15px;
-  left: 0;
+  top: 30px;
+  right: 0;
   color: #546A7B;
 }
 
@@ -656,7 +656,7 @@ footer {
   position: relative;
   border: 1px solid #cccccc;
   overflow: hidden;
-  box-shadow: 4px 8px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
   border-top-left-radius: 7px;
   border-top-right-radius: 7px;
 }
@@ -749,7 +749,6 @@ footer {
   line-height: 1.8rem;
   display: block;
   padding: 15px;
-  border-top: 1px solid #cccccc;
   color: #9a9a9a;
   background-color: #ffffff;
   text-decoration: none;
@@ -771,7 +770,7 @@ footer {
   color: #004E4E;
 }
 .portfolio__item[data-tag='modern'] .portfolio__thumb {
-  border-bottom: 1px solid #004E4E;
+  border-bottom: 3px solid #004E4E;
 }
 
 .portfolio__item[data-tag='traditional'] .portfolio__content:after {
@@ -786,7 +785,7 @@ footer {
   color: #546A7B;
 }
 .portfolio__item[data-tag='traditional'] .portfolio__thumb {
-  border-bottom: 1px solid #546A7B;
+  border-bottom: 3px solid #546A7B;
 }
 
 .portfolio__item[data-tag='bedroom'] .portfolio__content:after {
@@ -801,7 +800,7 @@ footer {
   color: #433A3F;
 }
 .portfolio__item[data-tag='bedroom'] .portfolio__thumb {
-  border-bottom: 1px solid #433A3F;
+  border-bottom: 3px solid #433A3F;
 }
 
 .portfolio__item[data-tag='modern'] .portfolio__thumb-content {
