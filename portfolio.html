@@ -83,6 +83,13 @@
           </div>
           <a href="#" class="portfolio__cta">View Photos</a>
         </div>
+        <ul style="display: none;">
+          <li data-size="1600x1200" data-src="http://placehold.it/1600x1200/ffffff/000000"></li>
+          <li data-size="1600x1200" data-src="http://placehold.it/1600x1200/000000/ffffff"></li>
+          <li data-size="1600x1200" data-src="http://placehold.it/1600x1200/ffffff/000000"></li>
+          <li data-size="1600x1200" data-src="http://placehold.it/1600x1200/000000/ffffff"></li>
+          <li data-size="1600x1200" data-src="http://placehold.it/1600x1200/ffffff/000000"></li>
+        </ul>
       </li>
         
       <li class="portfolio__item resultblock" data-tag="traditional">
@@ -98,6 +105,13 @@
           </div>
           <a href="#" class="portfolio__cta">View Photos</a>
         </div>
+        <ul class="featured--gallery" style="display: none;">
+          <li data-size="1600x1200" data-src="http://placehold.it/1600x1200/282828/000000"></li>
+          <li data-size="1600x1200" data-src="http://placehold.it/1600x1200/000000/282828"></li>
+          <li data-size="1600x1200" data-src="http://placehold.it/1600x1200/282828/000000"></li>
+          <li data-size="1600x1200" data-src="http://placehold.it/1600x1200/000000/282828"></li>
+          <li data-size="1600x1200" data-src="http://placehold.it/1600x1200/282828/000000"></li>
+        </ul>
       </li>
 
       <li class="portfolio__item resultblock" data-tag="modern">
@@ -253,7 +267,12 @@
   </div>
 </footer>
 
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true"><div class="pswp__bg"></div><div class="pswp__scroll-wrap"><div class="pswp__container"><div class="pswp__item"></div><div class="pswp__item"></div><div class="pswp__item"></div></div><div class="pswp__ui pswp__ui--hidden"> <div class="pswp__top-bar"> <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title="Share"></button> <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button> <div class="pswp__preloader"> <div class="pswp__preloader__icn"> <div class="pswp__preloader__cut"> <div class="pswp__preloader__donut"></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"> <div class="pswp__share-tooltip"></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"> </button> <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"> </button> <div class="pswp__caption"> <div class="pswp__caption__center"></div></div></div></div></div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="production/js/photoswipe.min.js"></script>
+<script src="production/js/photoswipe-ui-default.min.js"></script>
+
 <script>
 $(document).ready(function(){
   $('.category').on('change', function(){
@@ -277,6 +296,48 @@ $(document).ready(function(){
     }
   });
 });
+</script>
+
+<script>
+      $('.portfolio__item').each( function() {
+      var $pic     = $(this),
+        getItems = function() {
+            var items = [];
+            $pic.find('li').each(function() {
+                var $src   = $(this).data('src'),
+                    $size   = $(this).data('size').split('x'),
+                    $width  = $size[0],
+                    $height = $size[1];
+ 
+                var item = {
+                    src : $src,
+                    w   : $width,
+                    h   : $height
+                }
+ 
+                items.push(item);
+            });
+            return items;
+        }
+ 
+    var items = getItems();
+      console.log(items);
+      var $pswp = $('.pswp')[0];
+      $pic.on('click', '.portfolio__content', function(event) {
+      event.preventDefault();
+     
+    var options = {
+        index: 0,
+        //bgOpacity: 0.7,
+        showHideOpacity: true
+    }
+     
+    // Initialize PhotoSwipe
+    var lightBox = new PhotoSwipe($pswp, PhotoSwipeUI_Default, items, options);
+    lightBox.init();
+});
+    });
+
 </script>
 </body>
 
