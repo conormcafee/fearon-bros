@@ -20,6 +20,13 @@
   }
 }
 
+@media only screen and (min-width: 768px) {
+  .portfolio__item {
+    width: 50%;
+    padding: 0 em(30);
+  }
+}
+
 @media only screen and (min-width: 800px) {
   .portfolio__item {
     width: 33.333333333%;
@@ -47,7 +54,7 @@
   display: block;
   position: absolute;
   right: em(20);
-  bottom: em(10);
+  bottom: em(25);
   text-transform: capitalize;
 }
 
@@ -98,8 +105,7 @@
 .portfolio__title {
   @include font-size(1.2);
   display: block;
-  padding: em(15);
-  //color: brand-colour(colour-five, darker);
+  padding: em(20) em(15);
   color: #7A7A7A;
   background-color: brand-colour(colour-six);
 }
@@ -107,12 +113,10 @@
 .portfolio__cta {
   @include font-size(1.2);
   display: block;
-  padding: em(15);
-  //color: brand-colour(colour-five, darker);
+  padding: em(30) em(15);
   color: #7A7A7A;
   background-color: brand-colour(colour-six);
   text-decoration: none;
-  font-weight: bold;
 
   &:hover {
     background-color: brand-colour(colour-five);
