@@ -36,21 +36,19 @@
   border-top-right-radius: 7px;
 }
 
-.portfolio__item .portfolio__content {
-  &:after {
-    content: attr(data-tag);
-    opacity: 1;
-    @include font-size(1.0);
-    text-align: right;
-    color: brand-colour(colour-six);
-    padding: em(3) em(14);
-    border-radius: 7px;
-    display: block;
-    position: absolute;
-    right: 10px;
-    bottom: 15px;
-    text-transform: capitalize;
-  }
+.portfolio__item .portfolio__content:after {
+  @include font-size(1.1);
+  content: attr(data-tag);
+  opacity: 1;
+  text-align: right;
+  color: brand-colour(colour-six);
+  padding: em(7) em(20);
+  border-radius: 4px;
+  display: block;
+  position: absolute;
+  right: em(20);
+  bottom: em(10);
+  text-transform: capitalize;
 }
 
 .portfolio__thumb {
@@ -60,8 +58,6 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-color: #cccccc;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
   position: relative;
   overflow: hidden;
 }
@@ -103,22 +99,23 @@
   @include font-size(1.2);
   display: block;
   padding: em(15);
-  color: brand-colour(colour-five, darker);
+  //color: brand-colour(colour-five, darker);
+  color: #7A7A7A;
   background-color: brand-colour(colour-six);
 }
 
 .portfolio__cta {
   @include font-size(1.2);
   display: block;
-  padding: 15px;
-  //border-top: 1px solid #cccccc;
-  color: brand-colour(colour-five, darker);
+  padding: em(15);
+  //color: brand-colour(colour-five, darker);
+  color: #7A7A7A;
   background-color: brand-colour(colour-six);
   text-decoration: none;
   font-weight: bold;
 
   &:hover {
-    background-color: brand-colour(colour-five, dark);
+    background-color: brand-colour(colour-five);
   }
 }
 
@@ -139,13 +136,13 @@ $portfolio: (
       background-color: $value;
     }
 
-    .portfolio__cta,
-    .portfolio__title {
-      color: $value;
+    .portfolio__thumb {
+      border-top: 2px solid $value;
+      border-bottom: 2px solid $value;
     }
 
-    .portfolio__thumb {
-      border-bottom: 3px solid $value;
+    .portfolio__cta:hover {
+      color: $value;
     }
   }
 }

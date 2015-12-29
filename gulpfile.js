@@ -1,6 +1,6 @@
 /*!
  * gulp
- * $ npm install gulp gulp-ruby-sass gulp-autoprefixer gulp-minify-css gulp-jshint gulp-concat gulp-uglify gulp-notify gulp-rename gulp-cache del --save-dev
+ * $ npm install gulp gulp-ruby-sass gulp-autoprefixer gulp-livereload gulp-minify-css gulp-jshint gulp-concat gulp-uglify gulp-notify gulp-rename gulp-cache del --save-dev
  */
  
 // Load plugins
@@ -15,7 +15,8 @@ var gulp = require('gulp'),
     notify = require('gulp-notify'),
     cache = require('gulp-cache'),
     //minifyHTML = require('gulp-minify-html'),
-    del = require('del');
+    del = require('del'),
+    livereload = require('gulp-livereload');
  
 // SASS
 gulp.task('sass', function() {
@@ -25,7 +26,8 @@ gulp.task('sass', function() {
     .pipe(rename({ suffix: '.min' }))
     .pipe(minifycss())
     .pipe(gulp.dest('production/css'))
-    .pipe(notify({ message: 'Styles task complete' }));
+    .pipe(notify({ message: 'Styles task complete' }))
+    .pipe(livereload());
 });
 // Scripts
 gulp.task('scripts', function() {
@@ -67,6 +69,7 @@ gulp.task('default', ['clean'], function() {
  
 // Watch
 gulp.task('watch', function() {
+  livereload.listen();
  
   // Watch .scss files
   gulp.watch('build/sass/**/*.scss', ['sass']);
