@@ -249,6 +249,7 @@ header {
     line-height: 19.5px;
     line-height: 1.95rem;
     display: inline-block;
+    line-height: 53px;
   }
   .nav__item:not(:last-child) {
     margin-right: 1.875em;
@@ -256,10 +257,34 @@ header {
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
   .nav__link {
     color: #ffffff;
-    line-height: 53px;
+  }
+  .nav__link:before {
+    content: "";
+    height: 15px;
+    width: 15px;
+    display: block;
+    margin: 0 auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .nav__link[data-mobile='home']:before {
+    background-image: url("../assets/icons/home.svg");
+  }
+
+  .nav__link[data-mobile='services']:before {
+    background-image: url("../assets/icons/services.svg");
+  }
+
+  .nav__link[data-mobile='portfolio']:before {
+    background-image: url("../assets/icons/portfolio.svg");
+  }
+
+  .nav__link[data-mobile='contact']:before {
+    background-image: url("../assets/icons/contact.svg");
   }
 }
 .nav__mob-svg {
@@ -638,6 +663,7 @@ footer {
   float: left;
   width: 100%;
   margin-bottom: 5.625em;
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 600px) and (max-width: 799px) and (orientation: landscape) {
@@ -667,7 +693,7 @@ footer {
   border-top-right-radius: 7px;
 }
 
-.portfolio__item .portfolio__content:after {
+.portfolio__content:after {
   font-size: 11px;
   font-size: 1.1rem;
   line-height: 16.5px;
@@ -675,19 +701,20 @@ footer {
   content: attr(data-tag);
   opacity: 1;
   text-align: right;
-  color: #ffffff;
-  padding: 0.4375em 1.25em;
+  color: #9a9a9a;
   border-radius: 4px;
   display: block;
   position: absolute;
-  right: 1.25em;
-  bottom: 1.5625em;
+  right: 0.9375em;
+  bottom: 1.875em;
   text-transform: capitalize;
 }
 
 .portfolio__thumb {
   display: block;
   height: 250px;
+  border-top: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -745,6 +772,14 @@ footer {
   color: #7A7A7A;
   background-color: #ffffff;
 }
+.portfolio__title:before {
+  content: "";
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  border-radius: 10px;
+  margin-right: 0.625em;
+}
 
 .portfolio__cta {
   font-size: 12px;
@@ -765,45 +800,63 @@ footer {
   content: "modern";
 }
 
-.portfolio__item[data-tag='modern'] .portfolio__content:after {
-  background-color: #004E4E;
-}
 .portfolio__item[data-tag='modern'] .portfolio__thumb {
-  border-top: 2px solid #004E4E;
-  border-bottom: 2px solid #004E4E;
+  border-top: 2px solid #008181;
+  border-bottom: 2px solid #008181;
+}
+.portfolio__item[data-tag='modern'] .portfolio__title:before {
+  background-color: #008181;
+}
+.portfolio__item[data-tag='modern'] .portfolio__title {
+  color: #008181;
+}
+.portfolio__item[data-tag='modern'] .portfolio__cta {
+  color: #008181;
 }
 .portfolio__item[data-tag='modern'] .portfolio__cta:hover {
-  color: #004E4E;
+  color: #006868;
 }
 
 .portfolio__item[data-tag='traditional'] .portfolio__content:after {
   content: "traditional";
 }
 
-.portfolio__item[data-tag='traditional'] .portfolio__content:after {
-  background-color: #546A7B;
-}
 .portfolio__item[data-tag='traditional'] .portfolio__thumb {
-  border-top: 2px solid #546A7B;
-  border-bottom: 2px solid #546A7B;
+  border-top: 2px solid #698499;
+  border-bottom: 2px solid #698499;
+}
+.portfolio__item[data-tag='traditional'] .portfolio__title:before {
+  background-color: #698499;
+}
+.portfolio__item[data-tag='traditional'] .portfolio__title {
+  color: #698499;
+}
+.portfolio__item[data-tag='traditional'] .portfolio__cta {
+  color: #698499;
 }
 .portfolio__item[data-tag='traditional'] .portfolio__cta:hover {
-  color: #546A7B;
+  color: #5e778a;
 }
 
 .portfolio__item[data-tag='bedroom'] .portfolio__content:after {
   content: "bedroom";
 }
 
-.portfolio__item[data-tag='bedroom'] .portfolio__content:after {
-  background-color: #433A3F;
-}
 .portfolio__item[data-tag='bedroom'] .portfolio__thumb {
-  border-top: 2px solid #433A3F;
-  border-bottom: 2px solid #433A3F;
+  border-top: 2px solid #5e5259;
+  border-bottom: 2px solid #5e5259;
+}
+.portfolio__item[data-tag='bedroom'] .portfolio__title:before {
+  background-color: #5e5259;
+}
+.portfolio__item[data-tag='bedroom'] .portfolio__title {
+  color: #5e5259;
+}
+.portfolio__item[data-tag='bedroom'] .portfolio__cta {
+  color: #5e5259;
 }
 .portfolio__item[data-tag='bedroom'] .portfolio__cta:hover {
-  color: #433A3F;
+  color: #51464c;
 }
 
 .portfolio__item[data-tag='modern'] .portfolio__thumb-content {
@@ -865,60 +918,18 @@ footer {
   display: block;
   cursor: pointer;
 }
-.filter input[type="checkbox"] + label:before {
-  content: "";
-  height: 15px;
-  width: 15px;
-  border-radius: 15px;
+
+.filter input[type="checkbox"] + label {
+  color: #e6e6e6;
+}
+
+.filter input[type="checkbox"] + label .filter-colour {
+  fill: #e6e6e6;
+}
+
+.filter-svg {
   display: block;
-  margin: 0 auto 0.625em auto;
-  border: 2px solid #9a9a9a;
-}
-
-.filter input[type="checkbox"]:checked + label {
-  color: red;
-}
-
-.filter[data-filter="modern"] input[type="checkbox"] + label:hover:before {
-  border: 2px solid #008181;
-}
-
-.filter[data-filter="modern"] input[type="checkbox"] + label:hover,
-.filter[data-filter="modern"] input[type="checkbox"]:checked + label {
-  color: #008181;
-}
-
-.filter[data-filter="modern"] input[type="checkbox"]:checked + label:before {
-  border: 2px solid #006868;
-  background-color: #008181;
-}
-
-.filter[data-filter="traditional"] input[type="checkbox"] + label:hover:before {
-  border: 2px solid #698499;
-}
-
-.filter[data-filter="traditional"] input[type="checkbox"] + label:hover,
-.filter[data-filter="traditional"] input[type="checkbox"]:checked + label {
-  color: #698499;
-}
-
-.filter[data-filter="traditional"] input[type="checkbox"]:checked + label:before {
-  border: 2px solid #5e778a;
-  background-color: #698499;
-}
-
-.filter[data-filter="bedroom"] input[type="checkbox"] + label:hover:before {
-  border: 2px solid #5e5259;
-}
-
-.filter[data-filter="bedroom"] input[type="checkbox"] + label:hover,
-.filter[data-filter="bedroom"] input[type="checkbox"]:checked + label {
-  color: #5e5259;
-}
-
-.filter[data-filter="bedroom"] input[type="checkbox"]:checked + label:before {
-  border: 2px solid #51464c;
-  background-color: #5e5259;
+  margin: 0 auto 0.3125em auto;
 }
 
 @media only screen and (max-width: 767px) {
@@ -932,13 +943,31 @@ footer {
     line-height: 18px;
     line-height: 1.8rem;
   }
-
-  .filter input[type="checkbox"] + label:before {
-    height: 10px;
-    width: 10px;
-    border-radius: 10px;
-  }
 }
+.filter[data-filter='modern'] input[type="checkbox"]:checked + label {
+  color: #008181;
+}
+
+.filter[data-filter='modern'] input[type="checkbox"]:checked + label .filter-colour {
+  fill: #008181;
+}
+
+.filter[data-filter='traditional'] input[type="checkbox"]:checked + label {
+  color: #698499;
+}
+
+.filter[data-filter='traditional'] input[type="checkbox"]:checked + label .filter-colour {
+  fill: #698499;
+}
+
+.filter[data-filter='bedroom'] input[type="checkbox"]:checked + label {
+  color: #5e5259;
+}
+
+.filter[data-filter='bedroom'] input[type="checkbox"]:checked + label .filter-colour {
+  fill: #5e5259;
+}
+
 /*! PhotoSwipe main CSS by Dmitry Semenov | photoswipe.com | MIT license */
 /*
 	Styles for basic PhotoSwipe functionality (sliding area, open/close transitions)

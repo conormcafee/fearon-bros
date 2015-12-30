@@ -22,16 +22,25 @@
 
 <header>
   <div class="wrapper">
-    <a href="/" title="Fearon Bros | Home"><img src="production/assets/fb-logo.png" alt="Fearon Bros Logo" class="logo logo--header" /></a>
+    <a href="index.html" title="Fearon Bros | Home"><img src="production/assets/fb-logo.png" alt="Fearon Bros Logo" class="logo logo--header" /></a>
 
     <nav class="nav">
       <ul class="nav__list">
-        <li class="nav__item"><a href="#" class="nav__link fb--heading" title="Fearon Bros | Kitchens">Kitchens</a></li>
-        <li class="nav__item"><a href="#" class="nav__link fb--heading" title="Fearon Bros | Bedrooms">Bedrooms</a></li>
-        <li class="nav__item nav--mobile"><a href="#" class="nav__link fb--heading" title="Fearon Bros | Home">Home</a></li>
-        <li class="nav__item nav--desktop"><a href="#" class="nav__link fb--heading" title="Fearon Bros | Appliances/Brands">Appliances/Brands</a></li>
-        <li class="nav__item"><a href="#" class="nav__link fb--heading" title="Fearon Bros | Portfolio">Portfolio</a></li>
-        <li class="nav__item"><a href="#" class="nav__link fb--heading" title="Fearon Bros | Contact">Contact</a></li>
+        <li class="nav__item nav--mobile">
+          <a href="index.html" class="nav__link fb--heading" title="Fearon Bros | Home" data-mobile="home">Home</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link fb--heading" title="Fearon Bros | Bedrooms" data-mobile="services">Our Services</a>
+        </li>
+        <li class="nav__item">
+          <a href="portfolio.html" class="nav__link fb--heading" title="Fearon Bros | Portfolio" data-mobile="portfolio">Portfolio</a>
+        </li>
+        <li class="nav__item nav--desktop">
+          <a href="#" class="nav__link fb--heading" title="Fearon Bros | Appliances/Brands">Appliances/Brands</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link fb--heading" title="Fearon Bros | Contact" data-mobile="contact">Contact</a>
+        </li>
       </ul>
     </nav>
   </div>
@@ -184,11 +193,9 @@
      
     var options = {
         index: 0,
-        bgOpacity: 0.7,
         showHideOpacity: true
     }
-     
-    // Initialize PhotoSwipe
+    
     var lightBox = new PhotoSwipe($pswp, PhotoSwipeUI_Default, items, options);
     lightBox.init();
 });

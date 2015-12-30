@@ -34,42 +34,21 @@
 	color: brand-colour(colour-five, darker);
     display: block;
     cursor: pointer;
-
-    &:before {
-    	content: "";
-    	height: 15px;
-    	width: 15px;
-    	border-radius: 15px;
-    	display: block;
-    	margin: 0 auto em(10) auto;
-    	border: 2px solid brand-colour(colour-five, darker);
-    }
 }
 
-.filter input[type="checkbox"]:checked + label {
-	color: red;
+// Inactive State
+
+.filter input[type="checkbox"] + label {
+	color: #e6e6e6;
 }
 
-$filters: (
-    modern: brand-colour(colour-one, light),
-    traditional: brand-colour(colour-three, light),
-    bedroom: brand-colour(colour-seven, light)
-);
+.filter input[type="checkbox"] + label .filter-colour {
+	fill: #e6e6e6;
+}
 
-@each $selector, $value in $filters {
-	.filter[data-filter="#{$selector}"] input[type="checkbox"] + label:hover:before {
-		border: 2px solid $value;
-	}
-
-  	.filter[data-filter="#{$selector}"] input[type="checkbox"] + label:hover,
-  	.filter[data-filter="#{$selector}"] input[type="checkbox"]:checked + label {
-  		color: $value;
-  	}
-
-  	.filter[data-filter="#{$selector}"] input[type="checkbox"]:checked + label:before {
-  		border: 2px solid darken($value, 5%);
-  		background-color: $value;
-  	}
+.filter-svg {
+	display: block;
+	margin: 0 auto em(5) auto;
 }
 
 @media only screen and (max-width: 767px) {
@@ -80,10 +59,20 @@ $filters: (
 	.filter input[type="checkbox"] + label {
 		@include font-size(1.2);
 	}
+}
 
-	.filter input[type="checkbox"] + label:before {
-		height: 10px;
-    	width: 10px;
-    	border-radius: 10px;
+$filter: (
+	modern: brand-colour(colour-one, light),
+	traditional: brand-colour(colour-three, light),
+	bedroom: brand-colour(colour-seven, light)
+);
+
+@each $selector, $value in $filter {
+	.filter[data-filter='#{$selector}'] input[type="checkbox"]:checked + label {
+		color: $value;
+	}
+
+	.filter[data-filter='#{$selector}'] input[type="checkbox"]:checked + label .filter-colour {
+		fill: $value;
 	}
 }

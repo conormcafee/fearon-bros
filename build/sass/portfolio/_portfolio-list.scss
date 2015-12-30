@@ -11,6 +11,7 @@
   float: left;
   width: 100%;
   margin-bottom: em(90);
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 600px) and (max-width: 799px) and (orientation : landscape) {
@@ -43,24 +44,25 @@
   border-top-right-radius: 7px;
 }
 
-.portfolio__item .portfolio__content:after {
+.portfolio__content:after {
   @include font-size(1.1);
   content: attr(data-tag);
   opacity: 1;
   text-align: right;
-  color: brand-colour(colour-six);
-  padding: em(7) em(20);
+  color: #9a9a9a;
   border-radius: 4px;
   display: block;
   position: absolute;
-  right: em(20);
-  bottom: em(25);
+  right: em(15);
+  bottom: em(30);
   text-transform: capitalize;
 }
 
 .portfolio__thumb {
   display: block;
   height: 250px;
+  border-top: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -108,6 +110,15 @@
   padding: em(20) em(15);
   color: #7A7A7A;
   background-color: brand-colour(colour-six);
+
+  &:before {
+    content: "";
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    border-radius: 10px;
+    margin-right: em(10);
+  }
 }
 
 .portfolio__cta {
@@ -125,9 +136,9 @@
 
 
 $portfolio: (
-    modern: brand-colour(colour-one),
-    traditional: brand-colour(colour-three),
-    bedroom: brand-colour(colour-seven)
+    modern: brand-colour(colour-one, light),
+    traditional: brand-colour(colour-three, light),
+    bedroom: brand-colour(colour-seven, light)
 );
 
 @each $selector, $value in $portfolio {
@@ -136,17 +147,25 @@ $portfolio: (
   }
 
   .portfolio__item[data-tag='#{$selector}'] {
-    .portfolio__content:after {
-      background-color: $value;
-    }
-
     .portfolio__thumb {
       border-top: 2px solid $value;
       border-bottom: 2px solid $value;
     }
 
-    .portfolio__cta:hover {
+    .portfolio__title:before {
+      background-color: $value;
+    }
+
+    .portfolio__title {
       color: $value;
+    }
+
+    .portfolio__cta {
+      color: $value;
+
+      &:hover {
+        color: darken($value, 5%);
+      }
     }
   }
 }

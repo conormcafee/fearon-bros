@@ -68,6 +68,7 @@ header {
 	@media only screen and (min-width: 768px) {
 		@include font-size(1.3);
 		display: inline-block;
+		line-height: 53px;
 
 		&:not(:last-child) {
 			margin-right: em(30);
@@ -76,10 +77,32 @@ header {
 	}
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
 	.nav__link {
 		color: brand-colour(colour-six);
-		line-height: 53px;
+
+		&:before {
+			content: "";
+			height: 15px;
+			width: 15px;
+			display: block;
+			margin: 0 auto;
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+	}
+
+	$mobile-icons: (
+		home: home,
+		services: services,
+		portfolio: portfolio,
+		contact: contact
+	);
+
+	@each $selector, $value in $mobile-icons {
+		.nav__link[data-mobile='#{$selector}']:before {
+			background-image: url('../assets/icons/#{$value}.svg');
+		}
 	}
 }
 
