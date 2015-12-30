@@ -650,6 +650,59 @@ footer {
   display: none;
 }
 
+.services {
+  background-color: #ffffff;
+  border-top: 1px solid #cdcdcd;
+  border-bottom: 1px solid #cdcdcd;
+  overflow: hidden;
+}
+
+.service {
+  padding: 0 1.875em 1.875em 1.875em;
+}
+
+.service > .fb--heading {
+  font-size: 20px;
+  font-size: 2rem;
+  line-height: 30px;
+  line-height: 3rem;
+  background-color: #ffffff;
+  border-bottom: 1px solid #cdcdcd;
+  margin-bottom: 1.875em;
+  padding: 1.5625em 0 0.9375em 0;
+}
+
+.services__list {
+  overflow: hidden;
+  margin-bottom: 1.875em;
+}
+
+.services__item {
+  height: 200px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: block;
+  float: left;
+  width: 50%;
+  border: 1px solid #ffffff;
+}
+
+@media only screen and (min-width: 800px) {
+  .service {
+    display: block;
+    float: left;
+    width: 48.75%;
+  }
+
+  .service--kitchens {
+    margin-right: 1.25%;
+  }
+
+  .service--bedrooms {
+    margin-left: 1.25%;
+  }
+}
 .portfolio {
   display: block;
   float: left;

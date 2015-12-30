@@ -1,0 +1,51 @@
+.services {
+	background-color: brand-colour(colour-six);
+	border-top: 1px solid brand-colour(colour-five, dark);
+	border-bottom: 1px solid brand-colour(colour-five, dark);
+	overflow: hidden;
+}
+
+.service {
+	padding: 0 em(30) em(30) em(30);
+}
+
+.service > .fb--heading {
+	@include font-size(2.0);
+	background-color: brand-colour(colour-six);
+	border-bottom: 1px solid brand-colour(colour-five, dark);
+	margin-bottom: em(30);
+	padding: em(25) 0 em(15) 0;
+}
+
+.services__list {
+	overflow: hidden;
+	margin-bottom: em(30);
+}
+
+.services__item {
+	height: 200px;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	display: block;
+	float: left;
+	width: 50%;	
+	border: 1px solid brand-colour(colour-six);
+}
+
+
+@media only screen and (min-width: 800px) {
+	.service {
+		display: block;
+		float: left;
+		width: 48.75%;
+	}
+
+	.service--kitchens {
+		margin-right: 1.25%;
+	}	
+
+	.service--bedrooms {
+		margin-left: 1.25%;
+	}
+}
