@@ -116,8 +116,8 @@ body {
 }
 
 .fb--heading {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
 }
 
 .fb--base {
@@ -244,12 +244,15 @@ header {
 }
 @media only screen and (min-width: 768px) {
   .nav__item {
-    font-size: 13px;
-    font-size: 1.3rem;
-    line-height: 19.5px;
-    line-height: 1.95rem;
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 24px;
+    line-height: 2.4rem;
     display: inline-block;
-    line-height: 53px;
+    background: transparent;
+    padding: 0;
+    line-height: 68px;
+    border: none;
   }
   .nav__item:not(:last-child) {
     margin-right: 1.875em;
@@ -257,7 +260,7 @@ header {
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   .nav__link {
     color: #ffffff;
   }
@@ -667,9 +670,45 @@ footer {
   line-height: 30px;
   line-height: 3rem;
   background-color: #ffffff;
-  border-bottom: 1px solid #cdcdcd;
-  margin-bottom: 1.875em;
   padding: 1.5625em 0 0.9375em 0;
+  color: #546A7B;
+}
+.service > .fb--heading:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin: 0.9375em 0 0.625em 0;
+  background-color: #cdcdcd;
+}
+
+.service--cta {
+  font-size: 10px;
+  font-size: 1rem;
+  line-height: 15px;
+  line-height: 1.5rem;
+  line-height: 30px;
+  line-height: 3rem;
+  display: block;
+  text-transform: uppercase;
+  color: #00928f;
+}
+.service--cta:hover {
+  color: #005f5d;
+}
+@media only screen and (min-width: 768px) {
+  .service--cta {
+    float: right;
+    margin-left: 1.875em;
+  }
+}
+
+.service .fb--copy {
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 24px;
+  line-height: 2.4rem;
+  color: #666;
 }
 
 .services__list {
@@ -678,7 +717,6 @@ footer {
 }
 
 .services__item {
-  height: 200px;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -686,6 +724,11 @@ footer {
   float: left;
   width: 50%;
   border: 1px solid #ffffff;
+}
+
+.services__thumb {
+  max-width: 100%;
+  height: auto;
 }
 
 @media only screen and (min-width: 800px) {
