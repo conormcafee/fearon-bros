@@ -63,8 +63,6 @@ body {
 .fb--heading {
 	font-family: 'Lato', sans-serif;
 	font-weight: 700;
-	//font-family: 'Montserrat', sans-serif;
-	//font-weight: 400;
 }
 
 .fb--base {
@@ -107,9 +105,19 @@ a {
 }
 
 .btn {
-	font-family: 'Montserrat', sans-serif;
-	font-weight: 400;
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
 	display: inline-block;
 	border-radius: 20px;
 	padding: 10px 15px;   
+}
+
+.page-title {
+	background-color: brand-colour(colour-six);
+	border-top: 1px solid brand-colour(colour-five, dark);
+	border-bottom: 1px solid brand-colour(colour-five, dark);
+	text-align: center;
+	@include font-size(2.0);
+	padding: em(20);
+	color: brand-colour(colour-three);
 }

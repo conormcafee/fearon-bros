@@ -1,5 +1,5 @@
 .featured {
-	padding-top: em(120);
+	padding-top: em(160);
 	position: relative;
 
 	@media only screen and (min-width: 768px) {
@@ -18,7 +18,7 @@
 		display: block;
 		width: 100px;
 		height: 3px;
-		margin: 2.125em auto 3.125em auto;
+		margin: em(30) auto em(80) auto;
 		background-color: brand-colour(colour-one);
 	}
 }
@@ -251,49 +251,80 @@
 	}
 }
 
-@media only screen and (min-width: 768px) {
-	.approach__list {
-		padding-right: em(120);
-	}
-}
-
 .approach__item {
-	@include font-size(1.8);
+	@include font-size(1.4);
 	color: brand-colour(colour-one);
 	padding: em(60) 0;
-	position: relative;
-
-	&:not(:last-child) {
-		border-bottom: 2px solid brand-colour(colour-three);
-	}
-
-	span {
-		display: block;
-	}
 }
 
 .approach__item:before {
 	content: attr(data-approach);
-	display: inline-block;
+	display: block;
 	@include font-size(7.0);
 	opacity: 0.4;
-	position: absolute;
-	top: 30px;
-	right: 0;
 	color: brand-colour(colour-three);
 }
 
-.approach__item:after {
-	content: "";
-	height: 2px;
-	width: 5000px;
-	display: inline-block;
-	background-color: brand-colour(colour-three);
-	position: absolute;
-	bottom: -2px;
-	right: 0;
+@media only screen and (max-width: 767px) {
+	.approach__item {
+		width: 50%;
+		display: block;
+		float: left;
+		text-align: center;
+		height: 200px;
+		padding: em(40);
+
+		&:nth-child(odd) {
+			border-right: 2px solid brand-colour(colour-three);
+		}
+
+		&:nth-child(n+3) {
+			border-top: 2px solid brand-colour(colour-three);
+		}
+	}
+
+	.approach__item:before {
+		text-align: center;
+	}
 }
 
-.approach__item:last-child:after {
-	display: none;
+@media only screen and (min-width: 768px) {
+	.approach__list {
+		padding-right: em(120);
+	}
+
+	.approach__item {
+		position: relative;
+		@include font-size(1.8);
+
+		&:not(:last-child) {
+			border-bottom: 2px solid brand-colour(colour-three);
+		}
+
+		span {
+			display: block;
+		}
+	}
+
+	.approach__item:before {
+		display: inline-block;
+		position: absolute;
+		top: 30px;
+		right: 0;
+	}
+
+	.approach__item:after {
+		content: "";
+		height: 2px;
+		width: 5000px;
+		display: inline-block;
+		background-color: brand-colour(colour-three);
+		position: absolute;
+		bottom: -2px;
+		right: 0;
+	}
+
+	.approach__item:last-child:after {
+		display: none;
+	}
 }

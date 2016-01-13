@@ -158,11 +158,24 @@ a:focus {
 }
 
 .btn {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
   display: inline-block;
   border-radius: 20px;
   padding: 10px 15px;
+}
+
+.page-title {
+  background-color: #ffffff;
+  border-top: 1px solid #cdcdcd;
+  border-bottom: 1px solid #cdcdcd;
+  text-align: center;
+  font-size: 20px;
+  font-size: 2rem;
+  line-height: 30px;
+  line-height: 3rem;
+  padding: 1.25em;
+  color: #546A7B;
 }
 
 header {
@@ -244,10 +257,10 @@ header {
 }
 @media only screen and (min-width: 768px) {
   .nav__item {
-    font-size: 16px;
-    font-size: 1.6rem;
-    line-height: 24px;
-    line-height: 2.4rem;
+    font-size: 14px;
+    font-size: 1.4rem;
+    line-height: 21px;
+    line-height: 2.1rem;
     display: inline-block;
     background: transparent;
     padding: 0;
@@ -311,7 +324,7 @@ footer {
   background: linear-gradient(180deg, #004E4E, #002C2B);
   color: #ffffff;
   border-top: 3px solid #002C2B;
-  padding: 3.75em 0;
+  padding: 3.75em 0 7.5em 0;
   clear: both;
 }
 
@@ -328,6 +341,11 @@ footer {
 
 .footer__item {
   margin-bottom: 0.3125em;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 21px;
+  line-height: 2.1rem;
+  max-width: 200px;
 }
 .footer__item.fb--heading {
   font-size: 18px;
@@ -337,15 +355,8 @@ footer {
   margin-bottom: 0.9375em;
 }
 
-.footer__link {
-  font-size: 14px;
-  font-size: 1.4rem;
-  line-height: 21px;
-  line-height: 2.1rem;
-}
-
 .featured {
-  padding-top: 7.5em;
+  padding-top: 10em;
   position: relative;
 }
 @media only screen and (min-width: 768px) {
@@ -365,7 +376,7 @@ footer {
   display: block;
   width: 100px;
   height: 3px;
-  margin: 2.125em auto 3.125em auto;
+  margin: 1.875em auto 5em auto;
   background-color: #004E4E;
 }
 
@@ -603,65 +614,95 @@ footer {
   }
 }
 
-@media only screen and (min-width: 768px) {
-  .approach__list {
-    padding-right: 7.5em;
-  }
-}
 .approach__item {
-  font-size: 18px;
-  font-size: 1.8rem;
-  line-height: 27px;
-  line-height: 2.7rem;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 21px;
+  line-height: 2.1rem;
   color: #004E4E;
   padding: 3.75em 0;
-  position: relative;
-}
-.approach__item:not(:last-child) {
-  border-bottom: 2px solid #546A7B;
-}
-.approach__item span {
-  display: block;
 }
 
 .approach__item:before {
   content: attr(data-approach);
-  display: inline-block;
+  display: block;
   font-size: 70px;
   font-size: 7rem;
   line-height: 105px;
   line-height: 10.5rem;
   opacity: 0.4;
-  position: absolute;
-  top: 30px;
-  right: 0;
   color: #546A7B;
 }
 
-.approach__item:after {
-  content: "";
-  height: 2px;
-  width: 5000px;
-  display: inline-block;
-  background-color: #546A7B;
-  position: absolute;
-  bottom: -2px;
-  right: 0;
-}
+@media only screen and (max-width: 767px) {
+  .approach__item {
+    width: 50%;
+    display: block;
+    float: left;
+    text-align: center;
+    height: 200px;
+    padding: 2.5em;
+  }
+  .approach__item:nth-child(odd) {
+    border-right: 2px solid #546A7B;
+  }
+  .approach__item:nth-child(n+3) {
+    border-top: 2px solid #546A7B;
+  }
 
-.approach__item:last-child:after {
-  display: none;
+  .approach__item:before {
+    text-align: center;
+  }
 }
+@media only screen and (min-width: 768px) {
+  .approach__list {
+    padding-right: 7.5em;
+  }
 
+  .approach__item {
+    position: relative;
+    font-size: 18px;
+    font-size: 1.8rem;
+    line-height: 27px;
+    line-height: 2.7rem;
+  }
+  .approach__item:not(:last-child) {
+    border-bottom: 2px solid #546A7B;
+  }
+  .approach__item span {
+    display: block;
+  }
+
+  .approach__item:before {
+    display: inline-block;
+    position: absolute;
+    top: 30px;
+    right: 0;
+  }
+
+  .approach__item:after {
+    content: "";
+    height: 2px;
+    width: 5000px;
+    display: inline-block;
+    background-color: #546A7B;
+    position: absolute;
+    bottom: -2px;
+    right: 0;
+  }
+
+  .approach__item:last-child:after {
+    display: none;
+  }
+}
 .services {
-  background-color: #ffffff;
+  background-color: #f6f6f6;
   border-top: 1px solid #cdcdcd;
-  border-bottom: 1px solid #cdcdcd;
   overflow: hidden;
 }
 
 .service {
-  padding: 0 1.875em 1.875em 1.875em;
+  padding-bottom: 1.875em;
 }
 
 .service > .fb--heading {
@@ -669,9 +710,8 @@ footer {
   font-size: 2rem;
   line-height: 30px;
   line-height: 3rem;
-  background-color: #ffffff;
   padding: 1.5625em 0 0.9375em 0;
-  color: #546A7B;
+  color: #666666;
 }
 .service > .fb--heading:after {
   content: "";
@@ -679,7 +719,7 @@ footer {
   width: 100%;
   height: 2px;
   margin: 0.9375em 0 0.625em 0;
-  background-color: #cdcdcd;
+  background-color: #d9d9d9;
 }
 
 .service--cta {
@@ -708,7 +748,7 @@ footer {
   font-size: 1.6rem;
   line-height: 24px;
   line-height: 2.4rem;
-  color: #666;
+  color: #666666;
 }
 
 .services__list {
@@ -740,10 +780,12 @@ footer {
 
   .service--kitchens {
     margin-right: 1.25%;
+    padding-right: 1.875em;
   }
 
   .service--bedrooms {
     margin-left: 1.25%;
+    padding-left: 1.875em;
   }
 }
 .portfolio {
@@ -785,8 +827,6 @@ footer {
   border: 1px solid #cccccc;
   overflow: hidden;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
-  border-top-left-radius: 7px;
-  border-top-right-radius: 7px;
 }
 
 .portfolio__content:after {
@@ -968,12 +1008,14 @@ footer {
 }
 
 .filters {
-  background-color: #ffffff;
-  border-top: 1px solid #cdcdcd;
-  border-bottom: 1px solid #cdcdcd;
+  background-color: #f6f6f6;
+  padding-top: 5%;
 }
 
 .filter--wrapper {
+  background-color: #ffffff;
+  border: 1px solid #e6e6e6;
+  border-radius: 7px;
   max-width: 700px;
   margin: 0 auto;
   display: -webkit-flex;
@@ -998,6 +1040,17 @@ footer {
   border-left: 1px solid #cdcdcd;
   border-right: 1px solid #cdcdcd;
 }
+.filter:nth-child(3) {
+  border-right: 1px solid #cdcdcd;
+}
+
+.filter .fb--heading {
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 24px;
+  line-height: 2.4rem;
+  color: #666666;
+}
 
 .filter input[type="checkbox"] {
   display: none;
@@ -1008,8 +1061,6 @@ footer {
   font-size: 1.6rem;
   line-height: 24px;
   line-height: 2.4rem;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
   color: #9a9a9a;
   display: block;
   cursor: pointer;
