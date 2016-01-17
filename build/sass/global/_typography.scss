@@ -1,0 +1,46 @@
+h1 {
+	font-family: 'Playfair Display', serif;
+	font-weight: 700;
+	@include font-size(2.2);
+
+	span {
+		font-style: italic;
+	}
+}
+
+h2 {
+	font-family: 'Playfair Display', serif;
+	font-weight: 700;
+	@include font-size(1.8);
+
+	span {
+		font-style: italic;
+	}
+}
+
+h3 {
+	font-family: 'Playfair Display', serif;
+	font-weight: 700;
+	@include font-size(1.4);
+
+	span {
+		font-style: italic;
+	}
+}
+
+p {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	@include font-size(1);
+}
+
+a {
+	font-family: 'Open Sans', sans-serif;
+  	font-weight: 600;
+  	text-decoration: none;
+  	display: block;
+
+	&:focus {
+		outline: none;
+	}
+}

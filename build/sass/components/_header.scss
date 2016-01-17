@@ -1,0 +1,75 @@
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+nav {
+	background-color: brand-colour(green);
+	border-bottom: 5px solid brand-colour(white);
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+	display: flex;
+    flex-wrap:wrap;
+	width: 100%;
+}
+
+.nav__link {
+	color: brand-colour(white);
+	padding: em(25) em(15);
+}
+
+.nav__link.logo {
+	padding: 0 em(15);
+
+	img {
+		max-width: 200px;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	.order {
+		&.order--logo {
+			flex: 1 1 100%;
+		}
+		&.order--services,
+		&.order--portfolio,
+		&.order--apps,
+		&.order--contact {
+			flex: 1 1 50%;
+		}
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	nav ul {
+		align-items: center;
+		justify-content: center;
+	}
+
+	nav li {
+		flex: 1 1 auto;
+		text-align: center;
+	}
+
+	.order {
+		&.order--services {
+			order: 1;
+		}
+		&.order--portfolio {
+			order: 2;
+		}
+		&.order--logo {
+			order: 3;
+		}
+		&.order--apps {
+			order: 4;
+		}
+		&.order--contact {
+			order: 5;
+		}
+	}
+}

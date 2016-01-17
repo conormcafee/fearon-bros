@@ -3,9 +3,12 @@
 @import
 	"global/mixins",
 	"global/variables",
-    "global/base"
+    "global/base",
+    "global/typography",
+
+    "components/header",
     
     //"portfolio/filters",
-    //"photoswipe/photoswipe",
-    //"photoswipe/default-skin"
+    "photoswipe/photoswipe",
+    "photoswipe/default-skin"
 ;
