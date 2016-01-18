@@ -1,0 +1,66 @@
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  border: 2px solid #e6e6e6;
+  //justify-content: center;
+  margin: 0 auto 2em auto;
+  max-width: 700px;
+
+  @media only screen and (min-width: 768px) {
+    flex-wrap: no-wrap;
+  }
+}
+
+.box {
+  align-self: center;
+  flex: 1 1 100%;
+
+  @media only screen and (min-width: 768px) {
+    flex: 2;
+  }
+}
+
+.box .content {
+  padding: 2em;
+}
+
+.box.box--x {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  background-color: #ffffff;
+  color: brand-colour(grey);
+  text-align: center;
+  position: relative;
+  
+  &:before,
+  &:after {
+    content: "";
+    height: 2px;
+    width: 100%;
+    background-color: #ffffff;
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+
+  &:before {
+    top: -2px;
+  }
+
+  &:after {
+    bottom: -2px;
+  }
+
+  @media only screen and (min-width: 768px) {
+    flex: 1;
+  }
+}
+
+.box--x p {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  @include font-size(5.0);
+}

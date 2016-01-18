@@ -62,6 +62,10 @@ html {
   padding-top: 100px;
 }
 
+.wrapper {
+  padding: 0 2em;
+}
+
 h1 {
   font-family: 'Playfair Display', serif;
   font-weight: 700;
@@ -95,8 +99,8 @@ h3 span {
 p {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
-  font-size: 10px;
-  font-size: 1rem;
+  font-size: 9px;
+  font-size: 0.9rem;
 }
 
 a {
@@ -114,6 +118,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
+  z-index: 1979;
 }
 
 nav {
@@ -145,12 +150,16 @@ nav ul {
 }
 
 @media only screen and (max-width: 767px) {
-  .order.order--logo {
+  nav li[data-nav='home'] {
     -webkit-flex: 1 1 100%;
         -ms-flex: 1 1 100%;
             flex: 1 1 100%;
   }
-  .order.order--services, .order.order--portfolio, .order.order--apps, .order.order--contact {
+
+  nav li[data-nav='services'],
+  nav li[data-nav='portfolio'],
+  nav li[data-nav='apps'],
+  nav li[data-nav='contact'] {
     -webkit-flex: 1 1 50%;
         -ms-flex: 1 1 50%;
             flex: 1 1 50%;
@@ -166,39 +175,131 @@ nav ul {
             justify-content: center;
   }
 
+  nav li[data-nav='services'] {
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+
+  nav li[data-nav='portfolio'] {
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+
+  nav li[data-nav='home'] {
+    -webkit-order: 3;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+
+  nav li[data-nav='apps'] {
+    -webkit-order: 4;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+
+  nav li[data-nav='contact'] {
+    -webkit-order: 5;
+        -ms-flex-order: 5;
+            order: 5;
+  }
+
   nav li {
     -webkit-flex: 1 1 auto;
         -ms-flex: 1 1 auto;
             flex: 1 1 auto;
     text-align: center;
   }
-
-  .order.order--services {
-    -webkit-order: 1;
-        -ms-flex-order: 1;
-            order: 1;
-  }
-  .order.order--portfolio {
-    -webkit-order: 2;
-        -ms-flex-order: 2;
-            order: 2;
-  }
-  .order.order--logo {
-    -webkit-order: 3;
-        -ms-flex-order: 3;
-            order: 3;
-  }
-  .order.order--apps {
-    -webkit-order: 4;
-        -ms-flex-order: 4;
-            order: 4;
-  }
-  .order.order--contact {
-    -webkit-order: 5;
-        -ms-flex-order: 5;
-            order: 5;
+}
+.boxes {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  border: 2px solid #e6e6e6;
+  margin: 0 auto 2em auto;
+  max-width: 700px;
+}
+@media only screen and (min-width: 768px) {
+  .boxes {
+    -webkit-flex-wrap: no-wrap;
+        -ms-flex-wrap: no-wrap;
+            flex-wrap: no-wrap;
   }
 }
+
+.box {
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+  -webkit-flex: 1 1 100%;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+}
+@media only screen and (min-width: 768px) {
+  .box {
+    -webkit-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
+  }
+}
+
+.box .content {
+  padding: 2em;
+}
+
+.box.box--x {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-self: stretch;
+      -ms-flex-item-align: stretch;
+          align-self: stretch;
+  background-color: #ffffff;
+  color: #e6e6e6;
+  text-align: center;
+  position: relative;
+}
+.box.box--x:before, .box.box--x:after {
+  content: "";
+  height: 2px;
+  width: 100%;
+  background-color: #ffffff;
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+.box.box--x:before {
+  top: -2px;
+}
+.box.box--x:after {
+  bottom: -2px;
+}
+@media only screen and (min-width: 768px) {
+  .box.box--x {
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+
+.box--x p {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 50px;
+  font-size: 5rem;
+}
+
 .pswp {
   display: none;
   position: absolute;

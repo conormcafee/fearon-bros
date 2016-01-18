@@ -3,6 +3,7 @@ header {
 	top: 0;
 	left: 0;
 	right: 0;
+	z-index: 1979;
 }
 
 nav {
@@ -31,16 +32,15 @@ nav ul {
 }
 
 @media only screen and (max-width: 767px) {
-	.order {
-		&.order--logo {
-			flex: 1 1 100%;
-		}
-		&.order--services,
-		&.order--portfolio,
-		&.order--apps,
-		&.order--contact {
-			flex: 1 1 50%;
-		}
+	nav li[data-nav='home'] {
+		flex: 1 1 100%;
+	}
+
+	nav li[data-nav='services'],
+	nav li[data-nav='portfolio'],
+	nav li[data-nav='apps'],
+	nav li[data-nav='contact'] {
+		flex: 1 1 50%;
 	}
 }
 
@@ -50,26 +50,22 @@ nav ul {
 		justify-content: center;
 	}
 
+	$nav-order: (
+		services: 1,
+		portfolio: 2,
+		home: 3,
+		apps: 4,
+		contact: 5
+	);
+
+	@each $selector, $value in $nav-order {
+		nav li[data-nav='#{$selector}'] {
+			order: $value;
+		}
+	}
+
 	nav li {
 		flex: 1 1 auto;
 		text-align: center;
-	}
-
-	.order {
-		&.order--services {
-			order: 1;
-		}
-		&.order--portfolio {
-			order: 2;
-		}
-		&.order--logo {
-			order: 3;
-		}
-		&.order--apps {
-			order: 4;
-		}
-		&.order--contact {
-			order: 5;
-		}
 	}
 }
