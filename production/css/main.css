@@ -225,9 +225,9 @@ nav ul {
 }
 @media only screen and (min-width: 768px) {
   .boxes {
-    -webkit-flex-wrap: no-wrap;
-        -ms-flex-wrap: no-wrap;
-            flex-wrap: no-wrap;
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
   }
 }
 
@@ -298,6 +298,20 @@ nav ul {
   font-weight: 700;
   font-size: 50px;
   font-size: 5rem;
+}
+
+.featured {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: scroll;
+  cursor: all-scroll;
+}
+
+.featured img {
+  max-width: 100%;
+  height: auto;
+  border: 10px solid #ffffff;
 }
 
 .pswp {

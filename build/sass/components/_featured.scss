@@ -1,0 +1,11 @@
+.featured {
+	display: flex;
+	overflow-x: scroll;
+	cursor:all-scroll;
+}
+
+.featured img {
+	max-width: 100%;
+	height: auto;
+	border: 10px solid brand-colour(white);
+}
