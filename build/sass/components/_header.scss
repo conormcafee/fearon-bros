@@ -40,6 +40,7 @@ nav ul {
 	nav li[data-nav='portfolio'],
 	nav li[data-nav='apps'],
 	nav li[data-nav='contact'] {
+		display: none;
 		flex: 1 1 50%;
 	}
 }

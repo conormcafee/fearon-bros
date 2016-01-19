@@ -1,11 +1,89 @@
 .featured {
 	display: flex;
-	overflow-x: scroll;
-	cursor:all-scroll;
+	overflow-x: hidden;
+	position: relative;
+
+	@media only screen and (max-width: 767px) {
+		flex-wrap: wrap;
+	}
+
+	@media only screen and (min-width: 768px) {
+		border: 0.5em solid brand-colour(white);
+	}
+}
+
+.featured__image {
+	flex-shrink: 0;
+	background-color: brand-colour(green);
+	background-size: cover;
+	background-position: center center;
+	width: 100%;
+	height: 300px;
+	border: 0.5em solid brand-colour(white);
+	overflow: auto;
+
+	@media only screen and (min-width: 768px) {
+		height: 500px;
+		width: 70%;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.featured__image:nth-child(2) {
+		display: none;
+	}
+}
+
+.featured__text {
+	background-color: brand-colour(white);
+	padding: 0.5em;
+
+	@media only screen and (max-width: 767px) {
+		flex: 1;
+	}
+
+	@media only screen and (min-width: 768px) {
+		position: absolute;
+		top: 25%;
+		right: 6em;
+		max-width: 450px;
+		padding: 1em;
+	}
 }
 
 .featured img {
 	max-width: 100%;
 	height: auto;
 	border: 10px solid brand-colour(white);
+}
+
+.featured h2 {
+	@include font-size(2.4);
+
+	@media only screen and (min-width: 768px) {
+		@include font-size(2.8);
+	}
+}
+
+.featured h2:after {
+	content: "";
+	height: 2px;
+	display: block;
+	width: 150px;
+	background-color: brand-colour(grey);
+	margin: 0.2em 0;
+}
+
+.featured h3 {
+	font-style: italic;
+	margin-bottom: 0.75em;
+}
+
+.featured p {
+	max-width: 300px;
+}
+
+.featured__links {
+	margin-top: 0.75em;
+	display: flex;
 }

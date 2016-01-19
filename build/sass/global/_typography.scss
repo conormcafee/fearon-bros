@@ -2,6 +2,7 @@ h1 {
 	font-family: 'Playfair Display', serif;
 	font-weight: 700;
 	@include font-size(2.2);
+	color: brand-colour(green);
 
 	span {
 		font-style: italic;
@@ -12,6 +13,7 @@ h2 {
 	font-family: 'Playfair Display', serif;
 	font-weight: 700;
 	@include font-size(1.8);
+	color: brand-colour(green);
 
 	span {
 		font-style: italic;
@@ -22,6 +24,7 @@ h3 {
 	font-family: 'Playfair Display', serif;
 	font-weight: 700;
 	@include font-size(1.4);
+	color: brand-colour(green);
 
 	span {
 		font-style: italic;
@@ -42,5 +45,16 @@ a {
 
 	&:focus {
 		outline: none;
+	}
+}
+
+.link {
+	font-family: 'Playfair Display', serif;
+	font-weight: 700;
+	color: brand-colour(green);
+	@include font-size(0.9);
+
+	&:hover {
+		color: brand-colour(green, dark);
 	}
 }
