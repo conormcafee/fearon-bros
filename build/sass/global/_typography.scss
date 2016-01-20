@@ -48,9 +48,13 @@ a {
 	}
 }
 
+li {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	@include font-size(0.9);
+}
+
 .link {
-	font-family: 'Playfair Display', serif;
-	font-weight: 700;
 	color: brand-colour(green);
 	@include font-size(0.9);
 

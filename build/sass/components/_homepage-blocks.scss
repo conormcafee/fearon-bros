@@ -1,0 +1,44 @@
+.homepage-blocks {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 2em 0;
+}
+
+.homepage-block.block-1, 
+.homepage-block.block-2 {
+	flex: 1 100%;
+}
+
+.block__content {
+	margin: 0 1em;
+	padding: 2em;
+}
+
+.homepage-block.block-1 .block__content {
+	border: 1px solid brand-colour(blue, dark);
+	background-color: brand-colour(blue);
+
+	h2 {
+		color: brand-colour(white);
+	}
+}
+
+.homepage-block.block-2 .block__content {
+	border: 1px solid brand-colour(grey);
+}
+
+@media only screen and (max-width: 767px) {
+	.homepage-block.block-2 {
+		margin-top: 2em;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.homepage-block.block-1 {
+		flex: 1 40%;
+	}
+
+	.homepage-block.block-2 {
+		flex: 1 60%;
+	}
+}

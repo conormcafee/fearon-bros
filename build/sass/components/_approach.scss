@@ -1,0 +1,90 @@
+.approach {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	margin: 2em 1em;
+
+	h2 {
+		text-align: center;
+	}
+
+	h2,
+	p {
+		margin-bottom: 1em;
+	}
+}
+
+.approach-item {
+	flex: 1 100%;
+}
+
+.approach__content {
+	padding: 2em;
+	border: 2px solid brand-colour(grey);
+	position: relative;
+
+	&:before,
+    &:after {
+      content: "";
+      height: 2px;
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: #ffffff;
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+    }
+
+    &:before {
+      top: -2px;
+    }
+
+    &:after {
+      bottom: -2px;
+    }
+}
+
+.approach__steps ul {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.approach__steps li {
+	font-family: 'Playfair Display', serif;
+	font-weight: 700;
+	color: brand-colour(green);
+	display: flex;
+	flex: 1 100%;
+	align-items: center;
+	justify-content: center;
+	height: 150px;
+	text-align: center;
+
+	&:nth-child(n+2) {
+		border-top: 2px solid brand-colour(grey);
+	}
+}
+
+.approach__steps li span {
+	padding: 0 1em;
+}
+
+.approach__steps span:before {
+	content: attr(data-step);
+	@include font-size(1.8);
+	display: block;
+	margin-bottom: 0.25em;
+}
+
+@media only screen and (min-width: 768px) {
+	.approach-item {
+		flex: 1 20%;
+	}
+
+	.approach-item:nth-child(2) {
+		flex: 1 60%;
+	}
+}
