@@ -1,0 +1,37 @@
+.page-intro {
+	display: flex;
+	margin: 2em 1em;
+}
+
+.page-intro__item {
+	display: flex;
+	flex: 1;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+}
+
+.page-intro__item[data-intro='2'] {
+	flex: 2;
+	text-align: center;
+
+	h1 {
+		padding: 1em;
+	}
+}
+
+.page-intro__image {
+	background-color: brand-colour(green);
+	background-size: cover;
+	background-position: center center;
+	height: 200px;
+	width: 100%;
+}
+
+.page-intro__item[data-intro='3'] .page-intro__image {
+	border-right: 0.5em solid brand-colour(white);
+}
+
+.page-intro__item[data-intro='4'] .page-intro__image {
+	border-left: 0.5em solid brand-colour(white);
+}

@@ -63,7 +63,7 @@ html {
 
 .spacing {
   display: block;
-  padding-top: 70px;
+  padding-top: calc(79px - 1em);
 }
 
 .wrapper {

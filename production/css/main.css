@@ -65,7 +65,7 @@ html {
 
 .spacing {
   display: block;
-  padding-top: 70px;
+  padding-top: calc(79px - 1em);
 }
 
 .wrapper {
@@ -73,8 +73,8 @@ html {
 }
 
 h1 {
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
+  font-family: 'Abril Fatface', cursive;
+  font-weight: 400;
   font-size: 22px;
   font-size: 2.2rem;
   color: #004E4E;
@@ -84,8 +84,8 @@ h1 span {
 }
 
 h2 {
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
+  font-family: 'Abril Fatface', cursive;
+  font-weight: 400;
   font-size: 18px;
   font-size: 1.8rem;
   color: #004E4E;
@@ -95,8 +95,8 @@ h2 span {
 }
 
 h3 {
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
+  font-family: 'Abril Fatface', cursive;
+  font-weight: 400;
   font-size: 14px;
   font-size: 1.4rem;
   color: #004E4E;
@@ -106,15 +106,15 @@ h3 span {
 }
 
 p {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 400;
   font-size: 9px;
   font-size: 0.9rem;
 }
 
 a {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 600;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
   text-decoration: none;
   display: block;
 }
@@ -123,7 +123,7 @@ a:focus {
 }
 
 li {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 400;
   font-size: 9px;
   font-size: 0.9rem;
@@ -238,6 +238,55 @@ nav ul {
     text-align: center;
   }
 }
+.page-intro {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 2em 1em;
+}
+
+.page-intro__item {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  position: relative;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.page-intro__item[data-intro='2'] {
+  -webkit-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  text-align: center;
+}
+.page-intro__item[data-intro='2'] h1 {
+  padding: 1em;
+}
+
+.page-intro__image {
+  background-color: #004E4E;
+  background-size: cover;
+  background-position: center center;
+  height: 200px;
+  width: 100%;
+}
+
+.page-intro__item[data-intro='3'] .page-intro__image {
+  border-right: 0.5em solid #ffffff;
+}
+
+.page-intro__item[data-intro='4'] .page-intro__image {
+  border-left: 0.5em solid #ffffff;
+}
+
 .boxes {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -247,7 +296,6 @@ nav ul {
           flex-wrap: wrap;
   border-top: 1px solid #e6e6e6;
   border-bottom: 1px solid #e6e6e6;
-  max-width: 700px;
   margin: 2em 1em;
 }
 @media only screen and (min-width: 768px) {
@@ -256,7 +304,6 @@ nav ul {
         -ms-flex-wrap: nowrap;
             flex-wrap: nowrap;
     border: 2px solid #e6e6e6;
-    margin: 2em auto;
   }
 }
 
@@ -279,7 +326,7 @@ nav ul {
 }
 
 .box .content {
-  padding: 2em;
+  padding: 1em;
 }
 
 .box.box--x {
@@ -328,9 +375,9 @@ nav ul {
 .box--x p {
   font-size: 30px;
   font-size: 3rem;
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
-  opacity: 0.5;
+  font-family: 'Abril Fatface', cursive;
+  font-weight: 400;
+  opacity: 1;
 }
 @media only screen and (min-width: 768px) {
   .box--x p {
@@ -345,8 +392,9 @@ nav ul {
   display: flex;
   overflow-x: hidden;
   position: relative;
-  border: 1em solid #ffffff;
-  margin: 4em auto;
+  border-left: 1em solid #ffffff;
+  border-right: 1em solid #ffffff;
+  margin: 2em 0;
 }
 @media only screen and (max-width: 767px) {
   .featured {
@@ -376,12 +424,10 @@ nav ul {
   .featured__image:nth-child(1) {
     width: 70%;
     border-right: 2em solid #ffffff;
-    border-bottom: 25px solid #ffffff;
   }
 
   .featured__image:nth-child(2) {
     width: 30%;
-    border-top: 25px solid #ffffff;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -409,12 +455,6 @@ nav ul {
     max-width: 450px;
     padding: 1.5em;
   }
-}
-
-.featured img {
-  max-width: 100%;
-  height: auto;
-  border: 10px solid #ffffff;
 }
 
 .featured h2 {
@@ -496,8 +536,14 @@ nav ul {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  margin: 0 1em;
+  max-width: 400px;
+  margin: 2em 1em;
   border: 2px solid #3f505d;
+}
+@media only screen and (min-width: 675px) {
+  .homepage-blocks {
+    margin: 0 auto;
+  }
 }
 
 .homepage-block {

@@ -2,8 +2,9 @@
 	display: flex;
 	overflow-x: hidden;
 	position: relative;
-	border: 1em solid brand-colour(white);
-	margin: 4em auto;
+	border-left: 1em solid brand-colour(white);
+	border-right: 1em solid brand-colour(white);
+	margin: 2em 0;
 
 	@media only screen and (max-width: 767px) {
 		flex-wrap: wrap;
@@ -27,11 +28,9 @@
 	.featured__image:nth-child(1) {
 		width: 70%;
 		border-right: 2em solid brand-colour(white);
-		border-bottom: 25px solid brand-colour(white);
 	}
 	.featured__image:nth-child(2) {
 		width: 30%;
-		border-top: 25px solid brand-colour(white);
 	}
 }
 
@@ -58,12 +57,6 @@
 		max-width: 450px;
 		padding: 1.5em;
 	}
-}
-
-.featured img {
-	max-width: 100%;
-	height: auto;
-	border: 10px solid brand-colour(white);
 }
 
 .featured h2 {

@@ -3,13 +3,11 @@
   flex-wrap: wrap;
   border-top: 1px solid #e6e6e6;
   border-bottom: 1px solid #e6e6e6;
-  max-width: 700px;
   margin: 2em 1em;
 
   @media only screen and (min-width: 768px) {
     flex-wrap: nowrap;
     border: 2px solid #e6e6e6;
-    margin: 2em auto;
   }
 }
 
@@ -25,7 +23,7 @@
 }
 
 .box .content {
-  padding: 2em;
+  padding: 1em;
 }
 
 .box.box--x {
@@ -66,9 +64,9 @@
 
 .box--x p {
   @include font-size(3.0);
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
-  opacity: 0.5;
+  font-family: 'Abril Fatface', cursive;
+  font-weight: 400;
+  opacity: 1;
 
   @media only screen and (min-width: 768px) {
     @include font-size(5.0);
