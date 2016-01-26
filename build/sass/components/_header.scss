@@ -1,72 +1,51 @@
 header {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	z-index: 1979;
-}
-
-nav {
-	background-color: brand-colour(green);
-	border-bottom: 5px solid brand-colour(white);
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-nav ul {
 	display: flex;
-    flex-wrap:wrap;
-	width: 100%;
+	flex-wrap: wrap;
 }
 
-.nav__link {
-	color: brand-colour(white);
-	padding: em(25) em(15);
+.header--item {
+	flex: 1 100%;
+	height: 60vh;
+
+	@media only screen and (min-width: 850px) {
+		flex: 1 50%;
+	}
 }
 
-.nav__link.logo {
-	padding: 0 em(15);
+.header--item:first-child {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 
-	img {
+.header__content {
+	padding: 1em;
+	text-align: center;
+	max-width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.header__content ul {
+	display: flex;
+	justify-content: space-between;
+	border-top: 1px solid brand-colour(grey);
+	padding-top: 1em;
+}
+
+.header__image {
+	height: inherit;
+}
+
+
+
+
+.logo {
+	background: brand-colour(green);
+
+	figure {
 		max-width: 200px;
-	}
-}
-
-@media only screen and (max-width: 767px) {
-	nav li[data-nav='home'] {
-		flex: 1 1 100%;
-	}
-
-	nav li[data-nav='services'],
-	nav li[data-nav='portfolio'],
-	nav li[data-nav='apps'],
-	nav li[data-nav='contact'] {
-		display: none;
-		flex: 1 1 50%;
-	}
-}
-
-@media only screen and (min-width: 768px) {
-	nav ul {
-		align-items: center;
-		justify-content: center;
-	}
-
-	$nav-order: (
-		services: 1,
-		portfolio: 2,
-		home: 3,
-		apps: 4,
-		contact: 5
-	);
-
-	@each $selector, $value in $nav-order {
-		nav li[data-nav='#{$selector}'] {
-			order: $value;
-		}
-	}
-
-	nav li {
-		flex: 1 1 auto;
-		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
 	}
 }

@@ -2,7 +2,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 62.5%;
     font: inherit;
     vertical-align: baseline;
 }
@@ -11,15 +10,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 body {
-  font-size: 14px;
+  @include font-size(1.8);
+  line-height: 27px;
+  line-height: 2.7rem;
+  font-family: 'Alice', serif;
+  font-style: normal;
   font-weight: 400;
-  line-height: 1.5;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
-
-  @media only screen and (min-width: 992px) {
-      font-size: 16px;
-  }
 }
 
 ol, ul {
@@ -49,7 +47,11 @@ table {
   
 html {
   box-sizing: border-box;
-  font-size: 16px;
+  font-size: 52.5%;
+
+  @media only screen and (min-width: 850px) {
+    font-size: 62.5%;
+  }
 }
 
 *,
@@ -69,4 +71,8 @@ html {
 
 .wrapper {
   padding: 0 0.5em;
+}
+
+img {
+  max-width: 100%;
 }
