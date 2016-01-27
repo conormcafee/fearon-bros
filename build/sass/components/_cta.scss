@@ -2,14 +2,18 @@
 	display: block;
 	max-width: 550px;
 	padding: 1em 1em;
-	margin: 0 auto;
+	margin: 0 1em;
 	background-color: #f6f6f6;
 	border: 1px solid brand-colour(grey);
+
+	@media only screen and (min-width: 580px) {
+		margin: 0 auto;
+	}
 }
 
 .cta article {
-	border-top: 2px solid brand-colour(grey, darker);
-	border-bottom: 2px solid brand-colour(grey, darker);
+	border-top: 2px solid brand-colour(grey, dark);
+	border-bottom: 2px solid brand-colour(grey, dark);
 	padding: 1em 0;
 }
 

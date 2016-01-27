@@ -8,6 +8,11 @@
 }
 
 .about p {
-  column-count: 2;
-  column-gap: 1em;
+  max-width: 400px;
+
+	@media only screen and (min-width: 768px) {
+		column-count: 2;
+	  	column-gap: 1em;
+	  	max-width: 100%;
+	}
 }

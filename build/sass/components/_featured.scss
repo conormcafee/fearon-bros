@@ -39,37 +39,8 @@
 	margin-bottom: 0.75em;
 }
 
-.featured__btns {
-	display: flex;
-	flex-wrap: wrap;
-	margin-top: 1em;
-}
-
-.featured__btns a {
+.featured__text a {
 	color: brand-colour(blue);
-}
-
-.featured__photos-btn,
-.featured__portfolio-btn {
-	display: flex;
-  	flex: 1 100%;
-  
-  	@media only screen and (min-width: 320px) {
-   		flex: 1;
-  	}
-}
-
-.featured__portfolio-btn a {
-	width: 100%;
-   	text-align: left;
-
-   	@media only screen and (max-width: 319px) {
-   		margin-top: 1em;
-   	}
-  
-  	@media only screen and (min-width: 320px) {
-    	text-align: right;
-  	}
 }
 
 

@@ -101,10 +101,13 @@ header {
 
 
 .header__text article {
-  width: 80%;
-  margin: 0 auto;
   padding: 2em 1em;
   text-align: center;
+
+  @media only screen and (min-width: 600px) {
+    width: 80%;
+    margin: 0 auto;
+  }
   
   @media only screen and (min-width: 800px) {
     width: 100%;
