@@ -1,37 +1,22 @@
 .cta {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 100%;
-	margin: 2em 0;
-	background-color: brand-colour(blue);
-	border: 2px solid brand-colour(blue, dark);
+	display: block;
+	max-width: 550px;
+	padding: 1em 1em;
+	margin: 0 auto;
+	background-color: #f6f6f6;
+	border: 1px solid brand-colour(grey);
 }
 
-.cta-icon {
-	flex: 1 30%;
-
-	.cta__content {
-		border-right: 2px solid brand-colour(blue, dark);
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
+.cta article {
+	border-top: 2px solid brand-colour(grey, darker);
+	border-bottom: 2px solid brand-colour(grey, darker);
+	padding: 1em 0;
 }
 
-.cta-text {
-	flex: 1 70%;
+.cta article p {
+	margin-bottom: 0;
 }
 
-.cta__content {
-	padding: 1em;
-	color: brand-colour(white);
-}
-
-.cta-text a {
-	color: brand-colour(white);
-
-	&:hover {
-		color: brand-colour(blue, dark);
-	}
+.cta article a {
+	display: inline;
 }

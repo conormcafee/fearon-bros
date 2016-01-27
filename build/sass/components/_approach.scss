@@ -1,10 +1,8 @@
 .approach {
 	margin: 4em 0;
-	border-top: 2px solid brand-colour(grey);
 	padding: 2em 1em;
 
 	@media only screen and (min-width: 768px) {
-		border: none;
 		padding: 0 1em;
 	}
 }
@@ -24,6 +22,61 @@
 	}
 }
 
-.approach article h2 {
-	color: brand-colour(blue);
+.approach aside {
+	border-top: 3px solid brand-colour(grey);
+	margin-top: 4em;
+
+	&:before {
+		content: "";
+		display: block;
+		height: 1px;
+		width: 100%;
+		background-color: brand-colour(grey);
+		margin-top: 0.25em;
+	}
+}
+
+.approach ul {
+	display: flex;
+	flex-wrap: wrap;
+	background-color: white;
+}
+
+.approach li {
+	flex: 1 100%;
+
+	@media only screen and (min-width: 768px) {
+		flex: 1 50%;
+	}
+}
+
+.approach li span {
+	display: block;
+	padding: 1em 0;
+}
+
+.approach li span:hover {
+	background-color: #f6f6f6;
+}
+
+.approach li span:before {
+	@include font-size(4);
+	content: attr(data-step);
+	display: block;
+	font-family: 'Abril Fatface', cursive;
+	line-height: 60px;
+	line-height: 6rem;
+	color: brand-colour(green);
+}
+
+@media only screen and (max-width: 767px) {
+	.approach li:nth-child(n+2) span {
+		border-top: 1px solid brand-colour(grey);
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.approach li:nth-child(n+3) span {
+		border-top: 1px solid brand-colour(grey);
+	}
 }
