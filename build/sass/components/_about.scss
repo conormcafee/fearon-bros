@@ -1,0 +1,16 @@
+.about {
+  max-width: 800px;
+  margin: 4em 1em;
+  
+  @media only screen and (min-width: 820px) {
+    margin-left: auto;
+  }
+}
+
+.about h2 {
+	color: brand-colour(blue);
+}
+.about p {
+  column-count: 2;
+  column-gap: 1em;
+}

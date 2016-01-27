@@ -10,9 +10,9 @@ h1 {
 h2 {
 	font-family: 'Abril Fatface', cursive;
 	color: brand-colour(green);
-	@include font-size(3.2);
-   	line-height: 48px;
-   	line-height: 4.8rem;
+	@include font-size(3.5);
+   	line-height: 52.5px;
+   	line-height: 5.25rem;
    	margin-bottom: 0.25em;
 }
 

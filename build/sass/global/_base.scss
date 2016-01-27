@@ -49,7 +49,7 @@ html {
   box-sizing: border-box;
   font-size: 52.5%;
 
-  @media only screen and (min-width: 850px) {
+  @media only screen and (min-width: 1200px) {
     font-size: 62.5%;
   }
 }
@@ -64,15 +64,6 @@ html {
   clear: both;
 }
 
-.spacing {
-  display: block;
-  padding-top: calc(79px - 1em);
-}
-
 .wrapper {
   padding: 0 0.5em;
-}
-
-img {
-  max-width: 100%;
 }
