@@ -1,9 +1,11 @@
 .approach {
 	margin: 4em 0;
-	padding: 2em 1em;
+	padding: 0em 1em;
 
 	@media only screen and (min-width: 768px) {
-		padding: 0 1em;
+		display: block;
+		float: left;
+		width: 70%;
 	}
 }
 
@@ -25,11 +27,6 @@
 .approach aside {
 	border-top: 3px solid brand-colour(grey);
 	margin-top: 4em;
-	width: 100%;
-
-	@media only screen and (min-width: 800px) {
-		width: 70%;
-	}
 
 	&:before {
 		content: "";
@@ -61,10 +58,6 @@
 	padding: 1em 0;
 }
 
-.approach li span:hover {
-	background-color: #f6f6f6;
-}
-
 .approach li span:before {
 	@include font-size(4);
 	content: attr(data-step);
@@ -75,14 +68,22 @@
 	color: brand-colour(green);
 }
 
-@media only screen and (max-width: 767px) {
-	.approach li:nth-child(n+2) span {
-		border-top: 1px solid brand-colour(grey);
-	}
+.approach li:nth-child(n+3) span {
+	border-top: 1px solid brand-colour(grey);
 }
 
-@media only screen and (min-width: 768px) {
-	.approach li:nth-child(n+3) span {
-		border-top: 1px solid brand-colour(grey);
+
+
+
+.additional {
+	display: block;
+	float: left;
+	margin-bottom: 4em;
+	padding: 0 1em;
+	width: 100%; 
+	
+	@media only screen and (min-width: 768px) {
+		width: 30%;
+		margin: 4em 0;
 	}
 }

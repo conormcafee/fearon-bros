@@ -50,7 +50,13 @@
   </div>
   
   <div class="header--item">
-    <div class="header__image" style="background-image: url('production/assets/kitchen-01/001.jpg');"></div>
+    <div class="my-slider">
+      <ul>
+        <li><div class="header__image" style="background-image: url('production/assets/kitchen-03/001.jpg');"></div></li>
+        <li><div class="header__image" style="background-image: url('production/assets/kitchen-04/001.jpg');"></div></li>
+        <li><div class="header__image" style="background-image: url('production/assets/kitchen-07/001.jpg');"></div></li>
+      </ul>
+    </div>
   </div>
 </header>
 
@@ -98,6 +104,13 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="production/js/photoswipe.min.js"></script> 
 <script src="production/js/photoswipe-ui-default.min.js"></script>
+<script src="production/js/unslider.js"></script>
+
+<script>
+    jQuery(document).ready(function($) {
+      $('.my-slider').unslider();
+    });
+  </script>
 
 <script>
       $('.featured__designs').each( function() {

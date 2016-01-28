@@ -2,25 +2,28 @@
 	display: block;
 	max-width: 550px;
 	padding: 1em 1em;
-	margin: 0 1em;
-	background-color: #f6f6f6;
-	border: 1px solid brand-colour(grey);
+	background-color: brand-colour(blue);
+	border: 2px solid brand-colour(blue, dark);
+	color: brand-colour(white);
+	margin: 0 auto;
+	max-width: 580px;
+}
 
-	@media only screen and (min-width: 580px) {
-		margin: 0 auto;
-	}
+.cta:nth-child(n+2) {
+	margin-top: 4em;
 }
 
 .cta article {
-	border-top: 2px solid brand-colour(grey, dark);
-	border-bottom: 2px solid brand-colour(grey, dark);
-	padding: 1em 0;
+	border-top: 2px solid brand-colour(green);
+	padding: 1em 0 0 0;
 }
 
 .cta article p {
 	margin-bottom: 0;
+	color: brand-colour(white);
 }
 
 .cta article a {
 	display: inline;
+	color: brand-colour(green);
 }

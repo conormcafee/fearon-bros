@@ -52,6 +52,7 @@ header {
   border-bottom: 3px solid brand-colour(white);
   justify-content: space-between;
   box-shadow: 1px 1px 1px brand-colour(grey, dark);
+  z-index: 1979;
 }
 
 @media only screen and (max-width: 799px) {
@@ -64,6 +65,16 @@ header {
   }
 }
 
+@media only screen and (min-width: 800px) {
+  .header__bar.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1979;
+    transition: all 1s ease-in-out;
+  }
+}
 
 
 
@@ -75,11 +86,17 @@ header {
 
 .header__nav-btn a {
   color: #ffffff;
+  transition: all 0.2s ease-in-out;
   padding: 1em;
   
   @media only screen and (min-width: 800px) {
     color: #004E4E;
   }
+}
+
+.header__nav-btn.active a {
+  color: brand-colour(white);
+  transition: all 0.2s ease-in-out;
 }
 
 
@@ -133,14 +150,22 @@ header {
 }
 
 .header__nav a {
-  color: #004E4E;
+  color: brand-colour(green);
   
   &:not(:last-child) {
       margin-right: 1em;
   }
-  
-  &.active {
-    border-bottom: 1px dashed #004E4E;
+}
+
+.header__nav a:hover {
+  color: brand-colour(blue);
+}
+
+.header__nav a.active {
+  border-bottom: 1px dashed brand-colour(green);
+
+  &:hover {
+    border-bottom: 1px dashed brand-colour(blue);
   }
 }
 
@@ -155,6 +180,10 @@ header {
     padding: 0;
     height: inherit;
     position: relative;
+}
+
+.unslider-nav {
+  display: none;
 }
 
 .my-slider {
@@ -195,10 +224,6 @@ header {
 }
 
 .unslider li,.unslider ol,.unslider ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    border: none;
     height: inherit;
 }
 
@@ -208,13 +233,34 @@ header {
     z-index: 2;
     cursor: pointer;
     bottom: 0;
-    color: white;
+    font-size: 1px;
+    color: transparent;
 }
 
 .unslider-arrow.next {
     left: auto;
     right: 20px;
     bottom: 0;
+}
+
+.unslider-arrow.next:before {
+  content: ">";
+  display: inline-block;
+  color: white;
+  @include font-size(4);
+  font-family: 'Abril Fatface', cursive;
+  line-height: 60px;
+  line-height: 6rem;
+}
+
+.unslider-arrow.prev:before {
+  content: "<";
+  display: inline-block;
+  color: white;
+  @include font-size(4);
+  font-family: 'Abril Fatface', cursive;
+  line-height: 60px;
+  line-height: 6rem;
 }
 
 .header__image {
