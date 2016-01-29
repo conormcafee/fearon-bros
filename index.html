@@ -2,8 +2,8 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html> <!--<![endif]-->
-
+<!--[if gt IE 8]><!-->
+<html> <!--<![endif]-->
  <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -60,9 +60,9 @@
   </div>
 </header>
 
-<section class="about">
+<section class="about pt">
   <h2>About</h2>
-  <p>Our focus is to tailor make our unique designs to meet the indivdual needs of our customers; from the timeless traditional, to the ultra modern.  As the kitchen has evolved so to have the materials and appliances that in essence, create it. At Fearon Bros we strive to find new and innovative ways to not only create a kitchen, but a living space.</p>
+  <p>Our focus is to tailor make our unique designs to meet the indivdual needs of our customers; from the timeless traditional, to the ultra modern.  As the kitchen has evolved so to have the materials and appliances that in essence, create it. At Fearon Bros we strive to find new and innovative ways to not only create a kitchen, but a living space.  Our high quality range of appliances come from all over the world and are an essential addition to any kitchen. You can view our appliance partners at the bottom of the page.</p>
 </section>
 
 <section class="featured">
@@ -114,16 +114,51 @@
   </div>
 
   <div class="cta">
-    <h2>Awards</h2>
+    <h2>Recognition</h2>
     
-    <p>We've won numerous awards</p>
+    <p>We've been recognised for our work through awards &amp; publications.</p>
 
     <article>
-      <p>KRI Awards 2011 Finalist<br />Young Designer of the Year NI<br />Kevin Fearon</p>
-      <p>KRI Awards 2012 Finalist<br />Young Designer for Kitchens<br />Kevin Fearon</p>
+      <div class="award">
+        <p>KRI Awards 2011 (Finalist)</p>
+        <p>Young Designer of the Year NI</p>
+        <p>Kevin Fearon</p>
+      </div>
+
+      <div class="award">
+        <p>KRI Awards 2012 (Finalist)</p>
+        <p>Young Designer of for Kitchens</p>
+        <p>Kevin Fearon</p>
+      </div>
     </article>
   </div>
 </aside>
+
+<figure class="appliances">
+  <div class="manufacturer">
+    <img src="production/assets/appliances/neff.png" />
+  </div>
+
+  <div class="manufacturer">
+    <img src="production/assets/appliances/gorenje.png" />
+  </div>
+
+  <div class="manufacturer">
+    <img src="production/assets/appliances/insinkerator.png" />
+  </div>
+
+  <div class="manufacturer">
+    <img src="production/assets/appliances/franke.png" />
+  </div>
+
+  <div class="manufacturer">
+    <img src="production/assets/appliances/rangemaster.png" />
+  </div>
+
+  <div class="manufacturer">
+    <img src="production/assets/appliances/sensio.png" />
+  </div>
+</figure>
 
 <footer>
   <ul>
@@ -162,69 +197,7 @@
 <script src="production/js/photoswipe.min.js"></script> 
 <script src="production/js/photoswipe-ui-default.min.js"></script>
 <script src="production/js/unslider.js"></script>
-
-<script>
-    jQuery(document).ready(function($) {
-      $('.my-slider').unslider();
-    });
-</script>
-
-<script>
-$(document).scroll(function() {
-    var y = $(document).scrollTop(), //get page y value 
-        header = $(".header__bar").height();
-        result = $("header").height()
-        outcome = result - header;
-
-    if(y >= outcome)  {
-        $(".header__bar").addClass("sticky");
-        $(".header__nav-btn").addClass("active");
-    } else {
-        $(".header__bar").removeClass("sticky");
-        $(".header__nav-btn").removeClass("active");
-    }
-});
-</script>
-<!-- -->
-
-<script>
-      $('.featured').each( function() {
-      var $pic     = $(this),
-        getItems = function() {
-            var items = [];
-            $pic.find('li').each(function() {
-                var $src   = $(this).data('src'),
-                    $size   = $(this).data('size').split('x'),
-                    $width  = $size[0],
-                    $height = $size[1];
- 
-                var item = {
-                    src : $src,
-                    w   : $width,
-                    h   : $height
-                }
- 
-                items.push(item);
-            });
-            return items;
-        }
- 
-    var items = getItems();
-      console.log(items);
-      var $pswp = $('.pswp')[0];
-      $pic.on('click', 'div', function(event) {
-      event.preventDefault();
-     
-    var options = {
-        index: 0,
-        showHideOpacity: true
-    }
-  
-    var lightBox = new PhotoSwipe($pswp, PhotoSwipeUI_Default, items, options);
-    lightBox.init();
-});
-    });
-    </script>
+<script src="production/js/script.js"></script>
 
 </body>
 

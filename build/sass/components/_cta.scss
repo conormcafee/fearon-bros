@@ -2,9 +2,8 @@
 	display: block;
 	max-width: 550px;
 	padding: 1em 1em;
-	background-color: brand-colour(blue);
-	border: 2px solid brand-colour(blue, dark);
-	color: brand-colour(white);
+	background-color: #f6f6f6;
+	border: 2px solid brand-colour(grey);
 	margin: 0 auto;
 	max-width: 580px;
 }
@@ -14,16 +13,39 @@
 }
 
 .cta article {
-	border-top: 2px solid brand-colour(green);
+	border-top: 2px solid brand-colour(grey);
 	padding: 1em 0 0 0;
 }
 
 .cta article p {
 	margin-bottom: 0;
-	color: brand-colour(white);
 }
 
 .cta article a {
 	display: inline;
 	color: brand-colour(green);
+
+	&:hover {
+		color: brand-colour(blue);
+	}
+}
+
+.award:nth-child(n+2) {
+	margin-top: 1em;
+}
+
+.award p:first-child {
+	@include font-size(1.6);
+	font-family: 'Abril Fatface', cursive;
+	line-height: 24px;
+	line-height: 2.4rem;
+	color: brand-colour(blue);
+	margin-bottom: 0.25em;
+}
+
+.award p:nth-child(2),
+.award p:nth-child(3) {
+	@include font-size(1.4);
+	line-height: 21px;
+	line-height: 2.1rem;
 }

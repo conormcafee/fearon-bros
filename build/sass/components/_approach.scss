@@ -1,11 +1,12 @@
 .approach {
-	margin: 4em 0;
+	margin: 2em 0;
 	padding: 0em 1em;
 
 	@media only screen and (min-width: 768px) {
 		display: block;
 		float: left;
-		width: 70%;
+		width: 60%;
+		margin-right: 10%;
 	}
 }
 
@@ -84,6 +85,6 @@
 	
 	@media only screen and (min-width: 768px) {
 		width: 30%;
-		margin: 4em 0;
+		margin: 2em 0;
 	}
 }

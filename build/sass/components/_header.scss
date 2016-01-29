@@ -72,7 +72,6 @@ header {
     left: 0;
     right: 0;
     z-index: 1979;
-    transition: all 1s ease-in-out;
   }
 }
 
@@ -85,17 +84,18 @@ header {
 }
 
 .header__nav-btn a {
-  color: #ffffff;
+  color: brand-colour(white);
   transition: all 0.2s ease-in-out;
   padding: 1em;
+  opacity: 1;
   
   @media only screen and (min-width: 800px) {
-    color: #004E4E;
+    opacity: 0;
   }
 }
 
 .header__nav-btn.active a {
-  color: brand-colour(white);
+  opacity: 1;
   transition: all 0.2s ease-in-out;
 }
 
