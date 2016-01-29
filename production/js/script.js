@@ -25,7 +25,7 @@ $(document).scroll(function() {
 
 // Full Screen Slideshow
 
-$('.featured').each( function() {
+$('.js-gallery').each( function() {
 	var $pic     = $(this),
     	getItems = function() {
         var items = [];
@@ -59,4 +59,29 @@ var options = {
 var lightBox = new PhotoSwipe($pswp, PhotoSwipeUI_Default, items, options);
 lightBox.init();
 });
+});
+
+// Portfolio Filters
+
+$(document).ready(function(){
+  $('.category').on('change', function(){
+    var category_list = [];
+    $('#filters :input:checked').each(function(){
+      var category = $(this).val();
+      category_list.push(category);
+    });
+
+    if(category_list.length == 0)
+        $('.resultblock').fadeIn();
+    
+    else {
+      $('.resultblock').each(function(){
+        var item = $(this).attr('data-tag');
+        if(jQuery.inArray(item,category_list) > -1)
+          $(this).fadeIn('fast');
+        else
+          $(this).hide();
+      });
+    }
+  });
 });

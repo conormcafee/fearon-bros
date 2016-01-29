@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -10,359 +9,203 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Portfolio</title>
+  <title>Portfolio | Fearon Bros</title>
   <meta name="description" content="Established 1979, Fearon Bros is a family business specialising in the art of creating bespoke kitchen and bedroom furniture.  Our core focus is to tailor make our unique designs to meet the individual needs of our customers; from the timeless traditional, to the ultra modern.">
 
   <link rel="stylesheet" href="production/css/main.min.css">
-  <link href='https://fonts.googleapis.com/css?family=Droid+Serif|Lato:700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Abril+Fatface|Alice' rel='stylesheet' type='text/css'>
   <link rel="canonical" href="http://www.fearonbros.co.uk/">
 </head>
 
 <body>
 
 <header>
-  <div class="wrapper">
-    <a href="index.html" title="Fearon Bros | Home"><img src="production/assets/fb-logo.png" alt="Fearon Bros Logo" class="logo logo--header" /></a>
+  <div class="header--item">
+    <div class="header__bar">
 
-    <nav class="nav">
-      <ul class="nav__list">
-        <li class="nav__item nav--mobile">
-          <a href="index.html" class="nav__link fb--heading" title="Fearon Bros | Home" data-mobile="home">Home</a>
-        </li>
-        <li class="nav__item">
-          <a href="our-services.html" class="nav__link fb--heading" title="Fearon Bros | Bedrooms" data-mobile="services">Our Services</a>
-        </li>
-        <li class="nav__item">
-          <a href="portfolio.html" class="nav__link fb--heading" title="Fearon Bros | Portfolio" data-mobile="portfolio">Portfolio</a>
-        </li>
-        <li class="nav__item nav--desktop">
-          <a href="#" class="nav__link fb--heading" title="Fearon Bros | Appliances/Brands">Appliances/Brands</a>
-        </li>
-        <li class="nav__item">
-          <a href="#" class="nav__link fb--heading" title="Fearon Bros | Contact" data-mobile="contact">Contact</a>
-        </li>
+      <div class="header__logo">
+        <img src="production/assets/fb-logo.png" class="logo" />
+      </div>
+
+      <div class="header__nav-btn">
+        <a href="#">Menu</a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="header--item">
+    <div class="header__text">
+      <article>
+        <h1>Portfolio</h1>
+        <p>Whether it is a new kitchen or bedroom you are after, we can offer you a range of styles and solutions. Check out those solutions below:</p>
+      </article>
+      
+      <nav class="header__nav">
+        <a href="index.html">Home</a>
+        <a href="our-services.html">Our Services</a>
+        <a href="portfolio.html" class="active">Portfolio</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+  </div>
+  
+  <div class="header--item">
+    <div class="my-slider">
+      <ul>
+        <li><div class="header__image" style="background-image: url('production/assets/kitchen-03/001.jpg');"></div></li>
+        <li><div class="header__image" style="background-image: url('production/assets/kitchen-04/001.jpg');"></div></li>
+        <li><div class="header__image" style="background-image: url('production/assets/kitchen-07/001.jpg');"></div></li>
       </ul>
-    </nav>
+    </div>
   </div>
 </header>
 
-<section class="featured">
-  <div class="wrapper">
-    <p class="fb--copy fb--base">Our core focus is to tailor make our unique designs to meet the individual needs of our customers; from the timeless traditional, to the ultra modern.</p>
-  </div>
-</section>
-
-<section class="page-title">
-  <div class="wrapper">
-    <h1 class="fb--heading">Portfolio</h1>
-  </div>
-</section>
-
-<section class="filters" id="filters">
-  <div class="wrapper">
-    <div class="filter--wrapper">
-      <div class="filter">
-        <p class="fb--heading">Filters:</p>
-      </div>
-      <div class="filter" data-filter="modern">
-        <input id="check1" type="checkbox" name="check" value="modern" class="category" checked>
-        <label for="check1" class="fb--heading">
-          <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="filter-svg"><g fill="#9A9A9A" fill-rule="evenodd" class="filter-colour"><path d="M9.967 0C4.47 0 0 4.47 0 9.967c0 5.496 4.47 9.968 9.967 9.968 5.496 0 9.968-4.472 9.968-9.968C19.935 4.47 15.463 0 9.967 0zm0 18.3c-4.595 0-8.333-3.738-8.333-8.333 0-4.595 3.738-8.333 8.333-8.333 4.595 0 8.334 3.738 8.334 8.333 0 4.595-3.738 8.334-8.333 8.334z"/><path d="M14.28 6.142L8.36 12.06 5.656 9.354c-.32-.32-.836-.32-1.155 0-.32.32-.32.837 0 1.156l3.284 3.283c.16.16.368.24.577.24.21 0 .42-.08.58-.24l6.495-6.496c.32-.32.32-.836 0-1.155-.32-.32-.837-.32-1.156 0z"/></g></svg>
+<section class="filters pt" id="filters">
+  <div class="filter--wrapper">
+    <div class="filter" data-filter="modern">
+      <input id="check1" type="checkbox" name="check" value="modern" class="category" checked>
+      <label for="check1" class="fb--heading">
+        <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="filter-svg"><g fill="#9A9A9A" fill-rule="evenodd" class="filter-colour"><path d="M9.967 0C4.47 0 0 4.47 0 9.967c0 5.496 4.47 9.968 9.967 9.968 5.496 0 9.968-4.472 9.968-9.968C19.935 4.47 15.463 0 9.967 0zm0 18.3c-4.595 0-8.333-3.738-8.333-8.333 0-4.595 3.738-8.333 8.333-8.333 4.595 0 8.334 3.738 8.334 8.333 0 4.595-3.738 8.334-8.333 8.334z"/><path d="M14.28 6.142L8.36 12.06 5.656 9.354c-.32-.32-.836-.32-1.155 0-.32.32-.32.837 0 1.156l3.284 3.283c.16.16.368.24.577.24.21 0 .42-.08.58-.24l6.495-6.496c.32-.32.32-.836 0-1.155-.32-.32-.837-.32-1.156 0z"/></g></svg>
           Modern <span>Kitchens</span>
-        </label>
-      </div>
-
-      <div class="filter" data-filter="traditional">
-        <input id="check2" type="checkbox" name="check" value="traditional" class="category" checked>
-        <label for="check2" class="fb--heading">
-          <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="filter-svg"><g fill="#9A9A9A" fill-rule="evenodd" class="filter-colour"><path d="M9.967 0C4.47 0 0 4.47 0 9.967c0 5.496 4.47 9.968 9.967 9.968 5.496 0 9.968-4.472 9.968-9.968C19.935 4.47 15.463 0 9.967 0zm0 18.3c-4.595 0-8.333-3.738-8.333-8.333 0-4.595 3.738-8.333 8.333-8.333 4.595 0 8.334 3.738 8.334 8.333 0 4.595-3.738 8.334-8.333 8.334z"/><path d="M14.28 6.142L8.36 12.06 5.656 9.354c-.32-.32-.836-.32-1.155 0-.32.32-.32.837 0 1.156l3.284 3.283c.16.16.368.24.577.24.21 0 .42-.08.58-.24l6.495-6.496c.32-.32.32-.836 0-1.155-.32-.32-.837-.32-1.156 0z"/></g></svg>
-          Traditional <span>Kitchens</span>
-        </label>
-      </div>
-
-      <div class="filter" data-filter="bedroom">
-        <input id="check3" type="checkbox" name="check" value="bedroom" class="category" checked>
-        <label for="check3" class="fb--heading">
-          <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="filter-svg"><g fill="#9A9A9A" fill-rule="evenodd" class="filter-colour"><path d="M9.967 0C4.47 0 0 4.47 0 9.967c0 5.496 4.47 9.968 9.967 9.968 5.496 0 9.968-4.472 9.968-9.968C19.935 4.47 15.463 0 9.967 0zm0 18.3c-4.595 0-8.333-3.738-8.333-8.333 0-4.595 3.738-8.333 8.333-8.333 4.595 0 8.334 3.738 8.334 8.333 0 4.595-3.738 8.334-8.333 8.334z"/><path d="M14.28 6.142L8.36 12.06 5.656 9.354c-.32-.32-.836-.32-1.155 0-.32.32-.32.837 0 1.156l3.284 3.283c.16.16.368.24.577.24.21 0 .42-.08.58-.24l6.495-6.496c.32-.32.32-.836 0-1.155-.32-.32-.837-.32-1.156 0z"/></g></svg>
-          Bedrooms
-        </label>
-      </div>
+      </label>
     </div>
 
+    <div class="filter" data-filter="traditional">
+      <input id="check2" type="checkbox" name="check" value="traditional" class="category" checked>
+      <label for="check2" class="fb--heading">
+        <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="filter-svg"><g fill="#9A9A9A" fill-rule="evenodd" class="filter-colour"><path d="M9.967 0C4.47 0 0 4.47 0 9.967c0 5.496 4.47 9.968 9.967 9.968 5.496 0 9.968-4.472 9.968-9.968C19.935 4.47 15.463 0 9.967 0zm0 18.3c-4.595 0-8.333-3.738-8.333-8.333 0-4.595 3.738-8.333 8.333-8.333 4.595 0 8.334 3.738 8.334 8.333 0 4.595-3.738 8.334-8.333 8.334z"/><path d="M14.28 6.142L8.36 12.06 5.656 9.354c-.32-.32-.836-.32-1.155 0-.32.32-.32.837 0 1.156l3.284 3.283c.16.16.368.24.577.24.21 0 .42-.08.58-.24l6.495-6.496c.32-.32.32-.836 0-1.155-.32-.32-.837-.32-1.156 0z"/></g></svg>
+          Traditional <span>Kitchens</span>
+      </label>
+    </div>
+
+    <div class="filter" data-filter="bedroom">
+      <input id="check3" type="checkbox" name="check" value="bedroom" class="category" checked>
+      <label for="check3" class="fb--heading">
+        <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="filter-svg"><g fill="#9A9A9A" fill-rule="evenodd" class="filter-colour"><path d="M9.967 0C4.47 0 0 4.47 0 9.967c0 5.496 4.47 9.968 9.967 9.968 5.496 0 9.968-4.472 9.968-9.968C19.935 4.47 15.463 0 9.967 0zm0 18.3c-4.595 0-8.333-3.738-8.333-8.333 0-4.595 3.738-8.333 8.333-8.333 4.595 0 8.334 3.738 8.334 8.333 0 4.595-3.738 8.334-8.333 8.334z"/><path d="M14.28 6.142L8.36 12.06 5.656 9.354c-.32-.32-.836-.32-1.155 0-.32.32-.32.837 0 1.156l3.284 3.283c.16.16.368.24.577.24.21 0 .42-.08.58-.24l6.495-6.496c.32-.32.32-.836 0-1.155-.32-.32-.837-.32-1.156 0z"/></g></svg>
+          Bedrooms
+      </label>
+    </div>
   </div>
 </section>
 
 <section class="portfolio fb--heading">
-  <div class="wrapper">
-    <ul class="portfolio__list searchresults">
-      
-      <li class="portfolio__item resultblock" data-tag="modern">
-        <div class="portfolio__content">
-          <h2 class="portfolio__title">Ivory &amp; Blueberry Gloss</h2>
-          <div class="portfolio__thumb" style="background-image: url('https://raw.githubusercontent.com/conormcafee/fearon-bros/master/production/assets/featured-03.jpg');">
-            <div class="portfolio__thumb-content">
-              <a href="#" class="portfolio__link">
-                Designed &amp; Built by
-                <img src="production/assets/fb-logo.png" alt="Fearon Bros Logo" class="logo portfolio__logo" />
-              </a>
-            </div>
-          </div>
-          <a href="#" class="portfolio__cta">View Photos</a>
-        </div>
-        <ul style="display: none;">
-          <li data-size="1600x1200" data-src="http://placehold.it/1600x1200/ffffff/000000"></li>
-          <li data-size="1600x1200" data-src="http://placehold.it/1600x1200/000000/ffffff"></li>
-          <li data-size="1600x1200" data-src="http://placehold.it/1600x1200/ffffff/000000"></li>
-          <li data-size="1600x1200" data-src="http://placehold.it/1600x1200/000000/ffffff"></li>
-          <li data-size="1600x1200" data-src="http://placehold.it/1600x1200/ffffff/000000"></li>
-        </ul>
-      </li>
+  <ul class="portfolio__list searchresults">
+    <li class="portfolio__item resultblock js-gallery" data-tag="modern">
+      <div class="portfolio__content">
+        <h2>Ivory &amp; Blueberry Gloss</h2>
+        <div class="portfolio__thumb" style="background-image: url('https://raw.githubusercontent.com/conormcafee/fearon-bros/master/production/assets/featured-03.jpg');"></div>
+        <a href="#">View Photos</a>
+      </div>
+
+      <ul style="display: none;">
+        <li data-size="1600x1200" data-src="http://placehold.it/1600x1200/ffffff/000000"></li>
+        <li data-size="1600x1200" data-src="http://placehold.it/1600x1200/000000/ffffff"></li>
+        <li data-size="1600x1200" data-src="http://placehold.it/1600x1200/ffffff/000000"></li>
+        <li data-size="1600x1200" data-src="http://placehold.it/1600x1200/000000/ffffff"></li>
+        <li data-size="1600x1200" data-src="http://placehold.it/1600x1200/ffffff/000000"></li>
+      </ul>
+    </li>
         
-      <li class="portfolio__item resultblock" data-tag="traditional">
-        <div class="portfolio__content">
-          <h2 class="portfolio__title">1909 Half Pencil &amp; Scalloped</h2>
-          <div class="portfolio__thumb" style="background-image: url('production/assets/kitchen-02/001.jpg');">
-            <div class="portfolio__thumb-content">
-              <a href="#" class="portfolio__link">
-                Designed &amp; Built by
-                <img src="production/assets/fb-logo.png" alt="Fearon Bros Logo" class="logo portfolio__logo" />
-              </a>
-            </div>
-          </div>
-          <a href="#" class="portfolio__cta">View Photos</a>
-        </div>
-        <ul class="featured--gallery" style="display: none;">
-          <li data-size="1600x1200" data-src="http://placehold.it/1600x1200/282828/000000"></li>
-          <li data-size="1600x1200" data-src="http://placehold.it/1600x1200/000000/282828"></li>
-          <li data-size="1600x1200" data-src="http://placehold.it/1600x1200/282828/000000"></li>
-          <li data-size="1600x1200" data-src="http://placehold.it/1600x1200/000000/282828"></li>
-          <li data-size="1600x1200" data-src="http://placehold.it/1600x1200/282828/000000"></li>
-        </ul>
-      </li>
-
-      <li class="portfolio__item resultblock" data-tag="modern">
-        <div class="portfolio__content">
-          <h2 class="portfolio__title">Remo White &amp; Dove Grey</h2>
-          <div class="portfolio__thumb" style="background-image: url('production/assets/kitchen-03/001.jpg');">
-            <div class="portfolio__thumb-content">
-              <a href="#" class="portfolio__link">
-                Designed &amp; Built by
-                <img src="production/assets/fb-logo.png" alt="Fearon Bros Logo" class="logo portfolio__logo" />
-              </a>
-            </div>
-          </div>
-          <a href="#" class="portfolio__cta">View Photos</a>
-        </div>
-      </li>
-
-      <li class="portfolio__item resultblock" data-tag="modern">
-        <div class="portfolio__content">
-          <h2 class="portfolio__title">Slipped Shaker Painted</h2>
-          <div class="portfolio__thumb" style="background-image: url('production/assets/kitchen-04/001.jpg');">
-            <div class="portfolio__thumb-content">
-              <a href="#" class="portfolio__link">
-                Designed &amp; Built by
-                <img src="production/assets/fb-logo.png" alt="Fearon Bros Logo" class="logo portfolio__logo" />
-              </a>
-            </div>
-          </div>
-          <a href="#" class="portfolio__cta">View Photos</a>
-        </div>
-      </li>
+    <li class="portfolio__item resultblock js-gallery" data-tag="traditional">
+      <div class="portfolio__content">
+        <h2>1909 Half Pencil &amp; Scalloped</h2>
+        <div class="portfolio__thumb" style="background-image: url('production/assets/kitchen-02/001.jpg');"></div>
+        <a href="#">View Photos</a>
+      </div>
       
-      <li class="portfolio__item resultblock" data-tag="bedroom">
-        <div class="portfolio__content">
-          <h2 class="portfolio__title">Walk-in Wardrope</h2>
-          <div class="portfolio__thumb" style="background-image: url('production/assets/bedroom-01/001.jpg');">
-            <div class="portfolio__thumb-content">
-              <a href="#" class="portfolio__link">
-                Designed &amp; Built by
-                <img src="production/assets/fb-logo.png" alt="Fearon Bros Logo" class="logo portfolio__logo" />
-              </a>
-            </div>
-          </div>
-          <a href="#" class="portfolio__cta">View Photos</a>
-        </div>
-      </li>
+      <ul class="featured--gallery" style="display: none;">
+        <li data-size="1600x1200" data-src="http://placehold.it/1600x1200/282828/000000"></li>
+        <li data-size="1600x1200" data-src="http://placehold.it/1600x1200/000000/282828"></li>
+        <li data-size="1600x1200" data-src="http://placehold.it/1600x1200/282828/000000"></li>
+        <li data-size="1600x1200" data-src="http://placehold.it/1600x1200/000000/282828"></li>
+        <li data-size="1600x1200" data-src="http://placehold.it/1600x1200/282828/000000"></li>
+      </ul>
+    </li>
 
-      <li class="portfolio__item resultblock" data-tag="traditional">
-        <div class="portfolio__content">
-          <h2 class="portfolio__title">Broadoak Painted Stone</h2>
-          <div class="portfolio__thumb" style="background-image: url('production/assets/kitchen-05/001.jpg');">
-            <div class="portfolio__thumb-content">
-              <a href="#" class="portfolio__link">
-                Designed &amp; Built by
-                <img src="production/assets/fb-logo.png" alt="Fearon Bros Logo" class="logo portfolio__logo" />
-              </a>
-            </div>
-          </div>
-          <a href="#" class="portfolio__cta">View Photos</a>
-        </div>
-      </li>
+    <li class="portfolio__item resultblock js-gallery" data-tag="bedroom">
+      <div class="portfolio__content">
+        <h2>Walk-in Wardrope</h2>
+        <div class="portfolio__thumb" style="background-image: url('production/assets/bedroom-01/001.jpg');"></div>
+        <a href="#">View Photos</a>
+      </div>
 
-      <li class="portfolio__item resultblock" data-tag="traditional">
-        <div class="portfolio__content">
-          <h2 class="portfolio__title">Broadoak Painted Alabaster &amp; Linen</h2>
-          <div class="portfolio__thumb" style="background-image: url('production/assets/kitchen-06/001.jpg');">
-            <div class="portfolio__thumb-content">
-              <a href="#" class="portfolio__link">
-                Designed &amp; Built by
-                <img src="production/assets/fb-logo.png" alt="Fearon Bros Logo" class="logo portfolio__logo" />
-              </a>
-            </div>
-          </div>
-          <a href="#" class="portfolio__cta">View Photos</a>
-        </div>
-      </li>
-
-      <li class="portfolio__item resultblock" data-tag="traditional">
-        <div class="portfolio__content">
-          <h2 class="portfolio__title">Cornell Oak Kitchen</h2>
-          <div class="portfolio__thumb" style="background-image: url('production/assets/kitchen-07/001.jpg');">
-            <div class="portfolio__thumb-content">
-              <a href="#" class="portfolio__link">
-                Designed &amp; Built by
-                <img src="production/assets/fb-logo.png" alt="Fearon Bros Logo" class="logo portfolio__logo" />
-              </a>
-            </div>
-          </div>
-          <a href="#" class="portfolio__cta">View Photos</a>
-        </div>
-      </li>
-
-      <li class="portfolio__item resultblock" data-tag="modern">
-        <div class="portfolio__content">
-          <h2 class="portfolio__title">Textured Oak Handle-less</h2>
-          <div class="portfolio__thumb" style="background-image: url('production/assets/kitchen-08/001.jpg');">
-            <div class="portfolio__thumb-content">
-              <a href="#" class="portfolio__link">
-                Designed &amp; Built by
-                <img src="production/assets/fb-logo.png" alt="Fearon Bros Logo" class="logo portfolio__logo" />
-              </a>
-            </div>
-          </div>
-          <a href="#" class="portfolio__cta">View Photos</a>
-        </div>
-      </li>
-
+      <ul class="featured--gallery" style="display: none;">
+        <li data-size="1600x1200" data-src="http://placehold.it/1600x1200/282828/000000"></li>
+        <li data-size="1600x1200" data-src="http://placehold.it/1600x1200/000000/282828"></li>
+        <li data-size="1600x1200" data-src="http://placehold.it/1600x1200/282828/000000"></li>
+        <li data-size="1600x1200" data-src="http://placehold.it/1600x1200/000000/282828"></li>
+        <li data-size="1600x1200" data-src="http://placehold.it/1600x1200/282828/000000"></li>
+      </ul>
+    </li>
     </ul>
   </div>
 </section>
 
-<footer>
-  <div class="wrapper">
-    <ul class="footer__list">
-      <li class="footer__item fb--heading">Fearon Bros</li>
-      <li class="footer__item"><a href="#" title="Footer Link" class="footer__link fb--base">Featured Design</a></li>
-      <li class="footer__item"><a href="#" title="Footer Link" class="footer__link fb--base">Kitchens</a></li>
-      <li class="footer__item"><a href="#" title="Footer Link" class="footer__link fb--base">Bedrooms</a></li>
-      <li class="footer__item"><a href="#" title="Footer Link" class="footer__link fb--base">Applicances/Brands</a></li>
-      <li class="footer__item"><a href="#" title="Footer Link" class="footer__link fb--base">Portfolio</a></li>
-      <li class="footer__item"><a href="#" title="Footer Link" class="footer__link fb--base">Contact</a></li>
-    </ul>
-
-    <ul class="footer__list">
-      <li class="footer__item fb--heading">Awards</li>
-      <li class="footer__item"><a href="#" title="Footer Link" class="footer__link fb--base">Featured Design</a></li>
-      <li class="footer__item"><a href="#" title="Footer Link" class="footer__link fb--base">Kitchens</a></li>
-      <li class="footer__item"><a href="#" title="Footer Link" class="footer__link fb--base">Bedrooms</a></li>
-      <li class="footer__item"><a href="#" title="Footer Link" class="footer__link fb--base">Applicances/Brands</a></li>
-      <li class="footer__item"><a href="#" title="Footer Link" class="footer__link fb--base">Portfolio</a></li>
-      <li class="footer__item"><a href="#" title="Footer Link" class="footer__link fb--base">Contact</a></li>
-    </ul>
-
-    <ul class="footer__list">
-      <li class="footer__item fb--heading">Opening Hours</li>
-      <li class="footer__item"><a href="#" title="Footer Link" class="footer__link fb--base">Featured Design</a></li>
-      <li class="footer__item"><a href="#" title="Footer Link" class="footer__link fb--base">Kitchens</a></li>
-      <li class="footer__item"><a href="#" title="Footer Link" class="footer__link fb--base">Bedrooms</a></li>
-      <li class="footer__item"><a href="#" title="Footer Link" class="footer__link fb--base">Applicances/Brands</a></li>
-      <li class="footer__item"><a href="#" title="Footer Link" class="footer__link fb--base">Portfolio</a></li>
-      <li class="footer__item"><a href="#" title="Footer Link" class="footer__link fb--base">Contact</a></li>
-    </ul>
-
-    <ul class="footer__list">
-      <li class="footer__item fb--heading">Contact Us</li>
-      <li class="footer__item"><a href="#" title="Footer Link" class="footer__link fb--base">Featured Design</a></li>
-      <li class="footer__item"><a href="#" title="Footer Link" class="footer__link fb--base">Kitchens</a></li>
-      <li class="footer__item"><a href="#" title="Footer Link" class="footer__link fb--base">Bedrooms</a></li>
-      <li class="footer__item"><a href="#" title="Footer Link" class="footer__link fb--base">Applicances/Brands</a></li>
-      <li class="footer__item"><a href="#" title="Footer Link" class="footer__link fb--base">Portfolio</a></li>
-      <li class="footer__item"><a href="#" title="Footer Link" class="footer__link fb--base">Contact</a></li>
-    </ul>
+<figure class="appliances">
+  <div class="manufacturer">
+    <img src="production/assets/appliances/neff.png" />
   </div>
+
+  <div class="manufacturer">
+    <img src="production/assets/appliances/gorenje.png" />
+  </div>
+
+  <div class="manufacturer">
+    <img src="production/assets/appliances/insinkerator.png" />
+  </div>
+
+  <div class="manufacturer">
+    <img src="production/assets/appliances/franke.png" />
+  </div>
+
+  <div class="manufacturer">
+    <img src="production/assets/appliances/rangemaster.png" />
+  </div>
+
+  <div class="manufacturer">
+    <img src="production/assets/appliances/sensio.png" />
+  </div>
+</figure>
+
+<footer>
+  <ul>
+    <li>Quick Links</li>
+    <li><a href="our-services.html" title="Our Services">Our Services</a></li>
+    <li><a href="portfolio.html" title="Portfolio">Portfolio</a></li>
+    <li><a href="#" title="Footer Link">Applicances/Brands</a></li>
+    <li><a href="#" title="Footer Link">Contact</a></li>
+    <li><a href="#" title="Footer Link">Sitemap</a></li>
+  </ul>
+
+  <ul>
+    <li>Opening Hours</li>
+    <li>Monday: 09:00 - 17:00</li>  
+    <li>Tuesday: 09:00 - 17:00</li>
+    <li>Wednesday: 09:00 - 17:00</li>
+    <li>Thursday: 09:00 - 17:00</li>
+    <li>Friday: 09:00 - 17:00</li>
+    <li>Saturday: 09:00 - 13:00</li>
+    <li>Sunday: Closed</li>
+  </ul>
+
+  <ul>
+    <li>Contact Us</li>
+    <li>Details</li>
+    <li>Details</li>
+    <li>Details</li>
+    <li>Details</li>
+    <li>Details</li>
+  </ul>
 </footer>
 
 <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true"><div class="pswp__bg"></div><div class="pswp__scroll-wrap"><div class="pswp__container"><div class="pswp__item"></div><div class="pswp__item"></div><div class="pswp__item"></div></div><div class="pswp__ui pswp__ui--hidden"> <div class="pswp__top-bar"> <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title="Share"></button> <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button> <div class="pswp__preloader"> <div class="pswp__preloader__icn"> <div class="pswp__preloader__cut"> <div class="pswp__preloader__donut"></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"> <div class="pswp__share-tooltip"></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"> </button> <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"> </button> <div class="pswp__caption"> <div class="pswp__caption__center"></div></div></div></div></div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="production/js/photoswipe.min.js"></script>
+<script src="production/js/photoswipe.min.js"></script> 
 <script src="production/js/photoswipe-ui-default.min.js"></script>
+<script src="production/js/unslider.js"></script>
+<script src="production/js/script.js"></script>
 
-<script>
-$(document).ready(function(){
-  $('.category').on('change', function(){
-    var category_list = [];
-    $('#filters :input:checked').each(function(){
-      var category = $(this).val();
-      category_list.push(category);
-    });
-
-    if(category_list.length == 0)
-        $('.resultblock').fadeIn();
-    
-    else {
-      $('.resultblock').each(function(){
-        var item = $(this).attr('data-tag');
-        if(jQuery.inArray(item,category_list) > -1)
-          $(this).fadeIn('fast');
-        else
-          $(this).hide();
-      });
-    }
-  });
-});
-</script>
-
-<script>
-      $('.portfolio__item').each( function() {
-      var $pic     = $(this),
-        getItems = function() {
-            var items = [];
-            $pic.find('li').each(function() {
-                var $src   = $(this).data('src'),
-                    $size   = $(this).data('size').split('x'),
-                    $width  = $size[0],
-                    $height = $size[1];
- 
-                var item = {
-                    src : $src,
-                    w   : $width,
-                    h   : $height
-                }
- 
-                items.push(item);
-            });
-            return items;
-        }
- 
-    var items = getItems();
-      console.log(items);
-      var $pswp = $('.pswp')[0];
-      $pic.on('click', '.portfolio__content', function(event) {
-      event.preventDefault();
-     
-    var options = {
-        index: 0,
-        showHideOpacity: true
-    }
-
-    var lightBox = new PhotoSwipe($pswp, PhotoSwipeUI_Default, items, options);
-    lightBox.init();
-});
-    });
-
-</script>
 </body>
 
 </html>
