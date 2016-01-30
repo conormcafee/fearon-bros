@@ -920,21 +920,10 @@ header {
 }
 
 .filter {
-  -webkit-flex: 1 1 auto;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   text-align: center;
-  padding: 1.25em 0;
-}
-.filter:nth-child(2) {
-  border-left: 1px solid #e6e6e6;
-  border-right: 1px solid #e6e6e6;
-}
-
-.filter .fb--heading {
-  font-size: 16px;
-  font-size: 1.6rem;
-  color: #666666;
 }
 
 .filter input[type="checkbox"] {
@@ -944,17 +933,16 @@ header {
 .filter input[type="checkbox"] + label {
   font-size: 16px;
   font-size: 1.6rem;
-  color: #e6e6e6;
   display: block;
   cursor: pointer;
 }
 
 .filter input[type="checkbox"] + label {
-  color: #e6e6e6;
+  color: #cdcdcd;
 }
 
 .filter input[type="checkbox"] + label .filter-colour {
-  fill: #e6e6e6;
+  fill: #cdcdcd;
 }
 
 .filter-svg {
@@ -972,6 +960,47 @@ header {
     font-size: 1.2rem;
   }
 }
+.filter input[type="checkbox"]:checked + label {
+  color: #3D9999;
+}
+
+.filter input[type="checkbox"]:checked + label .filter-colour {
+  fill: #3D9999;
+}
+
+.portfolio__list {
+  display: block;
+  overflow: hidden;
+  padding: 0 0.5em;
+}
+
+.portfolio__item {
+  display: block;
+  float: left;
+  width: 100%;
+  cursor: pointer;
+}
+@media only screen and (min-width: 768px) {
+  .portfolio__item {
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .portfolio__item {
+    width: 33.333333333%;
+  }
+}
+
+.portfolio__content {
+  display: block;
+  padding: 0.5em;
+}
+
+.portfolio__content img {
+  max-width: 100%;
+  height: auto;
+}
+
 .pswp {
   display: none;
   position: absolute;

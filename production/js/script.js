@@ -1,7 +1,11 @@
 // Top Slider
 
 jQuery(document).ready(function($) {
-	$('.my-slider').unslider();
+	$('.my-slider').unslider({
+        autoplay: true,
+        speed: 1000,
+        delay: 5000
+    });
 });
 
 // Sticky Header
