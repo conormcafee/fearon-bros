@@ -25,13 +25,11 @@
 
 .service-text .btn {
 	text-align: center;
-	background-color: brand-colour(green);
-	border: 1px solid brand-colour(green, dark);
+	background-color: brand-colour(brown);
 	color: brand-colour(white);
 
 	&:hover {
-		background-color: brand-colour(green, dark);
-		border: 1px solid brand-colour(green);
+		background-color: brand-colour(brown, dark);
 	}
 
 	@media only screen and (min-width: 1100px) {

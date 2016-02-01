@@ -81,9 +81,23 @@ header {
 .header__nav-btn {
   display: flex;
   align-items: center;
+
+  @media only screen and (min-width: 800px) {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .header__bar.sticky .header__nav-btn {
+    display: flex;
+  }
 }
 
 .header__nav-btn a {
+  @include font-size(1.6);
+  font-family: 'Abril Fatface', cursive;
+  line-height: 24px;
+  line-height: 2.4rem;
   color: brand-colour(white);
   transition: all 0.2s ease-in-out;
   padding: 1em;
@@ -101,16 +115,25 @@ header {
 
 
 
-.header__logo  {
+.header__logo {
   width: 200px;
   margin: 0 1em;
-  
-  .logo {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    
+
+  @media only screen and (min-width: 800px) {
+    margin: 0 auto;
   }
+}
+
+@media only screen and (min-width: 800px) {
+  .header__bar.sticky .header__logo {
+    margin: 0 1em;
+  }
+}
+
+.header__logo .logo {
+  display: block;
+  max-width: 100%;
+  height: auto;  
 }
 
 
@@ -141,6 +164,7 @@ header {
 
 .header__nav {
   display: none;
+
   @media only screen and (min-width: 800px) {
     display: flex;
     width: 100%;
@@ -158,14 +182,14 @@ header {
 }
 
 .header__nav a:hover {
-  color: brand-colour(blue);
+  color: brand-colour(brown);
 }
 
 .header__nav a.active {
   border-bottom: 1px dashed brand-colour(green);
 
   &:hover {
-    border-bottom: 1px dashed brand-colour(blue);
+    border-bottom: 1px dashed brand-colour(brown);
   }
 }
 
@@ -173,6 +197,17 @@ header {
 
 
 
+.header__image {
+  display: block;
+  background-color: brand-colour(green);
+  background-size: cover;
+  background-position: center center;
+  height: 250px;
+  
+  @media only screen and (min-width: 800px) {
+   height: inherit; 
+  }
+}
 
 .unslider {
     overflow: hidden;
@@ -261,15 +296,4 @@ header {
   font-family: 'Abril Fatface', cursive;
   line-height: 60px;
   line-height: 6rem;
-}
-
-.header__image {
-  display: block;
-  background-size: cover;
-  background-position: center center;
-  height: 250px;
-  
-  @media only screen and (min-width: 800px) {
-   height: inherit; 
-  }
 }

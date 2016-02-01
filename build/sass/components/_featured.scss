@@ -2,7 +2,7 @@
 	display: block;
 	overflow: hidden;
 	position: relative;
-	margin: 4em 0;
+	margin-top: 4em;
 	cursor: pointer;
 }
 
@@ -36,17 +36,17 @@
 }
 
 .featured__text h3 {
-	color: brand-colour(blue);
+	color: brand-colour(brown);
 	margin-bottom: 0.75em;
 }
 
 .featured__text a {
 	color: brand-colour(white);
-	background-color: brand-colour(blue);
-	border: 2px solid brand-colour(blue);
+	background-color: brand-colour(brown);
+	border: 2px solid brand-colour(brown);
 
 	&:hover {
-		background-color: brand-colour(blue, dark);
+		background-color: brand-colour(brown, dark);
 	}
 }
 

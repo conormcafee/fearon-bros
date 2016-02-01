@@ -1,11 +1,9 @@
 // Colour Palette
 
 $colour-one: #004E4E;
-$colour-two: #002C2B;
-$colour-three: #3D9999;
-$colour-four: #384F61;
-$colour-five: #e6e6e6;
-$colour-six: #ffffff;
+$colour-two: #844133;
+$colour-three: #e6e6e6;
+$colour-four: #ffffff;
  
 // Brand Colour Palette
 $brand-colours: (
@@ -18,7 +16,7 @@ $brand-colours: (
         darker: darken($colour-one, 30%)
     ),
 
-    dark-green: (
+    brown: (
         base:   $colour-two,
         opacity: rgba($colour-two, 0.8),
         lighter: lighten($colour-two, 20%),
@@ -27,38 +25,20 @@ $brand-colours: (
         darker: darken($colour-two, 30%)
     ),
 
-    blue: (
+    grey: (
         base:   $colour-three,
-        opacity: rgba($colour-three, 0.8),
         lighter: lighten($colour-three, 20%),
         light:  lighten($colour-three, 10%),
         dark:   darken($colour-three, 10%),
         darker: darken($colour-three, 30%)
     ),
 
-    dark-blue: (
+    white: (
         base:   $colour-four,
-        opacity: rgba($colour-four, 0.8),
         lighter: lighten($colour-four, 20%),
         light:  lighten($colour-four, 10%),
         dark:   darken($colour-four, 10%),
         darker: darken($colour-four, 30%)
-    ),
-
-    grey: (
-        base:   $colour-five,
-        lighter: lighten($colour-five, 20%),
-        light:  lighten($colour-five, 10%),
-        dark:   darken($colour-five, 10%),
-        darker: darken($colour-five, 30%)
-    ),
-
-    white: (
-        base:   $colour-six,
-        lighter: lighten($colour-six, 20%),
-        light:  lighten($colour-six, 10%),
-        dark:   darken($colour-six, 10%),
-        darker: darken($colour-six, 30%)
     )
 );
  
