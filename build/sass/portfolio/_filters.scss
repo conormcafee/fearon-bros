@@ -78,6 +78,11 @@ p.portfolio--homepage__msg {
 
 .portfolio.portfolio--homepage a {
 	display: inline-block;
+	color: brand-colour(brown);
+
+	&:hover {
+		color: brand-colour(green);
+	}
 }
 
 @media only screen and (min-width: 768px) {
@@ -102,7 +107,6 @@ p.portfolio--homepage__msg {
   	display: block;
   	overflow: hidden;
   	float: left;
-  	cursor: zoom-in;
   	margin: 0.5em 0;
   
   	@media only screen and (min-width: 768px) {
@@ -122,6 +126,7 @@ p.portfolio--homepage__msg {
   	margin-bottom: 1em;
   	transform: scale(1);
   	transition: all 0.3s ease-in-out;
+  	cursor: zoom-in;
 
   	&:hover {
   		transform: scale(0.9);
@@ -140,10 +145,10 @@ p.portfolio--homepage__msg {
 }
 
 .portfolio__item a {
-	@include font-size(1.2);
-	line-height: 18px;
-	line-height: 1.8rem;
-	text-transform: uppercase;
+	@include font-size(1.4);
+	line-height: 24px;
+	line-height: 2.4rem;
+	//text-transform: uppercase;
 	margin-bottom: 1em;
 	color: brand-colour(green);
 

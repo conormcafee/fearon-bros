@@ -20,7 +20,7 @@ body {
   font-weight: 400;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
-  color: #282828;
+  color: #3D3D3D;
 }
 
 ol, ul {
@@ -78,7 +78,6 @@ html {
   font-family: 'Abril Fatface', cursive;
   display: inline-block;
   padding: 0.25em 1em;
-  border-radius: 7px;
 }
 .btn:hover {
   transition: all 0.3s ease-in-out;
@@ -810,7 +809,7 @@ header {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  margin: 4em 0;
+  margin: 2em 0;
 }
 
 .service-text--item {
@@ -848,6 +847,7 @@ header {
 }
 .service-text .btn:hover {
   background-color: #5f2f25;
+  color: #ffffff;
 }
 @media only screen and (min-width: 1100px) {
   .service-text .btn {
@@ -868,8 +868,24 @@ header {
   margin: 0;
 }
 
+.service-text__content h2 span {
+  color: #9a9a9a;
+  font-family: 'Alice', serif;
+}
+
 .service-text__content h3 {
   margin-top: 0.5em;
+}
+
+.service-text__content a {
+  color: #844133;
+}
+.service-text__content a:hover {
+  color: #004E4E;
+}
+
+.service-text__content a:first-of-type {
+  margin-top: 1em;
 }
 
 .service {
@@ -1010,6 +1026,10 @@ p.portfolio--homepage__msg {
 
 .portfolio.portfolio--homepage a {
   display: inline-block;
+  color: #844133;
+}
+.portfolio.portfolio--homepage a:hover {
+  color: #004E4E;
 }
 
 @media only screen and (min-width: 768px) {
@@ -1034,8 +1054,6 @@ p.portfolio--homepage__msg {
   display: block;
   overflow: hidden;
   float: left;
-  cursor: -webkit-zoom-in;
-  cursor: zoom-in;
   margin: 0.5em 0;
 }
 @media only screen and (min-width: 768px) {
@@ -1057,6 +1075,8 @@ p.portfolio--homepage__msg {
   -webkit-transform: scale(1);
           transform: scale(1);
   transition: all 0.3s ease-in-out;
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
 }
 .portfolio__image:before {
   content: '';
@@ -1086,11 +1106,10 @@ p.portfolio--homepage__msg {
 }
 
 .portfolio__item a {
-  font-size: 12px;
-  font-size: 1.2rem;
-  line-height: 18px;
-  line-height: 1.8rem;
-  text-transform: uppercase;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 24px;
+  line-height: 2.4rem;
   margin-bottom: 1em;
   color: #004E4E;
 }

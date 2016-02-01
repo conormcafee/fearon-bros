@@ -1,7 +1,7 @@
 .service-text {
 	display: flex;
 	flex-wrap: wrap;
-	margin: 4em 0;
+	margin: 2em 0;
 }
 
 .service-text--item {
@@ -30,6 +30,7 @@
 
 	&:hover {
 		background-color: brand-colour(brown, dark);
+		color: brand-colour(white);
 	}
 
 	@media only screen and (min-width: 1100px) {
@@ -50,8 +51,25 @@
 	margin: 0;
 }
 
+.service-text__content h2 span {
+	color: brand-colour(grey, darker);
+	font-family: 'Alice', serif;
+}
+
 .service-text__content h3 {
 	margin-top: 0.5em;
+}
+
+.service-text__content a {
+	color: brand-colour(brown);
+
+	&:hover {
+		color: brand-colour(green);
+	}
+}
+
+.service-text__content a:first-of-type {
+	margin-top: 1em;
 }
 
 .service {
