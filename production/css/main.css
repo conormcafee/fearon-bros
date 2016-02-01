@@ -20,6 +20,7 @@ body {
   font-weight: 400;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
+  color: #282828;
 }
 
 ol, ul {
@@ -931,8 +932,11 @@ header {
 }
 
 .filter input[type="checkbox"] + label {
-  font-size: 16px;
-  font-size: 1.6rem;
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-family: 'Abril Fatface', cursive;
+  line-height: 27px;
+  line-height: 2.7rem;
   display: block;
   cursor: pointer;
 }
@@ -961,11 +965,11 @@ header {
   }
 }
 .filter input[type="checkbox"]:checked + label {
-  color: #3D9999;
+  color: #004E4E;
 }
 
 .filter input[type="checkbox"]:checked + label .filter-colour {
-  fill: #3D9999;
+  fill: #004E4E;
 }
 
 .portfolio__list {
@@ -975,10 +979,13 @@ header {
 }
 
 .portfolio__item {
-  display: block;
-  float: left;
   width: 100%;
-  cursor: pointer;
+  display: block;
+  overflow: hidden;
+  float: left;
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
+  margin: 0.5em 0;
 }
 @media only screen and (min-width: 768px) {
   .portfolio__item {
@@ -987,18 +994,52 @@ header {
 }
 @media only screen and (min-width: 992px) {
   .portfolio__item {
-    width: 33.333333333%;
+    width: 25%;
   }
 }
 
-.portfolio__content {
-  display: block;
-  padding: 0.5em;
+.portfolio__image {
+  background-size: cover;
+  background-position: center center;
+  margin-bottom: 1em;
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+  transition: all 0.3s ease-in-out;
+}
+.portfolio__image:before {
+  content: '';
+  float: left;
+  padding-bottom: 75%;
+}
+.portfolio__image:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.portfolio__image:hover {
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
-.portfolio__content img {
-  max-width: 100%;
-  height: auto;
+.portfolio__item p {
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 24px;
+  line-height: 2.4rem;
+  margin-bottom: 0;
+}
+
+.portfolio__item a {
+  font-size: 12px;
+  font-size: 1.2rem;
+  line-height: 18px;
+  line-height: 1.8rem;
+  text-transform: uppercase;
+  margin-bottom: 1em;
+  color: #004E4E;
+}
+.portfolio__item a:hover {
+  color: #3D9999;
 }
 
 .pswp {
