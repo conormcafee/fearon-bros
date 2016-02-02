@@ -202,10 +202,15 @@ header {
   background-color: brand-colour(green);
   background-size: cover;
   background-position: center center;
-  height: 250px;
   
   @media only screen and (min-width: 800px) {
    height: inherit; 
+  }
+}
+
+@media only screen and (max-width: 799px) {
+  .header__image {
+    @include aspect-ratio(4,3);
   }
 }
 

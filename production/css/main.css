@@ -399,7 +399,6 @@ header {
   background-color: #004E4E;
   background-size: cover;
   background-position: center center;
-  height: 250px;
 }
 @media only screen and (min-width: 800px) {
   .header__image {
@@ -407,6 +406,18 @@ header {
   }
 }
 
+@media only screen and (max-width: 799px) {
+  .header__image:before {
+    content: '';
+    float: left;
+    padding-bottom: 75%;
+  }
+  .header__image:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
 .unslider {
   overflow: hidden;
   margin: 0;
@@ -578,12 +589,19 @@ header {
   background-position: center center;
   display: block;
   float: left;
-  height: 150px;
   width: 50%;
 }
-@media only screen and (min-width: 600px) {
-  .featured__image {
-    height: 250px;
+
+@media only screen and (max-width: 799px) {
+  .featured__image:before {
+    content: '';
+    float: left;
+    padding-bottom: 75%;
+  }
+  .featured__image:after {
+    content: '';
+    display: table;
+    clear: both;
   }
 }
 @media only screen and (min-width: 800px) {
@@ -591,7 +609,6 @@ header {
     height: 500px;
   }
 }
-
 .featured__image.featured--001 {
   border-right: 0.5em solid #ffffff;
 }
@@ -905,44 +922,34 @@ header {
   background-position: center center;
   display: block;
   float: left;
-  height: 250px;
   width: 100%;
 }
-@media only screen and (min-width: 600px) {
-  .service__image {
-    height: 350px;
-  }
+.service__image:before {
+  content: '';
+  float: left;
+  padding-bottom: 75%;
 }
-@media only screen and (min-width: 800px) {
-  .service__image {
-    height: 500px;
-  }
+.service__image:after {
+  content: '';
+  display: table;
+  clear: both;
 }
 
-@media only screen and (max-width: 799px) {
-  .service__image:nth-child(n+2) {
+@media only screen and (max-width: 599px) {
+  .service__image:nth-child(2) {
     margin-top: 1em;
   }
 }
-@media only screen and (min-width: 800px) {
-  .service--kitchens .service__image:first-child {
-    width: 70%;
+@media only screen and (min-width: 600px) {
+  .service__image {
+    width: 50%;
+  }
+
+  .service__image:first-child {
     border-right: 0.5em solid #ffffff;
   }
 
-  .service--kitchens .service__image:nth-child(2) {
-    width: 30%;
-    border-left: 0.5em solid #ffffff;
-  }
-}
-@media only screen and (min-width: 800px) {
-  .service--bedrooms .service__image:first-child {
-    width: 30%;
-    border-right: 0.5em solid #ffffff;
-  }
-
-  .service--bedrooms .service__image:nth-child(2) {
-    width: 70%;
+  .service__image:nth-child(2) {
     border-left: 0.5em solid #ffffff;
   }
 }
@@ -1063,6 +1070,11 @@ p.portfolio--homepage__msg {
   }
 }
 @media only screen and (min-width: 992px) {
+  .portfolio__item {
+    width: 33.333333333%;
+  }
+}
+@media only screen and (min-width: 1100px) {
   .portfolio__item {
     width: 25%;
   }

@@ -60,17 +60,20 @@
 	background-position: center center;
 	display: block;
 	float: left;
-	height: 150px;
 	width: 50%;
-
-	@media only screen and (min-width: 600px) {
-		height: 250px;
-	}
-
-	@media only screen and (min-width: 800px) {
-		height: 500px;
-	}
 }
+
+@media only screen and (max-width: 799px) {
+  .featured__image {
+    @include aspect-ratio(4,3);
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .featured__image {
+    height: 500px;
+  }
+} 
 
 .featured__image.featured--001 {
 	border-right: 0.5em solid brand-colour(white);

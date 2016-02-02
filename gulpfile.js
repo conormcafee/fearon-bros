@@ -31,7 +31,8 @@ gulp.task('sass', function() {
 });
 // Scripts
 gulp.task('scripts', function() {
-  return gulp.src('build/js/*.js')
+  //return gulp.src('build/js/*.js')
+  return gulp.src(['build/js/echo.js', 'build/js/photoswipe.js', 'build/js/photoswipe-ui-default.js', 'build/js/unslider.js', 'build/js/script.js'])
     .pipe(jshint('.jshintrc'))
     .pipe(jshint.reporter('default'))
     .pipe(concat('main.js'))

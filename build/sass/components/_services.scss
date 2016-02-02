@@ -84,49 +84,31 @@
 }
 
 .service__image {
+	@include aspect-ratio(4,3);
 	background-color: brand-colour(green);
 	background-size: cover;
 	background-position: center center;
 	display: block;
 	float: left;
-	height: 250px;
 	width: 100%;
-
-	@media only screen and (min-width: 600px) {
-		height: 350px;
-	}
-
-	@media only screen and (min-width: 800px) {
-		height: 500px;
-	}
 }
 
-@media only screen and (max-width: 799px) {
-	.service__image:nth-child(n+2) {
+@media only screen and (max-width: 599px) {
+	.service__image:nth-child(2) {
 		margin-top: 1em;
 	}
 }
 
-@media only screen and (min-width: 800px) {
-	.service--kitchens .service__image:first-child {
-		width: 70%;
+@media only screen and (min-width: 600px) {
+	.service__image {
+		width: 50%;
+	}
+
+	.service__image:first-child {
 		border-right: 0.5em solid brand-colour(white);
 	}
 
-	.service--kitchens .service__image:nth-child(2) {
-		width: 30%;
-		border-left: 0.5em solid brand-colour(white);
-	}
-}
-
-@media only screen and (min-width: 800px) {
-	.service--bedrooms .service__image:first-child {
-		width: 30%;
-		border-right: 0.5em solid brand-colour(white);
-	}
-
-	.service--bedrooms .service__image:nth-child(2) {
-		width: 70%;
+	.service__image:nth-child(2) {
 		border-left: 0.5em solid brand-colour(white);
 	}
 }
