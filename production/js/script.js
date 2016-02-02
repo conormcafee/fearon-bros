@@ -1,3 +1,11 @@
+// Echo
+
+echo.init({
+    offset: 100,
+    throttle: 250,
+    unload: false
+});
+
 // Top Slider
 
 jQuery(document).ready(function($) {
