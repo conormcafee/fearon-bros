@@ -2,7 +2,7 @@
 
 echo.init({
     offset: 100,
-    throttle: 50,
+    throttle: 100,
     unload: false
 });
 
@@ -58,7 +58,7 @@ $('.js-gallery').each( function() {
 }
 
 var items = getItems();
-    console.log(items);
+    //console.log(items);
 var $pswp = $('.pswp')[0];
     $pic.on('click', 'div', function(event) {
     event.preventDefault();
