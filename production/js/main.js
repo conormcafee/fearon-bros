@@ -5368,7 +5368,7 @@ return PhotoSwipeUI_Default;
 
 echo.init({
     offset: 100,
-    throttle: 250,
+    throttle: 50,
     unload: false
 });
 
