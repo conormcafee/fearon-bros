@@ -1,14 +1,18 @@
 h1 {
 	@include font-size(4);
-	font-family: 'Abril Fatface', cursive;
+	font-family: serif;
 	line-height: 60px;
 	line-height: 6rem;
 	color: brand-colour(green);
 	margin-bottom: 0.25em;
 }
 
-h2 {
+.fonts-loaded h1 {
 	font-family: 'Abril Fatface', cursive;
+}
+
+h2 {
+	font-family: serif;
 	color: brand-colour(green);
 	@include font-size(3.5);
    	line-height: 52.5px;
@@ -16,13 +20,21 @@ h2 {
    	margin-bottom: 0.25em;
 }
 
-h3 {
+.fonts-loaded h2 {
 	font-family: 'Abril Fatface', cursive;
+}
+
+h3 {
+	font-family: serif;
 	color: brand-colour(green);
 	@include font-size(2.4);
    	line-height: 36px;
    	line-height: 3.6rem;
    	margin-bottom: 0.25em;
+}
+
+.fonts-loaded h3 {
+	font-family: 'Abril Fatface', cursive;
 }
 
 p {

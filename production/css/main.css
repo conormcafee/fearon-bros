@@ -1,3 +1,17 @@
+@font-face {
+  font-family: 'Abril FatFace';
+  src: url("webfonts/abrilfatface-regular-webfont.eot");
+  src: url("webfonts/abrilfatface-regular-webfont.eot?#iefix") format("embedded-opentype"), url("webfonts/abrilfatface-regular-webfont.woff2") format("woff2"), url("webfonts/abrilfatface-regular-webfont.woff") format("woff"), url("webfonts/abrilfatface-regular-webfont.ttf") format("truetype"), url("webfonts/abrilfatface-regular-webfont.svg#abril_fatfaceregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Alice';
+  src: url("webfonts/alice-regular-webfont.eot");
+  src: url("webfonts/alice-regular-webfont.eot?#iefix") format("embedded-opentype"), url("webfonts/alice-regular-webfont.woff2") format("woff2"), url("webfonts/alice-regular-webfont.woff") format("woff"), url("webfonts/alice-regular-webfont.ttf") format("truetype"), url("webfonts/alice-regular-webfont.svg#aliceregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -15,12 +29,16 @@ body {
   font-size: 1.8rem;
   line-height: 27px;
   line-height: 2.7rem;
-  font-family: 'Alice', serif;
+  font-family: serif;
   font-style: normal;
   font-weight: 400;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   color: #3D3D3D;
+}
+
+.fonts-loaded body {
+  font-family: 'Alice', serif;
 }
 
 ol, ul {
@@ -96,15 +114,19 @@ html {
 h1 {
   font-size: 40px;
   font-size: 4rem;
-  font-family: 'Abril Fatface', cursive;
+  font-family: serif;
   line-height: 60px;
   line-height: 6rem;
   color: #004E4E;
   margin-bottom: 0.25em;
 }
 
-h2 {
+.fonts-loaded h1 {
   font-family: 'Abril Fatface', cursive;
+}
+
+h2 {
+  font-family: serif;
   color: #004E4E;
   font-size: 35px;
   font-size: 3.5rem;
@@ -113,14 +135,22 @@ h2 {
   margin-bottom: 0.25em;
 }
 
-h3 {
+.fonts-loaded h2 {
   font-family: 'Abril Fatface', cursive;
+}
+
+h3 {
+  font-family: serif;
   color: #004E4E;
   font-size: 24px;
   font-size: 2.4rem;
   line-height: 36px;
   line-height: 3.6rem;
   margin-bottom: 0.25em;
+}
+
+.fonts-loaded h3 {
+  font-family: 'Abril Fatface', cursive;
 }
 
 p {

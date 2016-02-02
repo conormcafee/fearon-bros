@@ -1,3 +1,28 @@
+@font-face {
+    font-family: 'Abril FatFace';
+    src: url('webfonts/abrilfatface-regular-webfont.eot');
+    src: url('webfonts/abrilfatface-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('webfonts/abrilfatface-regular-webfont.woff2') format('woff2'),
+         url('webfonts/abrilfatface-regular-webfont.woff') format('woff'),
+         url('webfonts/abrilfatface-regular-webfont.ttf') format('truetype'),
+         url('webfonts/abrilfatface-regular-webfont.svg#abril_fatfaceregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Alice';
+    src: url('webfonts/alice-regular-webfont.eot');
+    src: url('webfonts/alice-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('webfonts/alice-regular-webfont.woff2') format('woff2'),
+         url('webfonts/alice-regular-webfont.woff') format('woff'),
+         url('webfonts/alice-regular-webfont.ttf') format('truetype'),
+         url('webfonts/alice-regular-webfont.svg#aliceregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 @mixin font-size($sizeValue: 1.6) {
   font-size: ($sizeValue * 10) + px;
   font-size: $sizeValue + rem;

@@ -13,12 +13,16 @@ body {
   @include font-size(1.8);
   line-height: 27px;
   line-height: 2.7rem;
-  font-family: 'Alice', serif;
+  font-family: serif;
   font-style: normal;
   font-weight: 400;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   color: #3D3D3D;
+}
+
+.fonts-loaded body {
+  font-family: 'Alice', serif;
 }
 
 ol, ul {
