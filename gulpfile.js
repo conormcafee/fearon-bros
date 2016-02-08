@@ -31,7 +31,6 @@ gulp.task('sass', function() {
 });
 // Scripts
 gulp.task('scripts', function() {
-  //return gulp.src('build/js/*.js')
   return gulp.src(['build/js/fontFaceObserver.js', 'build/js/echo.js', 'build/js/photoswipe.js', 'build/js/photoswipe-ui-default.js', 'build/js/unslider.js', 'build/js/script.js'])
     .pipe(jshint('.jshintrc'))
     .pipe(jshint.reporter('default'))
@@ -71,13 +70,7 @@ gulp.task('default', ['clean'], function() {
 // Watch
 gulp.task('watch', function() {
   livereload.listen();
- 
-  // Watch .scss files
   gulp.watch('build/sass/**/*.scss', ['sass']);
- 
-  // Watch .js files
-  gulp.watch('build/js/*.js', ['scripts']);
-
   //gulp.watch('build/js/*.js', ['scripts']);
  
 });

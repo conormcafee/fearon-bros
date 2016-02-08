@@ -11,9 +11,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 body {
   @include font-size(1.8);
+  font-family: serif;
   line-height: 27px;
   line-height: 2.7rem;
-  font-family: serif;
   font-style: normal;
   font-weight: 400;
   -webkit-text-size-adjust: 100%;
@@ -75,7 +75,7 @@ html {
 
 .btn {
   @include font-size(1.6);
-  font-family: 'Abril Fatface', cursive;
+  font-family: 'Alice', serif;
   display: inline-block;
   padding: 0.25em 1em;
 

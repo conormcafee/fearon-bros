@@ -108,6 +108,7 @@ p.portfolio--homepage__msg {
   	overflow: hidden;
   	float: left;
   	margin: 0.5em 0;
+  	text-align: center;
   
   	@media only screen and (min-width: 768px) {
    		width: 50%;
@@ -137,23 +138,21 @@ p.portfolio--homepage__msg {
   	}
 }
 
-.portfolio__item article {
-	text-align: center;
-}
-
-.portfolio__item p {
+.portfolio__item p:first-child {
 	@include font-size(1.6);
 	line-height: 24px;
 	line-height: 2.4rem;
 	margin-bottom: 0;
+	cursor: pointer;
 }
 
-.portfolio__item a {
+.portfolio__item p:nth-child(2) {
 	@include font-size(1.4);
 	line-height: 24px;
 	line-height: 2.4rem;
 	margin-bottom: 1em;
 	color: brand-colour(green);
+	cursor: pointer;
 
 	&:hover {
 		color: brand-colour(brown);
