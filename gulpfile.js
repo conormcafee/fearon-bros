@@ -71,6 +71,6 @@ gulp.task('default', ['clean'], function() {
 gulp.task('watch', function() {
   livereload.listen();
   gulp.watch('build/sass/**/*.scss', ['sass']);
-  //gulp.watch('build/js/*.js', ['scripts']);
+  gulp.watch('build/js/*.js', ['scripts']);
  
 });

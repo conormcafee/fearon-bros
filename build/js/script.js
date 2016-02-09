@@ -1,3 +1,10 @@
+// Header Nav
+
+$('.header__nav-btn a').on('click', function(){
+    $('.full-screen-nav').toggleClass('js-header-active js-header-inactive');
+    event.preventDefault();
+});
+
 // Echo
 
 echo.init({
@@ -58,7 +65,7 @@ $('.js-gallery').each( function() {
 }
 
 var items = getItems();
-    //console.log(items);
+    console.log(items);
 var $pswp = $('.pswp')[0];
     $pic.on('click', 'div', function(event) {
     event.preventDefault();

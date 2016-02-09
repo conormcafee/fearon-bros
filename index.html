@@ -17,13 +17,21 @@
 </head>
 
 <body>
+<div class="full-screen-nav js-header-inactive">
+  <div>
+    <a href="index.html" class="active">Home</a>
+    <a href="our-services.html">Our Services</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="#">Contact</a>
+  </div>
+</div>
 
 <header>
   <div class="header--item">
     <div class="header__bar">
 
       <div class="header__logo">
-        <img src="production/assets/fb-logo.png" class="logo" />
+        <a href="index.html" title="Home"><img src="production/assets/fb-logo.png" class="logo" /></a>
       </div>
 
       <div class="header__nav-btn">
@@ -131,14 +139,30 @@
     </li>
   </ul>
 
-  <p class="portfolio--homepage__msg">Too see our full range of kitchen &amp; bedroom designs, check out our <a href="portfolio.html" title="View our entire Portfolio">entire portfolio</a>.</p>
+  <p class="portfolio--homepage__msg">To see our full range of kitchen &amp; bedroom designs, check out our <a href="portfolio.html" title="View our entire Portfolio">entire portfolio</a>.</p>
 </section>
 
 <section class="approach">
+  <ul class="d-list">
+    <li><span data-step="01">One to One<br />Consultation</span></li>
+    <li><span data-step="02">Perspective<br />Drawings</span></li>
+    <li><span data-step="03">Annotated<br />Plans</span></li>
+  </ul>
+
   <article>
     <h2>Our Approach</h2>
-    <p>Our dedication to pushing the boundairies of design is the core focus of our approach. During the design consultation phase we discuss your lifestyle, your design ideas, and what you want from your kitchen.  We take the time to get a better understanding of the way you live so we can tailor your design to work in harmony with your home.  We have our own team of builders’ electricians and plumbers should you need building works or alterations. We offer a singular approach where you have one point of contact throughout design and installation.</p>
+    <p>Our dedication to pushing the boundairies of design is the core focus of our approach. During the design consultation phase we discuss your lifestyle, your design ideas, and what you want from your kitchen.</p>
+
+    <p>We take the time to get a better understanding of the way you live so we can tailor your design to work in harmony with your home.</p>
+
+    <p>We have our own team of builders’ electricians and plumbers should you need building works or alterations. We offer a singular approach where you have one point of contact throughout design and installation.</p>
   </article>
+
+  <ul class="d-list">
+    <li><span data-step="04">Professional Planning<br />&amp; Presentation</span></li>
+    <li><span data-step="05">Mechanical &amp;<br />Electrical Drawings</span></li>
+    <li><span data-step="06">Dedicated Project<br />Manager During<br />Installation</span></li>
+  </ul>
   
   <aside>
     <ul>
@@ -152,7 +176,7 @@
   </aside>
 </section>
 
-<aside class="additional">
+<!--<aside class="additional">
   <div class="cta">
     <h2>Let's Talk</h2>
 
@@ -170,6 +194,12 @@
 
     <article>
       <div class="award">
+        <p>Kitchen of the Year</p>
+        <p>2013</p>
+        <p>Fearon Bros</p>
+      </div>
+
+      <div class="award">
         <p>KRI Awards 2011 (Finalist)</p>
         <p>Young Designer of the Year NI</p>
         <p>Kevin Fearon</p>
@@ -182,10 +212,11 @@
       </div>
     </article>
   </div>
-</aside>
+</aside>-->
 
 <footer>
   <div class="footer__item">
+    <p class="footer-title footer-appliances--title">Our Suppliers</p>
     <ul class="footer-appliances">
       <li><img src="production/assets/appliances/neff.png" /></li>
       <li><img src="production/assets/appliances/gorenje.png" /></li>
@@ -193,49 +224,84 @@
       <li><img src="production/assets/appliances/franke.png" /></li>
       <li><img src="production/assets/appliances/rangemaster.png" /></li>
       <li><img src="production/assets/appliances/sensio.png" /></li>
+    </ul>
+  </div>
+
+  <div class="footer__item">
+    <div class="opening-hours-wrapper">
+      <p class="footer-title">Opening Hours</p>
+      <table class="opening-hours">
+        <tr>
+          <td>Monday</td>
+          <td>09:00 - 17:00</td>
+        </tr>
+
+        <tr>
+          <td>Tuesday</td>
+          <td>09:00 - 17:00</td>
+        </tr>
+
+        <tr>
+          <td>Wednesday</td>
+          <td>09:00 - 17:00</td>
+        </tr>
+
+        <tr>
+          <td>Thursday</td>
+          <td>09:00 - 17:00</td>
+        </tr>
+
+        <tr>
+          <td>Friday</td>
+          <td>09:00 - 17:00</td>
+        </tr>
+
+        <tr>
+          <td>Saturday</td>
+          <td>09:00 - 13:00</td>
+        </tr>
+
+        <tr>
+          <td>Sunday</td>
+          <td>Closed</td>
+        </tr>
+      </table>
+      <p class="appointments">Appointments can be arranged outside normal office hours</p>
+    </div>
   </div>
 
   <div class="footer__item">
     <ul>
+      <li class="footer-title">Find Us</li>
+      <li class="fearon-bros-pin"><a href="https://www.google.co.uk/maps/place/Fearon+Bros/@54.0991783,-6.3853264,14z/data=!4m2!3m1!1s0x0:0xe1b5be7e5365ce40" target="_blank" title="See us on Google Maps">Fearon Bros on Google</a></li>
       <li>41 Faughiletra Road</li>
       <li>Newry</li>
       <li>County Down</li>
       <li>BT35 8JE</li>
-      <li>&nbsp;</li>
       <li><a href="tel:+442830848693">028 3084 8693</a></li>
       <li><a href="mailto:info@fearonbros.co.uk">info@fearonbros.co.uk</a></li>
     </ul>
   </div>
-
-  <div class="footer__item">
-    <ul>
-      <li>Monday: 09:00 - 17:00</li>  
-      <li>Tuesday: 09:00 - 17:00</li>
-      <li>Wednesday: 09:00 - 17:00</li>
-      <li>Thursday: 09:00 - 17:00</li>
-      <li>Friday: 09:00 - 17:00</li>
-      <li>Saturday: 09:00 - 13:00</li>
-      <li>Sunday: Closed</li>
-    </ul>
-  </div>
-
-  <div class="footer__item">
-    <ul class="footer-links">
-      <li><a href="our-services.html" title="Our Services">Our Services</a></li>
-      <li><a href="portfolio.html" title="Portfolio">Portfolio</a></li>
-      <li><a href="#" title="Footer Link">Applicances/Brands</a></li>
-      <li><a href="#" title="Footer Link">Contact</a></li>
-      <li><a href="#" title="Footer Link">Sitemap</a></li>
-    </ul>
-
-    <p class="footer-links">&copy; Copyright <script type="text/javascript">document.write(new Date().getFullYear());</script> &middot; Fearon Bros</p>
-  </div>
 </footer>
 
-<figure class="conor-mcafee">
-  <figcaption>Designed &amp; Built by<span style="display: none;">Conor McAfee</span></figcaption>
-  <img src="production/assets/conor-mcafee-logo.svg" alt="Conor McAfee | Designer &amp; Front-End Developer" height="25">
-</figure>
+<section class="sitelinks-wrapper">
+  <div class="sitelinks-item">
+    <div class="sitelinks">
+      <a href="our-services.html" title="Our Services">Our Services</a>
+      <a href="portfolio.html" title="Portfolio">Portfolio</a>
+      <a href="contact.html" title="Footer Link">Contact</a>
+      <a href="sitemap.xml" title="Footer Link">Sitemap</a>
+      
+      <p class="copyright">&copy; Copyright <script type="text/javascript">document.write(new Date().getFullYear());</script> &middot; Fearon Bros</p>
+    </div>
+  </div>
+  <div class="sitelinks-item">
+    <figure class="conor-mcafee">
+      <figcaption>Designed &amp; Built by<span style="display: none;">Conor McAfee</span></figcaption>
+      <img src="production/assets/conor-mcafee-logo.svg" alt="Conor McAfee | Designer &amp; Front-End Developer" height="20">
+    </figure>
+  </div>
+</section>
 
 <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true"><div class="pswp__bg"></div><div class="pswp__scroll-wrap"><div class="pswp__container"><div class="pswp__item"></div><div class="pswp__item"></div><div class="pswp__item"></div></div><div class="pswp__ui pswp__ui--hidden"> <div class="pswp__top-bar"> <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title="Share"></button> <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button> <div class="pswp__preloader"> <div class="pswp__preloader__icn"> <div class="pswp__preloader__cut"> <div class="pswp__preloader__donut"></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"> <div class="pswp__share-tooltip"></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"> </button> <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"> </button> <div class="pswp__caption"> <div class="pswp__caption__center"></div></div></div></div></div>
 

@@ -18,7 +18,8 @@ body {
   font-weight: 400;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
-  color: #3D3D3D;
+  color: $base-colour;
+  position: relative;
 }
 
 .fonts-loaded body {
