@@ -2,9 +2,12 @@ $footer-border: 1px solid brand-colour(grey);
 
 footer {
 	@include font-size(1.4);
+	display: flex;
+	flex-wrap: wrap;
 	clear: both;
 	border-top: $footer-border;
 	border-bottom: $footer-border;
+	background-color: #f6f6f6;
 	margin-top: 2em;
 	color: $base-colour;
 }
@@ -17,7 +20,9 @@ footer a {
 	}
 }
 
-// Suppliers
+.footer-suppliers {
+	background-color: brand-colour(white);
+}
 
 .footer-suppliers .footer-list {
 	display: flex;
@@ -44,40 +49,58 @@ footer a {
 	padding: 0 2em;
 }
 
-
-
-.footer__items {
-	display: flex;
-}
-
-.footer-item {
-	flex: 1;
-
-	&__content {
-		padding: 1em;
-	}
-}
-
-.footer-item__content h3:nth-child(n+2) {
-	margin-top: 1em;
-}
-
-
-// Map
-
 .footer--map {
 	display: none;
 
-	@media only screen and (min-width: 768px) {
+	@media only screen and (min-width: 800px) {
 		display: flex;
+		flex: 1 33.333333333%;
 	}
 }
 
-.footer-map img {
+.footer-map {
+	background-size: cover;
+	background-position: center center;
+	height: inherit;
+	width: 100%;
+	border-right: 1px solid brand-colour(grey, dark);
+}
+
+.footer__items {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+
+	@media only screen and (min-width: 800px) {
+		flex: 1 66.666666666%;
+	}
+}
+
+.footer-item {
+	display: flex;
+	flex: 1 100%;
+
+	@media only screen and (min-width: 768px) {
+		flex: 1 33.333333333%;
+	}
+}
+
+.footer-item__content {
+	padding: 1em;
+	width: 100%;
+
+	@media only screen and (min-width: 800px) {
+		padding: 2em;
+	}
+}
+
+.footer-item__content h4:after {
+	content: "";
 	display: block;
-	max-width: 100%;
-	float: left;
-	border-right: $footer-border;
+	height: 2px;
+	width: 50px;
+	background-color: brand-colour(grey, dark);
+	margin: 0.5em 0;
 }
 
 
@@ -91,4 +114,47 @@ footer a {
 
 .opening-hours td {
 	padding: 0.25em 0;
+}
+
+
+
+
+
+
+.footer--copyright {
+	flex: 1 100%;
+	align-self: flex-end;
+	border-top: 1px solid brand-colour(grey);
+	background-color: brand-colour(white);
+	padding-bottom: 1em;
+}
+
+.footer--copyright .footer-item__content {
+	padding-bottom: 0;
+}
+
+.footer--copyright li {
+	display: inline-block;
+
+	&:not(:last-child) {
+		margin-right: 1em;
+	}
+}
+
+.footer--copyright p {
+	margin-bottom: 0;
+}
+
+.copyright {
+	display: block;
+	float: left;
+}
+
+.sitelink {
+	display: block;
+	float: right;
+
+	a {
+		display: inline-block;
+	}
 }

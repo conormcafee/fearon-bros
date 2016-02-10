@@ -78,8 +78,8 @@
     <h3>Painted In-Frame Kitchen</h3>    
     <a href="#" title="View All Photos" class="btn">View all Photos</a>
   </div>
-  <div class="featured__image featured--001" data-echo-background="production/assets/kitchen-01/001.jpg" style="background-image: url('production/assets/fb-blank.png');"></div>
-  <div class="featured__image featured--002" data-echo-background="production/assets/kitchen-01/002.jpg "style="background-image: url('production/assets/fb-blank.png');"></div>
+  <div class="featured__image featured--001" style="background-image: url('production/assets/kitchen-01/001.jpg');"></div>
+  <div class="featured__image featured--002" style="background-image: url('production/assets/kitchen-01/002.jpg');"></div>
   <ul style="display: none;">
     <li data-size="1600x1200" data-src="http://placehold.it/1600x1200/ffffff/000000"></li>
     <li data-size="1600x1200" data-src="http://placehold.it/1600x1200/000000/ffffff"></li>
@@ -217,26 +217,23 @@
 <footer>
   <div class="footer-suppliers">
     <ul class="footer-list">
-      <li><img src="production/assets/footer/neff.png" /></li>
-      <li><img src="production/assets/footer/blanco.png" /></li>
-      <li><img src="production/assets/footer/franke.png" /></li>
-      <li><img src="production/assets/footer/1909.png" /></li>
-      <li><img src="production/assets/footer/metris.png" /></li>
-      <li><img src="production/assets/footer/sn.png" /></li>
+      <li><a href="#" target="_blank" title="Fearon Bros Suppler: Name"><img src="production/assets/footer/neff.png" /></a></li>
+      <li><a href="#" target="_blank" title="Fearon Bros Suppler: Name"><img src="production/assets/footer/blanco.png" /></a></li>
+      <li><a href="#" target="_blank" title="Fearon Bros Suppler: Name"><img src="production/assets/footer/franke.png" /></a></li>
+      <li><a href="#" target="_blank" title="Fearon Bros Suppler: Name"><img src="production/assets/footer/1909.png" /></a></li>
+      <li><a href="#" target="_blank" title="Fearon Bros Suppler: Name"><img src="production/assets/footer/metris.png" /></a></li>
+      <li><a href="#" target="_blank" title="Fearon Bros Suppler: Name"><img src="production/assets/footer/sn.png" /></a></li>
     </ul>
   </div>
 
+  <div class="footer--map">
+    <div class="footer-map" style="background-image: url('production/assets/footer/google-map.png');"></div> 
+  </div>
+
   <div class="footer__items">
-
-    <div class="footer-item footer--map">
-      <div class="footer-map">
-        <img src="production/assets/footer/google-map.png">
-      </div> 
-    </div>
-
     <div class="footer-item">
       <div class="footer-item__content">
-        <h3>Find Us</h3>
+        <h4>Find Us</h4>
 
         <ul class="footer-list">
           <li>Fearon Bros Ltd</li>
@@ -245,8 +242,12 @@
           <li>County Down</li>
           <li>BT35 8JE</li>
         </ul>
+      </div>
+    </div>
 
-        <h3>Contact Us</h3>
+    <div class="footer-item">
+      <div class="footer-item__content">
+        <h4>Contact Us</h4>
 
         <ul class="footer-list">
           <li><a href="tel:+442830848693">028 3084 8693</a></li>
@@ -257,31 +258,11 @@
 
     <div class="footer-item">
       <div class="footer-item__content">
-        <h3>Opening Hours</h3>
+        <h4>Opening Hours</h4>
 
         <table class="opening-hours">
         <tr>
-          <td>Monday:</td>
-          <td>09:00 - 17:00</td>
-        </tr>
-
-        <tr>
-          <td>Tuesday:</td>
-          <td>09:00 - 17:00</td>
-        </tr>
-
-        <tr>
-          <td>Wednesday:</td>
-          <td>09:00 - 17:00</td>
-        </tr>
-
-        <tr>
-          <td>Thursday:</td>
-          <td>09:00 - 17:00</td>
-        </tr>
-
-        <tr>
-          <td>Friday:</td>
+          <td>Mon - Fri:</td>
           <td>09:00 - 17:00</td>
         </tr>
 
@@ -298,83 +279,23 @@
       </div>
     </div>
 
-  </div>
+    <div class="footer-item footer--copyright">
+      <div class="footer-item__content">
+        <ul>
+          <li><a href="our-services.html" title="Our Services">Our Services</a></li>
+          <li><a href="portfolio.html" title="Portfolio">Portfolio</a></li>
+          <li><a href="contact.html" title="Footer Link">Contact</a></li>
+          <li><a href="sitemap.xml" title="Footer Link">Sitemap</a></li>
+        </ul>
+        <div class="copyright-wrapper">
+          <p class="copyright">&copy; Copyright <script type="text/javascript">document.write(new Date().getFullYear());</script> &middot; Fearon Bros</p>
 
-  <!--<div class="footer__item">
-    <div class="opening-hours-wrapper">
-      <p class="footer-title">Opening Hours</p>
-      <table class="opening-hours">
-        <tr>
-          <td>Monday</td>
-          <td>09:00 - 17:00</td>
-        </tr>
-
-        <tr>
-          <td>Tuesday</td>
-          <td>09:00 - 17:00</td>
-        </tr>
-
-        <tr>
-          <td>Wednesday</td>
-          <td>09:00 - 17:00</td>
-        </tr>
-
-        <tr>
-          <td>Thursday</td>
-          <td>09:00 - 17:00</td>
-        </tr>
-
-        <tr>
-          <td>Friday</td>
-          <td>09:00 - 17:00</td>
-        </tr>
-
-        <tr>
-          <td>Saturday</td>
-          <td>09:00 - 13:00</td>
-        </tr>
-
-        <tr>
-          <td>Sunday</td>
-          <td>Closed</td>
-        </tr>
-      </table>
-      <p class="appointments">Appointments can be arranged outside normal office hours</p>
+          <p class="sitelink">Site by <a href="http://conormcafee.co.uk" title="Website by Conor McAfee" target="_blank">Conor McAfee</a></p>
+        </div>
+      </div>
     </div>
-  </div>
-
-  <div class="footer__item">
-    <ul>
-      <li class="footer-title">Find Us</li>
-      <li class="fearon-bros-pin"><a href="https://www.google.co.uk/maps/place/Fearon+Bros/@54.0991783,-6.3853264,14z/data=!4m2!3m1!1s0x0:0xe1b5be7e5365ce40" target="_blank" title="See us on Google Maps">Fearon Bros on Google</a></li>
-      <li>41 Faughiletra Road</li>
-      <li>Newry</li>
-      <li>County Down</li>
-      <li>BT35 8JE</li>
-      <li><a href="tel:+442830848693">028 3084 8693</a></li>
-      <li><a href="mailto:info@fearonbros.co.uk">info@fearonbros.co.uk</a></li>
-    </ul>
   </div>
 </footer>
-
-<section class="sitelinks-wrapper">
-  <div class="sitelinks-item">
-    <div class="sitelinks">
-      <a href="our-services.html" title="Our Services">Our Services</a>
-      <a href="portfolio.html" title="Portfolio">Portfolio</a>
-      <a href="contact.html" title="Footer Link">Contact</a>
-      <a href="sitemap.xml" title="Footer Link">Sitemap</a>
-      
-      <p class="copyright">&copy; Copyright <script type="text/javascript">document.write(new Date().getFullYear());</script> &middot; Fearon Bros</p>
-    </div>
-  </div>
-  <div class="sitelinks-item">
-    <figure class="conor-mcafee">
-      <figcaption>Designed &amp; Built by<span style="display: none;">Conor McAfee</span></figcaption>
-      <img src="production/assets/conor-mcafee-logo.svg" alt="Conor McAfee | Designer &amp; Front-End Developer" height="20">
-    </figure>
-  </div>
-</section>-->
 
 <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true"><div class="pswp__bg"></div><div class="pswp__scroll-wrap"><div class="pswp__container"><div class="pswp__item"></div><div class="pswp__item"></div><div class="pswp__item"></div></div><div class="pswp__ui pswp__ui--hidden"> <div class="pswp__top-bar"> <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title="Share"></button> <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button> <div class="pswp__preloader"> <div class="pswp__preloader__icn"> <div class="pswp__preloader__cut"> <div class="pswp__preloader__donut"></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"> <div class="pswp__share-tooltip"></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"> </button> <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"> </button> <div class="pswp__caption"> <div class="pswp__caption__center"></div></div></div></div></div>
 
