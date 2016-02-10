@@ -44,26 +44,6 @@ header {
 
 
 
-.full-screen-nav.js-header-inactive {
-  display: none;
-}
-
-.full-screen-nav.js-header-active {
-  position: fixed;
-  z-index: 99999;
-  top: 0;
-  left: 0;
-  right:0;
-  bottom: 0;
-  height: 100%;
-  background-color: brand-colour(green); 
-  display: block;
-}
-
-
-
-
-
 .header__bar {
   width: 100%;
   display: flex;

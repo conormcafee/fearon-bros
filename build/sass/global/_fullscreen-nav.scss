@@ -1,0 +1,52 @@
+.full-screen-nav.js-header-inactive {
+  display: none;
+}
+
+.full-screen-nav.js-header-active {
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  left: 0;
+  right:0;
+  bottom: 0;
+  height: 100%;
+  background-color: rgba(0, 78, 78, 0.98); 
+  display: block;
+}
+
+.full-screen-nav__bar .header__logo {
+  display: block;
+  float: left;
+  margin-left: 1em;
+}
+
+.full-screen-nav__btn {
+  display: block;
+  float: right;
+
+  a {
+  @include font-size(1.6);
+  font-family: 'Abril Fatface', cursive;
+  line-height: 24px;
+  line-height: 2.4rem;
+  color: brand-colour(white);
+  transition: all 0.2s ease-in-out;
+  padding: 1em;
+}
+}
+
+.full-screen-nav__links {
+  clear: both;
+
+  a {
+    font-family: 'Abril Fatface', cursive;
+    @include font-size(4);
+    font-family: serif;
+    font-weight: 600;
+    color: brand-colour(green);
+    line-height: 60px;
+    line-height: 6.0rem;
+    color: brand-colour(white);
+    text-shadow: 1px 1px 1px brand-colour(green, dark);
+  }
+}
