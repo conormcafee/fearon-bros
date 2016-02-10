@@ -1,8 +1,8 @@
-.full-screen-nav.js-header-inactive {
-  display: none;
+.overflow-hidden {
+  overflow: hidden;
 }
 
-.full-screen-nav.js-header-active {
+.full-screen-nav {
   position: fixed;
   z-index: 99999;
   top: 0;
@@ -10,43 +10,55 @@
   right:0;
   bottom: 0;
   height: 100%;
-  background-color: rgba(0, 78, 78, 0.98); 
-  display: block;
-}
-
-.full-screen-nav__bar .header__logo {
-  display: block;
-  float: left;
-  margin-left: 1em;
-}
-
-.full-screen-nav__btn {
-  display: block;
-  float: right;
-
-  a {
-  @include font-size(1.6);
-  font-family: 'Abril Fatface', cursive;
-  line-height: 24px;
-  line-height: 2.4rem;
-  color: brand-colour(white);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
   transition: all 0.2s ease-in-out;
-  padding: 1em;
 }
+
+.full-screen-nav.js-header-inactive {
+  transform: translateY(-9999px);
+  transform: scale(0);
+  background-color: rgba(0, 78, 78, 0.18);
+}
+
+.full-screen-nav.js-header-active {
+  background-color: rgba(0, 78, 78, 0.98); 
+  transform: scale(1);
+}
+
+.fullscreen__close {
+  font-family: 'Abril Fatface', cursive;
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: right;
+  padding: 1em 2em;
+  color: brand-colour(white);
+
+  &:hover {
+    color: brand-colour(green, dark);
+  }
 }
 
 .full-screen-nav__links {
-  clear: both;
+  text-align: center;
+}
 
-  a {
-    font-family: 'Abril Fatface', cursive;
-    @include font-size(4);
-    font-family: serif;
-    font-weight: 600;
-    color: brand-colour(green);
-    line-height: 60px;
-    line-height: 6.0rem;
-    color: brand-colour(white);
-    text-shadow: 1px 1px 1px brand-colour(green, dark);
+.full-screen-nav__links a {
+  @include font-size(3);
+  color: brand-colour(green);
+  line-height: 45px;
+  line-height: 4.5rem;
+  color: brand-colour(white);
+
+  &:hover {
+    color: brand-colour(brown);
   }
+}
+
+.full-screen-nav__links a:not(:first-child) {
+  margin-top: 1em;
 }

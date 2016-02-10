@@ -2,6 +2,13 @@
 
 $('.header__nav-btn a').on('click', function(){
     $('.full-screen-nav').toggleClass('js-header-active js-header-inactive');
+    //$('body').toggleClass(' overflow-hidden');
+    event.preventDefault();
+});
+
+$('.fullscreen__close').on('click', function(){
+    $('.full-screen-nav').toggleClass('js-header-active js-header-inactive');
+    //$('body').toggleClass(' overflow-hidden');
     event.preventDefault();
 });
 

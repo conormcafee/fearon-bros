@@ -98,18 +98,20 @@ header {
   line-height: 24px;
   line-height: 2.4rem;
   color: brand-colour(white);
-  transition: all 0.2s ease-in-out;
   padding: 1em;
-  opacity: 1;
-  
-  @media only screen and (min-width: 800px) {
-    opacity: 0;
-  }
 }
 
-.header__nav-btn.active a {
-  opacity: 1;
-  transition: all 0.2s ease-in-out;
+.menu-icon {
+  fill: brand-colour(white);
+  margin-top: 2px;
+}
+
+.header__nav-btn a:hover {
+  color: brand-colour(brown);
+
+  .menu-icon {
+    fill: brand-colour(brown);
+  }
 }
 
 
