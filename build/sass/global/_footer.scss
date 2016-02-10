@@ -1,13 +1,10 @@
-$footer-border: 1px solid brand-colour(grey, dark);
+$footer-border: 1px solid brand-colour(grey);
 
 footer {
+	@include font-size(1.4);
 	clear: both;
-	display: flex;
-	flex-wrap: wrap;
 	border-top: $footer-border;
 	border-bottom: $footer-border;
-	background: brand-colour(grey);
-	@include font-size(1.4);
 	margin-top: 2em;
 	color: $base-colour;
 }
@@ -20,178 +17,78 @@ footer a {
 	}
 }
 
-.footer__item {
-	display: block;
-	float: left;
-	height: inherit;
+// Suppliers
+
+.footer-suppliers .footer-list {
+	display: flex;
+	flex-wrap: wrap;
+	border-bottom: $footer-border;
+	width: 100%;
+	padding: 1em 0;
 }
 
-.footer__item:nth-child(1),
-.footer__item:nth-child(2),
-.footer__item:nth-child(3) {
-	flex: 1 100%;
+.footer-suppliers li {
+	flex: 1 33.333333333%;
 
-	@media only screen and (min-width: 800px) {
+	@media only screen and (min-width: 768px) {
 		flex: 1;
 	}
 }
 
-.footer__item ul {
-	padding: 0 1em;
-}
-
-.footer-appliances {
-	border: $footer-border;
-	overflow: hidden;
-	margin: 0 1em;
-}
-
-ul.footer-appliances {
-	padding: 0;
-}
-
-.footer-appliances li {
-	display: block;
-	float: left;
-	width: 50%;
-	background: brand-colour(white);
-	
-	@media only screen and (min-width: 768px) {
-		
-	}
-
-	@media only screen and (min-width: 800px) {
-		//width: 16.666666667%;
-	}
-}
-
-.footer-appliances img {
+.footer-suppliers img {
 	display: block;
 	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
 	height: auto;
-	padding: 0 0.5em;
-	opacity: 0.5;
+	padding: 0 2em;
 }
 
-.footer-links li {
-	display: inline-block;
+
+
+.footer__items {
+	display: flex;
 }
 
-.footer-links li:not(:last-child) {
-	margin-right: 1em;
+.footer-item {
+	flex: 1;
+
+	&__content {
+		padding: 1em;
+	}
 }
 
-.opening-hours-wrapper,
-.footer-appliances--title {
-	padding: 0 1em;
+.footer-item__content h3:nth-child(n+2) {
+	margin-top: 1em;
 }
 
-.opening-hours {
-	width: 100%;
-	border: $footer-border;
-	color: #3D3D3D;
+
+// Map
+
+.footer--map {
+	display: none;
+
+	@media only screen and (min-width: 768px) {
+		display: flex;
+	}
 }
 
-.opening-hours tr:not(:last-child) {
-	border-bottom: $footer-border;;
-}
-
-.opening-hours tr:nth-child(odd) {
-	background: brand-colour(white);
-}
-
-.opening-hours tr:nth-child(even) {
-	background: #f6f6f6;
-}
-
-.opening-hours td {
-	padding: 0.5em 1em;
-}
-
-.opening-hours td:first-child {
+.footer-map img {
+	display: block;
+	max-width: 100%;
+	float: left;
 	border-right: $footer-border;
 }
 
-p.appointments {
-	margin: 1em 0 0 0;
-}
 
-.footer-title {
-	@include font-size(2.0);
-	font-family: 'Abril Fatface', cursive;
-	color: brand-colour(green);
-	margin: 1em 0;
-	color: brand-colour(green);
-}
 
-.fearon-bros-pin {
-	height: 115px;
+
+// Opening Hours
+
+.opening-hours {
 	width: 100%;
-	background-image: url('../assets/footer/fearon-bros-pin.png');
-	border: $footer-border;
-	background-position: center center;
-	margin-bottom: 1em;
 }
 
-.fearon-bros-pin a {
-	color: transparent;
-	display: block;
-	height: inherit;
-	width: inherit;
-	&:hover {
-		color: transparent;
-	}
-}
-
-
-
-.sitelinks-wrapper {
-	@include font-size(1.3);
-	display: flex;
-}
-
-.sitelinks-item:nth-child(1) {
-	flex: 2;
-}
-
-.sitelinks-item:nth-child(2) {
-	display: flex;
-	align-items: center;
-	justify-content: flex-end;
-	flex: 1;
-}
-
-.sitelinks {
-	padding: 1em;
-}
-
-.sitelinks a {
-	display: inline-block;
-	color: $base-colour;
-
-	&:hover {
-		color: brand-colour(brown);
-	}
-
-	&:not(:last-child) {
-		margin-right: 1em;
-	}
-}
-
-.copyright {
-	display: block;
-}
-
-.conor-mcafee {
-	padding: 0 1em;
-}
-
-.conor-mcafee img {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.conor-mcafee figcaption {
-	color: brand-colour(grey, darker)
+.opening-hours td {
+	padding: 0.25em 0;
 }

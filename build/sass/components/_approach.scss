@@ -74,6 +74,8 @@
 		flex: 1 25%;
 		text-align: center;
 		color: brand-colour(green);
+		align-items: center;
+		justify-content: center;
 	}
 
 	.approach .d-list li {
@@ -89,7 +91,7 @@
 		max-width: 600px;
 		width: 50%;
 		border: 2px solid brand-colour(grey);
-		padding: 1em;
+		padding: 1em 2em;
 		position: relative;
 
 		&:before {
