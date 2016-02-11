@@ -22,10 +22,10 @@ var gulp = require('gulp'),
 gulp.task('sass', function() {
     return sass('build/sass/main.scss', { style: 'expanded' })
     .pipe(prefix({ browsers: ['last 2 versions'] }))
-    .pipe(gulp.dest('production/css'))
+    .pipe(gulp.dest('public/css'))
     .pipe(rename({ suffix: '.min' }))
     .pipe(minifycss())
-    .pipe(gulp.dest('production/css'))
+    .pipe(gulp.dest('public/css'))
     .pipe(notify({ message: 'Styles task complete' }))
     .pipe(livereload());
 });
@@ -35,10 +35,10 @@ gulp.task('scripts', function() {
     .pipe(jshint('.jshintrc'))
     .pipe(jshint.reporter('default'))
     .pipe(concat('main.js'))
-    .pipe(gulp.dest('production/js'))
+    .pipe(gulp.dest('public/js'))
     .pipe(rename({ suffix: '.min' }))
     .pipe(uglify())
-    .pipe(gulp.dest('production/js'))
+    .pipe(gulp.dest('public/js'))
     .pipe(notify({ message: 'Scripts task complete' }));
 });
 
